@@ -13,7 +13,6 @@ export const HeaderStyled = styled.header`
 
   & > * {
     cursor: pointer;
-    ${({ theme }) => theme.headlines.headline7}
   }
 `
 

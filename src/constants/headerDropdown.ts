@@ -1,7 +1,7 @@
 import { Routes } from 'enums'
-import { IHeaderItem } from 'types'
+import { ILinkItem } from 'types'
 
-export const HEADER_DROPDOWN_ITEMS: IHeaderItem[] = [
+export const HEADER_DROPDOWN_ITEMS: ILinkItem[] = [
   { name: 'Services', route: Routes.Services },
   { name: 'About Us', route: Routes.AboutUs },
   { name: 'Our Team', route: Routes.OurTeam },
