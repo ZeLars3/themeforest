@@ -4,7 +4,7 @@ export const ButtonStyled = styled.button`
   display: flex;
   align-self: center;
   justify-content: space-between;
-  max-width: 168px;
+  width: 168px;
   height: 44px;
   border-radius: 6px;
   border: none;
@@ -22,7 +22,6 @@ export const ButtonStyled = styled.button`
 `
 
 export const TextStyled = styled.p`
-  font-size: 14px;
   line-height: 24px;
   margin-left: 10px;
   color: ${({ theme }) => theme.colors.white};

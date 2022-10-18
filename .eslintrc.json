@@ -24,10 +24,9 @@
     "rules": {
         "rules": {
             "comma-dangle": [
-                2,
-                "always-multiline"
-            ],
-            "@typescript-eslint/comma-dangle": "warn"
+                "error",
+                "never"
+            ]
         }
     }
 }

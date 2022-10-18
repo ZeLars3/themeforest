@@ -1,6 +1,6 @@
 import { Routes } from 'enums'
 
-export interface IHeaderItem {
+export interface ILinkItem {
     name: string
 	route: Routes
 }
