@@ -4,3 +4,8 @@ export interface ILinkItem {
     name: string
 	route: Routes
 }
+
+export interface IStatisticAmount {
+    count: string
+    title: string
+}
