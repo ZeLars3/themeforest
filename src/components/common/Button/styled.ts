@@ -19,6 +19,7 @@ export const ButtonContainer = styled.button<IButtonContainer>`
   border-radius: 6px;
   transition: 0.5s;
   cursor: pointer;
+  background: ${({ theme }) => theme.colors.primary};
   box-shadow: ${({ isDisable }) => (isDisable ? 'none' : '0px 1.2rem 3rem rgba(24, 92, 255, 0.18)')};
   
   &:disabled {
