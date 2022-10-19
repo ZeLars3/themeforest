@@ -1,3 +1,5 @@
 export * from './Dropdown'
 export * from './Header'
 export * from './ButtonVideo'
+export * from './Button'
+export * from './TextInput'
