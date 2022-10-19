@@ -5,7 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Manrope', sans-serif;
 
     &::-webkit-scrollbar {
       width: 11px;
@@ -24,7 +24,7 @@ export default createGlobalStyle`
   html, body {
     width: 100%;
     height: 100%;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Manrope', sans-serif;
   }
 
   body {
