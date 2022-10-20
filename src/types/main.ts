@@ -9,3 +9,9 @@ export interface IStatisticAmount {
     count: string
     title: string
 }
+
+export interface IBenefitItem {
+    title: string
+    text: string
+    icon: string
+}
