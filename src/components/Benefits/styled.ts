@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const BenefitsContainer = styled.section`
   background-color: ${({ theme }) =>
     theme.colors.background};
-  padding-top: 120px;
+  padding: 120px 0;
 `
 
 export const BenefitsWrapper = styled.div`
