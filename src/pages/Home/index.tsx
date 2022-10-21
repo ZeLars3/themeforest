@@ -8,7 +8,8 @@ import {
   NewSolutions,
   Benefits,
   BasicInfo,
-  Testimonials
+  Testimonials,
+  Blog
 } from 'components'
 
 export const Home: FC = () => {
@@ -21,6 +22,7 @@ export const Home: FC = () => {
         <SuccessStatistic />
         <Benefits />
         <Testimonials />
+        <Blog />
         <Help />
       </MainLayout>
     </>

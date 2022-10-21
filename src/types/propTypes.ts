@@ -14,3 +14,10 @@ export interface ITestimonialItem {
   avatar: string;
   text: string;
 }
+
+export interface IBlogItem {
+  img: string
+  date: string
+  title: string
+  text: string
+}
