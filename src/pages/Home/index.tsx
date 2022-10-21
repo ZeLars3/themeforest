@@ -9,7 +9,8 @@ import {
   Benefits,
   BasicInfo,
   Testimonials,
-  Blog
+  Blog,
+  Pricing
 } from 'components'
 
 export const Home: FC = () => {
@@ -22,6 +23,7 @@ export const Home: FC = () => {
         <SuccessStatistic />
         <Benefits />
         <Testimonials />
+        <Pricing />
         <Blog />
         <Help />
       </MainLayout>

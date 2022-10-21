@@ -14,6 +14,20 @@ export const SWIPER_CONFIG = {
       slidesPerView: 3
     }
   },
+  pricingBreakPoints: {
+    360: {
+      slidesPerView: 1,
+      spaceBetween: -40,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    1110: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
   centeredSlidesBounds: true,
   scrollbar: { draggable: true },
   grabCursor: true,
@@ -27,5 +41,10 @@ export const SWIPER_CONFIG = {
       prevEl: prev.current,
       nextEl: next.current
     }
+  },
+  priceSliderStyles: {
+    width: '100%',
+    padding: '0 10px',
+    overflow: 'visible',
   }
 }

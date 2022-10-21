@@ -15,3 +15,11 @@ export interface IBenefitItem {
     text: string
     icon: string
 }
+
+export interface IPriceItem {
+    id: number
+    title: string
+    price: string
+    features: string[]
+}
+  
