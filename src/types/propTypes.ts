@@ -21,3 +21,12 @@ export interface IBlogItem {
   title: string
   text: string
 }
+
+export interface INavigation {
+  menu: boolean
+}
+
+export interface IButtonVideo {
+  handleClick(): void
+}
+

@@ -11,8 +11,8 @@ import {
 
 export const Help: FC = () => {
   return (
-    <HelpWrapper>
-      <HelpContainer>
+    <HelpContainer>
+      <HelpWrapper>
         <HelpTitle>Do you need help?</HelpTitle>
         <HelpText>
           Ut enim ad minima veniam, quis nostrum
@@ -25,7 +25,7 @@ export const Help: FC = () => {
           contentPosition="center">
           Contact us
         </Button>
-      </HelpContainer>
-    </HelpWrapper>
+      </HelpWrapper>
+    </HelpContainer>
   )
 }

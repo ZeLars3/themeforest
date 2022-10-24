@@ -23,9 +23,9 @@ export const Home: FC = () => {
         <SuccessStatistic />
         <Benefits />
         <Testimonials />
-        <Pricing />
-        <Blog />
-        <Help />
+        <Pricing /> 
+        <Blog /> 
+        <Help /> 
       </MainLayout>
     </>
   )

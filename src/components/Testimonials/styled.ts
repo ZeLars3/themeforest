@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const TestimonialsContainer = styled.section`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 120px 0;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
 `
 
 export const TestimonialsWrapper = styled.div`
@@ -11,6 +15,10 @@ export const TestimonialsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `
 
 export const TestimonialsTitle = styled.h2`
@@ -18,6 +26,11 @@ export const TestimonialsTitle = styled.h2`
   font-size: 38px;
   line-height: 56px;
   letter-spacing: -0.015em;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `
 
 export const TestimonialsController = styled.div`
@@ -35,6 +48,13 @@ export const TestimonialButton = styled.button`
   border-radius: 20px;
   background-color: ${({ theme }) =>
     theme.colors.background};
+
+  @media (max-width: 768px) {
+    display: flex;
+    padding: 15.8px;
+    width: 48px;
+    height: 40px;
+  }
 `
 
 export const TestimonialsList = styled.ul`
@@ -43,4 +63,9 @@ export const TestimonialsList = styled.ul`
   margin: 0 auto;
 `
 
-export const Icon = styled.img``
+export const Icon = styled.img`
+  @media (max-width: 768px) {
+    width: 16.8px;
+    height: 9px;
+  }
+`

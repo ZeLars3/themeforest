@@ -1,26 +1,33 @@
 import { FC } from 'react'
 import {
   NavigateFunction,
-  useNavigate,
+  useNavigate
 } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-import Info from 'assets/img/info.jpg'
+import InfoBig from 'assets/img/infoBig.jpg'
+import InfoSmall from 'assets/img/infoSmall.jpg'
 import { Routes } from 'enums'
 
 import {
-  InformationButton,
-  BasicInfoContainer,
-  InformationImage,
+  Img,
+  ColorTitle,
+  BasicInfoButton,
+  BasicInfoWrapper,
+  BasicInfoImgWrapper,
   BasicInfoText,
   BasicInfoTitle,
   BasicInfoWrapperText,
-  BasicInfoWrapper,
-  Img,
-  ColorTitle,
+  BasicInfoContainer
 } from './styled'
+import { RootState } from 'store'
 
 export const BasicInfo: FC = () => {
   const navigate: NavigateFunction = useNavigate()
+
+  const currentViewport = useSelector<RootState, string>(
+    ({ app }) => app.viewport
+  )
 
   const handleNavigate = (): void => {
     navigate(Routes.Services)
@@ -29,25 +36,22 @@ export const BasicInfo: FC = () => {
   return (
     <BasicInfoContainer>
       <BasicInfoWrapper>
+        <BasicInfoTitle>
+          Find true power in your data with <ColorTitle>Ensome</ColorTitle>
+        </BasicInfoTitle>
         <BasicInfoWrapperText>
-          <BasicInfoTitle>
-            Find true power in your data with{' '}
-            <ColorTitle>Ensome</ColorTitle>
-          </BasicInfoTitle>
           <BasicInfoText>
-            Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque lauda,
-            totam rem aperiam, eaque ipsa quae ab illo
-            inventore veritatis et quasi.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
           </BasicInfoText>
+          <BasicInfoButton onClick={handleNavigate}>
+            Learn more
+          </BasicInfoButton>
         </BasicInfoWrapperText>
-        <InformationButton onClick={handleNavigate}>
-          Learn more
-        </InformationButton>
       </BasicInfoWrapper>
-      <InformationImage>
-        <Img src={Info} />
-      </InformationImage>
+      <BasicInfoImgWrapper>
+        <Img src={currentViewport === 'desktop' ? InfoBig : InfoSmall} />
+      </BasicInfoImgWrapper>
     </BasicInfoContainer>
   )
 }

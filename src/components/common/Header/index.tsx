@@ -1,57 +1,75 @@
-import { FC, MouseEventHandler } from 'react'
-import {
-  Link,
-  NavigateFunction,
-  useNavigate
-} from 'react-router-dom'
+import { FC, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
-import LogoImg from 'assets/icons/logo_blue.png'
-import { Routes } from 'enums'
+import LogoBlue from 'assets/icons/logo_blue.png'
+import MenuOpen from 'assets/icons/menu.svg'
+import MenuClose from 'assets/icons/menuClose.svg'
+import PlayIcon from 'assets/icons/play.png'
 
-import { Dropdown } from '../Dropdown'
-import { ButtonVideo } from '../ButtonVideo'
 import {
-  HeaderStyled,
-  LogoStyled,
-  LinksContainer,
-  LinkStyled
+  HeaderContainer,
+  HeaderLogo,
+  HeaderWrapper,
+  HeaderWrapperButton,
+  HeaderWrapperInner,
+  Icon,
+  BurgerButton
 } from './styled'
+import { Navigation } from '../Navigation'
+import { Button } from '../Button'
+import { DemoVideo } from '../DemoVideo'
+import { RootState } from 'store'
 
 export const Header: FC = () => {
-  const navigate: NavigateFunction = useNavigate()
+  const [isMenuOpen, setIsMenuOpen] =
+    useState<boolean>(false)
+  const [isVideo, setIsVideo] = useState <boolean>(false)
 
-  const handleNavigateFromLogo: MouseEventHandler<
-  HTMLImageElement
-  > = () => {
-    navigate(Routes.Home)
+  const currentViewport = useSelector<RootState, string>(
+    ({ app }) => app.viewport
+  )
+
+  useEffect(() => {
+    return currentViewport === 'desktop'
+      ? setIsMenuOpen(true)
+      : setIsMenuOpen(false)
+  }, [currentViewport])
+
+  const handleMenuClick = (): void => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const handleCallDemo = (): void => {
+    setIsVideo(!isVideo)
   }
 
   return (
-    <HeaderStyled>
-      <LogoStyled
-        alt="Logo"
-        src={LogoImg}
-        onClick={handleNavigateFromLogo}
-      />
-      <LinksContainer>
-        <LinkStyled>
-          <Link to={Routes.Home}>Home</Link>
-        </LinkStyled>
-        <LinkStyled>
-          <Link to={Routes.Solutions}>Solutions</Link>
-        </LinkStyled>
-        <Dropdown />
-        <LinkStyled>
-          <Link to={Routes.Elements}>Elements</Link>
-        </LinkStyled>
-        <LinkStyled>
-          <Link to={Routes.Blog}>Blog</Link>
-        </LinkStyled>
-        <LinkStyled>
-          <Link to={Routes.Contacts}>Contacts</Link>
-        </LinkStyled>
-      </LinksContainer>
-      <ButtonVideo />
-    </HeaderStyled>
+    <HeaderContainer>
+      <HeaderWrapper>
+        <HeaderWrapperInner>
+          <HeaderLogo>
+            <Icon src={LogoBlue} alt="Site logo" />
+          </HeaderLogo>
+          <BurgerButton onClick={handleMenuClick}>
+            {!isMenuOpen ? (
+              <Icon src={MenuOpen} />
+            ) : (
+              <Icon src={MenuClose} />
+            )}
+          </BurgerButton>
+        </HeaderWrapperInner>
+        <Navigation menu={isMenuOpen} />
+        <HeaderWrapperButton>
+          <Button
+            size="medium"
+            btnType="square"
+            clickHandle={handleCallDemo}>
+            <Icon src={PlayIcon} alt="Play Demo" />
+            Watch the demo
+          </Button>
+        </HeaderWrapperButton>
+      </HeaderWrapper>
+      {isVideo && <DemoVideo />}
+    </HeaderContainer>
   )
 }

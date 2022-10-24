@@ -5,6 +5,12 @@ export const BenefitListItem = styled.li`
   flex-direction: column;
   padding: 25px;
   background-color: ${({ theme }) => theme.colors.white};
+  ${({ theme }) => theme.shadows.shadowCard3};
+
+  @media (max-width: 768px) {
+    width: 244px;
+    height: 248px;
+  }
 `
 
 export const BenefitItemTitle = styled.h3`

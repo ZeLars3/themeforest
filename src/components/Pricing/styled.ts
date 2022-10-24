@@ -14,6 +14,11 @@ export const PricingTitle = styled.h2`
   font-size: 38px;
   line-height: 56px;
   letter-spacing: -0.015em;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `
 
 export const PriceList = styled.ul`
@@ -23,4 +28,8 @@ export const PriceList = styled.ul`
   align-items: stretch;
   width: 100%;
   margin-top: 50px;
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
 `
