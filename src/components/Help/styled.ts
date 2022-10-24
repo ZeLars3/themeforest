@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const HelpWrapper = styled.div`
+export const HelpContainer = styled.section`
   background-color: ${({ theme }) =>
     theme.colors.background};
 `
 
-export const HelpContainer = styled.div`
+export const HelpWrapper = styled.div`
   padding: 100px 0;
   max-width: 540px;
   margin: 0 auto;
@@ -21,6 +21,14 @@ export const HelpContainer = styled.div`
     border: none;
     color: ${({ theme }) => theme.colors.white};
   }
+
+  @media (max-width: 768px) {
+    padding: 50px 16px;
+
+    button {
+      width: 100%;
+    }
+  }
 `
 
 export const HelpTitle = styled.h2`
@@ -28,6 +36,11 @@ export const HelpTitle = styled.h2`
   text-align: center;
   font-size: 38px;
   line-height: 56px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `
 
 export const HelpText = styled.p`
@@ -37,4 +50,8 @@ export const HelpText = styled.p`
   font-size: 16px;
   line-height: 28px;
   color: ${({ theme }) => theme.colors.grey};
+
+  @media (max-width: 768px) {
+    padding: 20px 0 30px 0;
+  }
 `

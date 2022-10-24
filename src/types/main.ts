@@ -23,3 +23,13 @@ export interface IPriceItem {
     features: string[]
 }
   
+export type IInitialApp = {
+    viewport: string
+}
+  
+export interface IServicesItem {
+    icon: string
+    title: string
+    text: string
+    id?: string
+}

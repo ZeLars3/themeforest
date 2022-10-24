@@ -1,10 +1,18 @@
 import { FC, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { v4 as uuidv4 } from 'uuid'
+import { useSelector } from 'react-redux'
+import {
+  NavigateFunction,
+  useNavigate,
+} from 'react-router-dom'
 
 import ArrowLeft from 'assets/icons/arrowLeft.png'
 import ArrowRight from 'assets/icons/arrowRight.png'
 import { SWIPER_CONFIG, BLOG_ITEMS } from 'constants/index'
+import { Routes } from 'enums'
+import { Button } from 'components/common'
+import { RootState } from 'store'
 
 import { BlogItem } from './BlogItem'
 import {
@@ -15,12 +23,22 @@ import {
   BlogTitle,
   BlogWrapperText,
   Icon,
-  BlogWrapper
+  BlogWrapper,
+  ButtonWrapper,
 } from './styled'
 
 export const Blog: FC = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
+  const navigate: NavigateFunction = useNavigate()
+
+  const currentViewport = useSelector<RootState, string>(
+    ({ app }) => app.viewport
+  )
+
+  const handleNavigate = (): void => {
+    navigate(Routes.Solutions)
+  }
 
   return (
     <BlogContainer>
@@ -37,7 +55,7 @@ export const Blog: FC = () => {
           </BlogController>
         </BlogWrapperText>
         <BlogList>
-          {
+          {currentViewport === 'desktop' ? (
             <Swiper
               navigation={SWIPER_CONFIG.setCustomNavigation(
                 navigationPrevRef,
@@ -70,8 +88,30 @@ export const Blog: FC = () => {
                 ),
               )}
             </Swiper>
-          }
+          ) : (
+            BLOG_ITEMS.slice(0, 3).map(
+              ({ img, date, title, text }) => (
+                <BlogItem
+                  key={uuidv4()}
+                  img={img}
+                  date={date}
+                  title={title}
+                  text={text}
+                />
+              ),
+            )
+          )}
         </BlogList>
+        {currentViewport === 'desktop' ? null : (
+          <ButtonWrapper>
+            <Button
+              size="big"
+              btnType="square"
+              clickHandle={handleNavigate}>
+              Learn more
+            </Button>
+          </ButtonWrapper>
+        )}
       </BlogWrapper>
     </BlogContainer>
   )

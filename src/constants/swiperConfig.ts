@@ -17,7 +17,7 @@ export const SWIPER_CONFIG = {
   pricingBreakPoints: {
     360: {
       slidesPerView: 1,
-      spaceBetween: -40,
+      spaceBetween: -80,
     },
     768: {
       slidesPerView: 3,
@@ -26,6 +26,20 @@ export const SWIPER_CONFIG = {
     1110: {
       slidesPerView: 4,
       spaceBetween: 20,
+    },
+  },
+  benefitsPoints: {
+    360: {
+      slidesPerView: 1,
+      spaceBetween: -40,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 0,
     },
   },
   centeredSlidesBounds: true,

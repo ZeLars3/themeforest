@@ -1,42 +1,83 @@
 import styled from 'styled-components'
 
-export const HeaderStyled = styled.header`
-  margin: 0 auto;
-  max-width: 1100px;
-  max-height: 126px;
-  padding: 40px 0px;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+export const HeaderContainer = styled.header`
   background-color: ${({ theme }) =>
     theme.colors.background};
+  padding: 40px 0;
 
-  & > * {
-    cursor: pointer;
+  @media (max-width: 768px) {
+    background-color: ${({ theme }) => theme.colors.white};
+    padding: 20px 0 0 0;
   }
 `
 
-export const LogoStyled = styled.img`
-  width: 141px;
-  height: 46px;
+export const HeaderWrapper = styled.div`
+  position: relative;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  min-width: 360px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 16px;
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media (max-width: 360px) {
+    background-color: ${({ theme }) => theme.colors.white};
+  }
 `
 
-export const LinksContainer = styled.div`
-  column-gap: 40px;
+export const HeaderWrapperInner = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-`
 
-export const LinkStyled = styled.div`
-  font-size: 14px;
-  line-height: 24px;
-
-  & > * {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.grey};
+  @media (max-width: 768px) {
+    flex-direction: row;
   }
 `
+
+export const HeaderWrapperButton = styled.div`
+  button {
+    width: 168px;
+    padding: 10px 13px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: ${({ theme }) => theme.colors.white};
+
+    img {
+      padding-right: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const HeaderLogo = styled.div`
+  img {
+    @media (max-width: 360px) {
+      width: 92px;
+      height: 30px;
+    }
+  }
+`
+
+export const BurgerButton = styled.button`
+  display: none;
+  border: none;
+  background-color: transparent;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`
+
+export const Icon = styled.img``

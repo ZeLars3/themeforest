@@ -7,13 +7,13 @@ import {
   SubscribeText,
   SubscribeTitle,
   SubscribeWrapper,
-  SubscribeWrapperInner
+  SubscribeWrapperInner,
 } from './styled'
 
 export const Subscribe: FC = () => {
   return (
-    <SubscribeWrapper>
-      <SubscribeContainer>
+    <SubscribeContainer>
+      <SubscribeWrapper>
         <SubscribeWrapperInner>
           <SubscribeTitle>
             Subscribe to our newsletter
@@ -25,7 +25,7 @@ export const Subscribe: FC = () => {
           </SubscribeText>
         </SubscribeWrapperInner>
         <SubscribeForm />
-      </SubscribeContainer>
-    </SubscribeWrapper>
+      </SubscribeWrapper>
+    </SubscribeContainer>
   )
 }
