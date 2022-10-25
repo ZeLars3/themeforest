@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 import {
   STATISTIC_AMOUNT,
-  STATISTIC_COMPANY_ICONS
+  STATISTIC_COMPANY_ICONS,
 } from 'constants/index'
 
 import {
@@ -17,7 +17,7 @@ import {
   CompanyIcon,
   ItemCount,
   ItemName,
-  StatisticWrapper
+  StatisticWrapper,
 } from './styled'
 
 export const SuccessStatistic: FC = () => {
@@ -29,12 +29,14 @@ export const SuccessStatistic: FC = () => {
         </StatisticTitle>
         <StatisticWrapperInner>
           <StatisticAmounts>
-            {STATISTIC_AMOUNT.map(({ title, count }) => (
-              <StatisticAmountItem key={uuidv4()}>
-                <ItemCount>{count}</ItemCount>
-                <ItemName>{title}</ItemName>
-              </StatisticAmountItem>
-            ))}
+            {STATISTIC_AMOUNT.slice(0, 3).map(
+              ({ title, count }) => (
+                <StatisticAmountItem key={uuidv4()}>
+                  <ItemCount>{count}</ItemCount>
+                  <ItemName>{title}</ItemName>
+                </StatisticAmountItem>
+              ),
+            )}
           </StatisticAmounts>
           <StatisticText>
             Sed ut perspiciatis unde omnis iste natus error

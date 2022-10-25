@@ -5,7 +5,7 @@ import {
   BrowserRouter,
 } from 'react-router-dom'
 
-import { Home, Services } from 'pages'
+import { AboutUs, Home, Services } from 'pages'
 import { Routes as PathRoute } from 'enums'
 
 const ContentRoutes: FC = () => (
@@ -15,6 +15,14 @@ const ContentRoutes: FC = () => (
       <Route
         path={PathRoute.Services}
         element={<Services />}
+      />
+       <Route
+        path={PathRoute.Services}
+        element={<Services />}
+      />
+       <Route
+        path={PathRoute.AboutUs}
+        element={<AboutUs />}
       />
     </Routes>
   </BrowserRouter>

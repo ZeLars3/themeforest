@@ -33,3 +33,8 @@ export interface IServicesItem {
     text: string
     id?: string
 }
+
+export interface IContactItem {
+    title: string
+    name: string
+  }

@@ -12,5 +12,9 @@ export const STATISTIC_AMOUNT: IStatisticAmount[] = [
   {
     count: '390',
     title: 'Data management',
+  },
+  {
+    count: '220',
+    title: 'Data Analytics',
   }
 ]

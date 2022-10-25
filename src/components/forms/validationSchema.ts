@@ -54,3 +54,30 @@ export const subscribeFields = [
     placeholder: 'Your email',
   },
 ]
+
+export const contactFields = [
+  {
+    label: 'Name',
+    name: 'form_name',
+    text: '',
+    placeholder: 'Andrea',
+  },
+  {
+    label: 'Email',
+    name: 'form_email',
+    text: '',
+    placeholder: 'andrea@gmaol.com',
+  },
+  {
+    label: 'Theme',
+    name: 'form_job',
+    text: '',
+    placeholder: 'Job',
+  },
+  {
+    label: 'Message',
+    name: 'form_message',
+    text: '',
+    placeholder: 'Your message',
+  },
+]
