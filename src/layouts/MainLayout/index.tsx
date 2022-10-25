@@ -14,7 +14,7 @@ export const MainLayout: FC<{
     <Container>
       <Header />
       <>{children}</>
-      <Subscribe />
+      <Subscribe background='secondary' />
       <Footer />
     </Container>
   </Layout>

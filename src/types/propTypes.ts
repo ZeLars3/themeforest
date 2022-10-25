@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react'
 
 export interface IErrorBoundary {
   children: ReactNode;
@@ -29,4 +29,21 @@ export interface INavigation {
 export interface IButtonVideo {
   handleClick(): void
 }
+
+export interface IContactForm {
+  title: string
+  titleSize: 'big' | 'small'
+}
+
+export type DefaultInput = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+export type LabelInputProps = DefaultInput & {
+  label: string,
+  onChangeText?: (e: ChangeEvent<HTMLInputElement>) => void,
+  onEnter?: () => void
+  error?: boolean
+  message?: string
+  placeholder?: string
+}
+
+
 
