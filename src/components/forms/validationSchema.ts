@@ -81,3 +81,26 @@ export const contactFields = [
     placeholder: 'Your message',
   },
 ]
+
+export const helpFields = [
+  {
+    name: 'help_email',
+    text: '',
+    placeholder: 'Your email',
+  },
+  {
+    name: 'help_name',
+    text: '',
+    placeholder: 'Your name',
+  },
+  {
+    name: 'help_job',
+    text: '',
+    placeholder: 'Theme',
+  },
+  {
+    name: 'help_message',
+    text: '',
+    placeholder: 'Your message',
+  },
+]

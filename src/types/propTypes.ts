@@ -1,4 +1,4 @@
-import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react'
+import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react'
 
 export interface IErrorBoundary {
   children: ReactNode;
@@ -43,6 +43,16 @@ export type LabelInputProps = DefaultInput & {
   error?: boolean
   message?: string
   placeholder?: string
+}
+
+export type TextareaTextProps = DefaultInput & {
+  onChangeText?: (e: ChangeEvent<HTMLInputElement>) => void,
+  onEnter?: () => void,
+  error?: boolean,
+  message?: string,
+  placeholder?: string,
+  bgColor?: 'white' | 'blue',
+  border?: boolean,
 }
 
 
