@@ -53,7 +53,6 @@ export const ContactForm: FC<IContactForm> = ({ title, titleSize }) => {
       <FormLegend titleSize={titleSize}>{title}</FormLegend>
       <form ref={contactFormRef} onSubmit={formik.handleSubmit}>
         {contactFields.map(({ label, name, placeholder }) => (
-          console.log(name),
           <LabelInput
             key={name}
             name={name}

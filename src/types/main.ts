@@ -37,4 +37,10 @@ export interface IServicesItem {
 export interface IContactItem {
     title: string
     name: string
-  }
+    icon?: string
+}
+
+export interface IMapMarker {
+    position: number[]
+    street: string
+}
