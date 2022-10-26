@@ -7,5 +7,5 @@ export enum Routes {
     Services = '/services',
     AboutUs = '/about-us',
     OurTeam = '/our-team',
-    FAQs = 'faqs'
+    FAQs = '/faqs'
 }

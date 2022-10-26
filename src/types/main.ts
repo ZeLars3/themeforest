@@ -44,3 +44,8 @@ export interface IMapMarker {
     position: number[]
     street: string
 }
+
+export interface IFAQsItem {
+    title: string
+    text: string
+}
