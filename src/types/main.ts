@@ -49,3 +49,20 @@ export interface IFAQsItem {
     title: string
     text: string
 }
+
+interface IProfileSocialItem {
+    name: string
+    path: string
+  }
+
+export interface ITeamItem {
+    name: string
+    position: string
+    socials: IProfileSocialItem[]
+    avatar: string
+    isMargin?: boolean
+    id?: string
+    mail?: string
+    description?: string
+  }
+  

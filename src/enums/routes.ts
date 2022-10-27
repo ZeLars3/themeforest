@@ -7,5 +7,6 @@ export enum Routes {
     Services = '/services',
     AboutUs = '/about-us',
     OurTeam = '/our-team',
+    OurTeamSingle = '/our-team/:id',
     FAQs = '/faqs'
 }
