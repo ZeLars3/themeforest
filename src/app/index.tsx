@@ -6,9 +6,9 @@ import {
   SetStateAction,
 } from 'react'
 
-import ContentRoutes from 'components/common/Routes'
 import { appActions } from 'store/slices'
 import { useActions } from 'hooks'
+import { MainLayout } from 'layouts/MainLayout'
 
 const App: FC = () => {
   const [width, setWidth] = useState<number>(
@@ -43,7 +43,7 @@ const App: FC = () => {
       )
   }, [width])
 
-  return <ContentRoutes />
+  return <MainLayout />
 }
 
 export default App
