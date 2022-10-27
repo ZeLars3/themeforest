@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-import { MainLayout } from 'layouts/MainLayout'
 import {
   AboutUsContact,
   AboutUsCustomers,
@@ -14,15 +13,13 @@ import {
 export const AboutUs: FC = () => {
   return (
     <>
-      <MainLayout>
-        <AboutUsHead />
-        <AboutUsInfo />
-        <AboutUsStatistic />
-        <AboutUsCustomers />
-        <AboutUsSay />
-        <AboutUsContact />
-        <Subscribe background="primary" />
-      </MainLayout>
+      <AboutUsHead />
+      <AboutUsInfo />
+      <AboutUsStatistic />
+      <AboutUsCustomers />
+      <AboutUsSay />
+      <AboutUsContact />
+      <Subscribe background="primary" />
     </>
   )
 }

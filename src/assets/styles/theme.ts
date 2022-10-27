@@ -6,7 +6,7 @@ const shadows = {
   shadowCard2:
     'box-shadow: 0 1.2rem 3rem 1.7rem rgba(24, 92, 255, 0.04);',
   shadowCard3:
-    'box-shadow: 0 0.4rem 1.2rem rgba(12, 68, 204, 0.1);',
+    'box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);',
   shadowDropdown:
     'box-shadow: 0 0.2rem 0.6rem rgba(0, 43, 78, 0.15), 0 0.1rem 0.2rem rgba(0, 43, 78, 0.3);'
 }

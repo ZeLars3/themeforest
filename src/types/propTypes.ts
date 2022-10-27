@@ -55,5 +55,10 @@ export type TextareaTextProps = DefaultInput & {
   border?: boolean,
 }
 
+export interface ISolutionItem {
+  title: string
+  text: string
+}
+
 
 

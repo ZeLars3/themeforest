@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-import { MainLayout } from 'layouts/MainLayout'
 import {
   Help,
   Business,
@@ -10,23 +9,21 @@ import {
   BasicInfo,
   Testimonials,
   Blog,
-  Pricing
+  Pricing,
 } from 'components'
 
 export const Home: FC = () => {
   return (
     <>
-      <MainLayout>
-        <BasicInfo />
-        <Business />
-        <NewSolutions />
-        <SuccessStatistic />
-        <Benefits />
-        <Testimonials />
-        <Pricing /> 
-        <Blog /> 
-        <Help /> 
-      </MainLayout>
+      <BasicInfo />
+      <Business />
+      <NewSolutions />
+      <SuccessStatistic />
+      <Benefits />
+      <Testimonials />
+      <Pricing />
+      <Blog />
+      <Help />
     </>
   )
 }
