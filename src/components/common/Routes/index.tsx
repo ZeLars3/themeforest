@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Routes, Route } from 'react-router-dom'
+
 import {
   AboutUs,
   Contacts,
@@ -11,6 +12,7 @@ import {
 } from 'pages'
 import { Routes as PathRoute } from 'enums'
 import { OurTeamSingle } from 'components'
+import { SolutionSingle } from 'pages/Solutions/SolutionSingle'
 
 const ContentRoutes: FC = () => (
   <Routes>
@@ -37,6 +39,10 @@ const ContentRoutes: FC = () => (
     <Route
       path={PathRoute.Solutions}
       element={<Solutions />}
+    />
+    <Route
+      path={PathRoute.SolutionSingle}
+      element={<SolutionSingle />}
     />
   </Routes>
 )

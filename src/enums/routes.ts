@@ -8,5 +8,6 @@ export enum Routes {
     AboutUs = '/about-us',
     OurTeam = '/our-team',
     OurTeamSingle = '/our-team/:id',
-    FAQs = '/faqs'
+    FAQs = '/faqs',
+    SolutionSingle = '/solution/:id',
 }
