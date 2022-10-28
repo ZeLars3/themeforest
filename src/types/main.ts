@@ -34,6 +34,23 @@ export interface IServicesItem {
     id?: string
 }
 
+export interface ISolutionSingleArticle {
+    defenition: string
+    description: string
+}
+  
+export type ISolutionSingleItem = {
+    id: string
+    name: string
+    text: string
+    refs?: any
+    activeCategory?: any
+    setActiveCategory?: any
+    pageHeight?: number
+    img?: string
+    list?: ISolutionSingleArticle[]
+}
+
 export interface IContactItem {
     title: string
     name: string

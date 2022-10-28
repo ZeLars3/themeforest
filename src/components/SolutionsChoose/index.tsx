@@ -29,7 +29,7 @@ export const SolutionsChoose: FC = () => {
             Why choose us?
           </SolutionsChooseTitle>
           <SolutionsChooseList>
-            {SOLUTION_ITEMS.slice(1, 3).map(
+            {SOLUTION_ITEMS.slice(1, 4).map(
               ({ title, text, id }) => (
                 <SolutionsChooseItem
                   key={id}
