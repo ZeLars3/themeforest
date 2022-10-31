@@ -1,21 +1,18 @@
-import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react'
+import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react'
 
 export interface IErrorBoundary {
-  children: ReactNode;
-}
-
-export interface IMainLayout {
-  children?: ReactNode;
+  children: ReactNode
 }
 
 export interface ITestimonialItem {
-  name: string;
-  position: string;
-  avatar: string;
-  text: string;
+  name: string
+  position: string
+  avatar: string
+  text: string
 }
 
 export interface IBlogItem {
+  id: string | number
   img: string
   date: string
   title: string
@@ -36,21 +33,13 @@ export interface IContactForm {
 }
 
 export type DefaultInput = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-export type LabelInputProps = DefaultInput & {
-  label: string,
-  onChangeText?: (e: ChangeEvent<HTMLInputElement>) => void,
+export type FieldsProps = DefaultInput & {
+  label?: string
+  onChangeText?: (e: ChangeEvent<HTMLInputElement>) => void
   onEnter?: () => void
   error?: boolean
   message?: string
   placeholder?: string
-}
-
-export type TextareaTextProps = DefaultInput & {
-  onChangeText?: (e: ChangeEvent<HTMLInputElement>) => void,
-  onEnter?: () => void,
-  error?: boolean,
-  message?: string,
-  placeholder?: string,
   bgColor?: 'white' | 'blue',
   border?: boolean,
 }
@@ -60,5 +49,9 @@ export interface ISolutionItem {
   text: string
 }
 
-
+export interface ICardModal {
+  children: ReactNode
+  open: boolean
+  onClose(): void
+}
 

@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+import { FC, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -17,6 +17,8 @@ import {
   PricingTitle,
   PricingWrapper,
 } from './styled'
+
+SwiperCore.use([Navigation])
 
 export const Pricing: FC = () => {
   return (
@@ -36,9 +38,9 @@ export const Pricing: FC = () => {
             style={SWIPER_CONFIG.priceSliderStyles}>
             {PRICING_ITEMS.map(
               ({ id, title, price, features }) => (
-                <SwiperSlide key={uuidv4()}>
+                <SwiperSlide key={id}>
                   <PriceItem
-                    key={uuidv4()}
+                    key={id}
                     id={id}
                     title={title}
                     price={price}

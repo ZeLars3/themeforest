@@ -5,12 +5,13 @@ import { RootState } from 'store'
 import { NAV_ITEMS } from 'constants/navItems'
 import { INavigation } from 'types'
 
+import { SocialLinks } from '../SocialLinks'
+import { Dropdown } from '../Dropdown'
 import {
   NavigationContainer,
   NavigationList,
-  NavigationListItem
+  NavigationListItem,
 } from './styles'
-import { SocialLinks } from '../SocialLinks'
 
 export const Navigation: FC<INavigation> = ({ menu }) => {
   const currentViewport: string = useSelector<RootState, string>(
@@ -21,13 +22,17 @@ export const Navigation: FC<INavigation> = ({ menu }) => {
     <NavigationContainer>
       {menu && (
         <NavigationList>
-          {NAV_ITEMS.map(({ id, name, path }) => {
-            return (
-              <NavigationListItem to={path} key={id}>
-                {name}
-              </NavigationListItem>
-            )
-          })}
+          {NAV_ITEMS.slice(0, 2).map(({ id, name, path }) => (
+            <NavigationListItem to={path} key={id}>
+              {name}
+            </NavigationListItem>
+          ))}
+          <Dropdown />
+          {NAV_ITEMS.slice(2).map(({ id, name, path }) => (
+            <NavigationListItem to={path} key={id}>
+              {name}
+            </NavigationListItem>
+          ))}
         </NavigationList>
       )}
       {currentViewport === 'tablet' && menu && (

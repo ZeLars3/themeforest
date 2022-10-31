@@ -2,7 +2,7 @@ import { Component } from 'react'
 
 import { IErrorBoundary, IErrorBoundaryState } from 'types'
 
-class ErrorBoundary extends Component<
+export class ErrorBoundary extends Component<
   IErrorBoundary,
   IErrorBoundaryState
 > {
@@ -34,4 +34,3 @@ class ErrorBoundary extends Component<
   }
 }
 
-export default ErrorBoundary

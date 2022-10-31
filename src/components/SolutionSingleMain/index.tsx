@@ -1,8 +1,4 @@
-import {
-  createRef,
-  FC,
-  useState,
-} from 'react'
+import { createRef, FC, useState } from 'react'
 
 import { useReadingProgress } from 'hooks'
 import { SOLUTION_SINGLE_ITEMS } from 'constants/index'
@@ -34,8 +30,6 @@ export const SolutionSingleMain: FC = () => {
       block: 'center',
     })
   }
-
-
 
   return (
     <SolutionSingleMainWrapper>

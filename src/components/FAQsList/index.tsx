@@ -13,15 +13,14 @@ export const FAQsList: FC = () => {
   return (
     <FAQsListContainer>
       <FAQsListWrapper>
-        {FAQ_ITEMS.map(({ title, text }) => {
-          return (
-            <FAQsItem
-              key={uuidv4()}
-              title={title}
-              text={text}
-            />
-          )
-        })}
+        {FAQ_ITEMS.map(({ title, text, id }) => (
+          <FAQsItem
+            key={id}
+            id={id}
+            title={title}
+            text={text}
+          />
+        ))}
       </FAQsListWrapper>
     </FAQsListContainer>
   )

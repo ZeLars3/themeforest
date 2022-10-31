@@ -28,6 +28,10 @@ export const NavigationListItem = styled(NavLink)`
   align-items: center;
   padding: 0 15px;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.grey};
 
   &:hover {

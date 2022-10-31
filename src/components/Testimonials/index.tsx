@@ -10,7 +10,7 @@ import ArrowLeft from 'assets/icons/arrowLeft.png'
 import ArrowRight from 'assets/icons/arrowRight.png'
 import {
   SWIPER_CONFIG,
-  TESTIMONIAL_ITEMS
+  TESTIMONIAL_ITEMS,
 } from 'constants/index'
 
 import {
@@ -20,14 +20,14 @@ import {
   TestimonialsList,
   TestimonialsTitle,
   TestimonialsWrapper,
-  Icon
+  Icon,
 } from './styled'
 import { TestimonialItem } from './TestimonialItem'
 
 SwiperCore.use([Navigation])
 
 export const Testimonials: FC = () => {
-  const navigationPrevRef = useRef <HTMLButtonElement>(null)
+  const navigationPrevRef = useRef<HTMLButtonElement>(null)
   const navigationNextRef = useRef<HTMLButtonElement>(null)
 
   return (
@@ -49,7 +49,7 @@ export const Testimonials: FC = () => {
         <Swiper
           navigation={SWIPER_CONFIG.setCustomNavigation(
             navigationPrevRef,
-            navigationNextRef
+            navigationNextRef,
           )}
           onBeforeInit={(swiper: any) => {
             swiper.params.navigation.prevEl =
@@ -75,7 +75,7 @@ export const Testimonials: FC = () => {
                   text={text}
                 />
               </SwiperSlide>
-            )
+            ),
           )}
         </Swiper>
       </TestimonialsList>

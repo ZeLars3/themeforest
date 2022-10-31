@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const AboutUsInfoContainer = styled.section`
-  background: ${({ theme }) => theme.colors.white};
   padding: 120px 0;
 
   @media (max-width: 768px) {

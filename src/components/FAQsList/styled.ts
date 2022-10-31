@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const FAQsListContainer = styled.div`
-  background: ${({ theme }) => theme.colors.white};
   padding: 0 0 120px 0;
 
   @media (max-width: 768px) {

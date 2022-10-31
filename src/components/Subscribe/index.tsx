@@ -10,7 +10,9 @@ import {
   SubscribeWrapperInner,
 } from './styled'
 
-export const Subscribe: FC<{background: 'primary' | 'secondary'}> = ({ background }) => {
+export const Subscribe: FC<{
+  background: 'primary' | 'secondary',
+}> = ({ background }) => {
   return (
     <SubscribeContainer background={background}>
       <SubscribeWrapper>

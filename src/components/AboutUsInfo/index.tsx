@@ -35,10 +35,16 @@ export const AboutUsInfo: FC = () => {
               consequat et dolor vel, cursus lacinia lectus.
             </AboutUsInfoText>
           </AboutUsInfoWrapperText>
-          <AboutUsInfoImg src={Team} alt='Our team people'/>
+          <AboutUsInfoImg
+            src={Team}
+            alt="Our team"
+          />
         </AboutUsInfoItem>
         <AboutUsInfoItem>
-          <AboutUsInfoImg src={TeamMission} alt='Our team people' />
+          <AboutUsInfoImg
+            src={TeamMission}
+            alt="Our team"
+          />
           <AboutUsInfoWrapperText>
             <AboutUsInfoTitle>Our mission</AboutUsInfoTitle>
             <AboutUsInfoText>

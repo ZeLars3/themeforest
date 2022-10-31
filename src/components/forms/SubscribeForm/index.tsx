@@ -9,7 +9,7 @@ import { RootState } from 'store'
 import { sendEmailSchema, subscribeFields } from '../validationSchema'
 import { Form, SubscribeFormContainer } from './styled'
 
-init('j-PjuD4i90vcyH5lb')
+init(process.env.REACT_APP_PUBLIC_KEY as string)
 
 export const SubscribeForm: FC = () => {
   const [_, setMessage] = useState<string>('')
@@ -30,9 +30,9 @@ export const SubscribeForm: FC = () => {
     validationSchema: sendEmailSchema,
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: () => {
-      alert('You are successfuly subscribe')
-    }
+    onSubmit: (values, {resetForm}) => {
+      resetForm()
+    },
   })
 
   const sendEmail = (event: FormEvent<HTMLFormElement>): void => {
@@ -42,7 +42,7 @@ export const SubscribeForm: FC = () => {
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID as string,
-        process.env.REACT_APP_TEMPLATE_ID as string,
+        'template_98jhgo7',
         subscribeRef.current as HTMLFormElement,
         process.env.REACT_APP_PUBLIC_KEY as string,
       )
@@ -74,7 +74,6 @@ export const SubscribeForm: FC = () => {
           type='submit'
           btnType='square'
           isDisable={disabled}
-          contentPosition='center'
         >
           {currentViewport === 'desktop' ? 'Send' : 'Subscribe'}
         </Button>

@@ -10,7 +10,6 @@ export const Button: FC<ButtonPropsType> = ({
   isDisable,
   inversion,
   children,
-  contentPosition
 }) => {
   return (
     <ButtonContainer
@@ -18,8 +17,7 @@ export const Button: FC<ButtonPropsType> = ({
       size={size}
       isDisable={isDisable}
       inversion={inversion}
-      onClick={clickHandle}
-      contentPosition={contentPosition}>
+      onClick={clickHandle}>
       {children}
     </ButtonContainer>
   )

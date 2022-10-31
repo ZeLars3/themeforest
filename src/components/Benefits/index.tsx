@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 import { useSelector } from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -7,6 +6,7 @@ import {
   BENEFIT_ITEMS,
   SWIPER_CONFIG,
 } from 'constants/index'
+import { RootState } from 'store'
 
 import { BenefitItem } from './BenefitItem'
 import {
@@ -18,7 +18,6 @@ import {
   GroupWrapper,
   TextWrapper,
 } from './styled'
-import { RootState } from 'store'
 
 export const Benefits: FC = () => {
   const currentViewport = useSelector<RootState, string>(
@@ -45,9 +44,10 @@ export const Benefits: FC = () => {
             <>
               <GroupWrapper>
                 {BENEFIT_ITEMS.slice(0, 2).map(
-                  ({ title, text, icon }) => (
+                  ({ title, text, icon, id }) => (
                     <BenefitItem
-                      key={uuidv4()}
+                      key={id}
+                      id={id}
                       title={title}
                       text={text}
                       icon={icon}
@@ -57,9 +57,10 @@ export const Benefits: FC = () => {
               </GroupWrapper>
               <GroupWrapper>
                 {BENEFIT_ITEMS.slice(2, 4).map(
-                  ({ title, text, icon }) => (
+                  ({ title, text, icon, id }) => (
                     <BenefitItem
-                      key={uuidv4()}
+                      key={id}
+                      id={id}
                       title={title}
                       text={text}
                       icon={icon}
@@ -79,10 +80,11 @@ export const Benefits: FC = () => {
               scrollbar={SWIPER_CONFIG.scrollbar}
               modules={SWIPER_CONFIG.modules}>
               {BENEFIT_ITEMS.map(
-                ({ title, text, icon }) => (
-                  <SwiperSlide key={uuidv4()}>
+                ({ title, text, icon, id }) => (
+                  <SwiperSlide key={id}>
                     <BenefitItem
-                      key={uuidv4()}
+                      key={id}
+                      id={id}
                       title={title}
                       text={text}
                       icon={icon}

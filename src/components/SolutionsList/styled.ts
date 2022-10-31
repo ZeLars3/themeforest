@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const SolutionsListContainer = styled.section`
-  background${({ theme }) => theme.shadows.shadowCard3};
-`
+export const SolutionsListContainer = styled.section``
 
 export const SolutionsListWrapper = styled.ul`
   display: grid;

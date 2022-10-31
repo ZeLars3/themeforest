@@ -16,11 +16,6 @@ export const ContactHelpContainer = styled.div`
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
-    color: ${({ theme }) => theme.colors.white};
-
-    &:hover {
-      background: ${({ theme }) => theme.colors.hover};
-    }
 
     @media (max-width: 768px) {
       width: 100%;

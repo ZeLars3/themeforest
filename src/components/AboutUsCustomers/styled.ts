@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const AboutUsCustomersContainer = styled.section`
   padding: 120px 0;
-  background: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     padding: 50px 0;

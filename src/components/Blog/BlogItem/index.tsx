@@ -3,7 +3,6 @@ import {
   NavigateFunction,
   useNavigate,
 } from 'react-router-dom'
-import { v4 as uuidv4 } from 'uuid'
 
 import ArrowRightSmall from 'assets/icons/arrowRightSmall.png'
 import { IBlogItem } from 'types'
@@ -16,7 +15,7 @@ import {
   BlogItemTitle,
   BlogItemWrapper,
   Button,
-  Icon
+  Icon,
 } from './styled'
 import { Routes } from 'enums'
 
@@ -25,11 +24,12 @@ export const BlogItem: FC<IBlogItem> = ({
   date,
   title,
   text,
+  id,
 }) => {
   const navigate: NavigateFunction = useNavigate()
 
   const handleNavigate = (): void => {
-    navigate(`${Routes.Blog}/${uuidv4()}`)
+    navigate(`${Routes.Blog}/id=${id}`)
   }
 
   return (
@@ -41,7 +41,7 @@ export const BlogItem: FC<IBlogItem> = ({
         <BlogItemText>{text}</BlogItemText>
         <Button onClick={handleNavigate}>
           Read more <Icon src={ArrowRightSmall} />
-          </Button>
+        </Button>
       </BlogItemWrapper>
     </BlogItemContainer>
   )

@@ -12,14 +12,12 @@ import {
 export const AboutUsContactItem: FC = () => {
   return (
     <>
-      {CONTACT_ITEMS.map(({ name, title }) => {
-        return (
-          <ContactsInfoItem key={uuidv4()}>
-            <InfoTitle>{name}</InfoTitle>
-            <InfoSubtitle>{title}</InfoSubtitle>
-          </ContactsInfoItem>
-        )
-      })}
+      {CONTACT_ITEMS.map(({ name, title }) => (
+        <ContactsInfoItem key={uuidv4()}>
+          <InfoTitle>{name}</InfoTitle>
+          <InfoSubtitle>{title}</InfoSubtitle>
+        </ContactsInfoItem>
+      ))}
     </>
   )
 }

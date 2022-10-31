@@ -1,4 +1,5 @@
-import { FC, useId } from 'react'
+import { FC } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 import { STATISTIC_AMOUNT } from 'constants/statisticAmount'
 
@@ -21,7 +22,7 @@ export const AboutUsStatistic: FC = () => {
         </AboutUsStatisticTitle>
         <AboutUsStatisticList>
           {STATISTIC_AMOUNT.map(({ title, count }) => (
-            <AboutUsStatisticItem key={useId()}>
+            <AboutUsStatisticItem key={uuidv4()}>
               <ItemCount>{count}</ItemCount>
               <ItemName>{title}</ItemName>
             </AboutUsStatisticItem>

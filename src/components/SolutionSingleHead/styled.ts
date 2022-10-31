@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const SolutionSingleHeadContainer = styled.section`
-  background: ${({ theme }) => theme.colors.background};
   padding: 60px 0 160px 0;
+  background: ${({ theme }) => theme.colors.background};
 
   @media (max-width: 768px) {
     padding: 35px 0 60px 0;

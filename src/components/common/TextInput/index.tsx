@@ -1,13 +1,14 @@
 import { FC, ChangeEvent } from 'react'
 
+import { FieldsProps } from 'types'
+
 import {
   TextInputContainer,
   TextInputField,
   TextInputMessage,
 } from './styled'
-import { InputTextPropsType } from './types'
 
-export const TextInput: FC<InputTextPropsType> = ({
+export const TextInput: FC<FieldsProps> = ({
   onChangeText,
   error,
   placeholder,

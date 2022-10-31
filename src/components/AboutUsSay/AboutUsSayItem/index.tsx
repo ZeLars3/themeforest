@@ -1,6 +1,6 @@
-import { Routes } from 'enums'
 import { FC } from 'react'
 
+import { Routes } from 'enums'
 import { ITestimonialItem } from 'types'
 
 import {

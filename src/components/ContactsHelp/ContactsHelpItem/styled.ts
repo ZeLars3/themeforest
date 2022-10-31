@@ -33,3 +33,5 @@ export const Icon = styled.img`
   margin-right: 14.5px;
   fill: ${({ theme }) => theme.colors.black};
 `
+
+export const TitleText = styled.span``

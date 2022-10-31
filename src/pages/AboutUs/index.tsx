@@ -10,7 +10,7 @@ import {
   Subscribe,
 } from 'components'
 
-export const AboutUs: FC = () => {
+const AboutUs: FC = () => {
   return (
     <>
       <AboutUsHead />
@@ -23,3 +23,5 @@ export const AboutUs: FC = () => {
     </>
   )
 }
+
+export default AboutUs

@@ -9,7 +9,7 @@ export const FOOTER_LINKS: ILinkItem[] = [
   { name: 'Our Team', route: Routes.OurTeam },
   { name: 'About Us', route: Routes.AboutUs },
   { name: 'Services', route: Routes.Services },
-  { name: 'FAQs', route: Routes.FAQs }
+  { name: 'FAQs', route: Routes.FAQs },
 ]
 
 export const FOOTER_SERVICES: ILinkItem[] = [
@@ -17,5 +17,14 @@ export const FOOTER_SERVICES: ILinkItem[] = [
   { name: 'Elements', route: Routes.Elements },
   { name: 'FAQ', route: Routes.FAQs },
   { name: 'Pricing', route: Routes.Home },
-  { name: 'Site map', route: Routes.Home }
+  { name: 'Site map', route: Routes.Home },
+]
+
+export const FOOTER_CONTACTS: ILinkItem[] = [
+  { name: 'ensome@info.co.us', route: Routes.Home },
+  { name: '+1 601-201-5580', route: Routes.Elements },
+  {
+    name: '1642 Washington Avenue, Jackson, MS,Mississippi, 39201',
+    route: Routes.FAQs,
+  },
 ]

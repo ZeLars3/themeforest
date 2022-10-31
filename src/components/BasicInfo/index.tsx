@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import {
   NavigateFunction,
-  useNavigate
+  useNavigate,
 } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+import { Routes } from 'enums'
 import InfoBig from 'assets/img/infoBig.jpg'
 import InfoSmall from 'assets/img/infoSmall.jpg'
-import { Routes } from 'enums'
 
 import {
   Img,
@@ -18,7 +18,7 @@ import {
   BasicInfoText,
   BasicInfoTitle,
   BasicInfoWrapperText,
-  BasicInfoContainer
+  BasicInfoContainer,
 } from './styled'
 import { RootState } from 'store'
 
@@ -37,12 +37,16 @@ export const BasicInfo: FC = () => {
     <BasicInfoContainer>
       <BasicInfoWrapper>
         <BasicInfoTitle>
-          Find true power in your data with <ColorTitle>Ensome</ColorTitle>
+          Find true power in your data with{' '}
+          <ColorTitle>Ensome</ColorTitle>
         </BasicInfoTitle>
         <BasicInfoWrapperText>
           <BasicInfoText>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae
+            ab illo inventore veritatis et quasi architecto
+            beatae vitae dicta sunt explicabo.
           </BasicInfoText>
           <BasicInfoButton onClick={handleNavigate}>
             Learn more
@@ -50,7 +54,13 @@ export const BasicInfo: FC = () => {
         </BasicInfoWrapperText>
       </BasicInfoWrapper>
       <BasicInfoImgWrapper>
-        <Img src={currentViewport === 'desktop' ? InfoBig : InfoSmall} />
+        <Img
+          src={
+            currentViewport === 'desktop'
+              ? InfoBig
+              : InfoSmall
+          }
+        />
       </BasicInfoImgWrapper>
     </BasicInfoContainer>
   )

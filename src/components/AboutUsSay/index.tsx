@@ -42,7 +42,6 @@ export const AboutUsSay: FC = () => {
         {currentViewport === 'desktop' ? (
           <AboutUsSayController>
             <AboutUsSayButton
-              disabled={true}
               ref={navigationPrevRef}>
               <Icon src={ArrowLeft} />
             </AboutUsSayButton>

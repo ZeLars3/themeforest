@@ -10,14 +10,14 @@ import {
   TestimonialItemPosition,
   TestimonialItemText,
   TestimonialItemWrapper,
-  Icon
+  Icon,
 } from './styled'
 
 export const TestimonialItem: FC<ITestimonialItem> = ({
   name,
   position,
   avatar,
-  text
+  text,
 }) => {
   return (
     <TestimonialItemContainer>

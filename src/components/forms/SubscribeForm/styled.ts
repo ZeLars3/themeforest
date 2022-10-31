@@ -41,10 +41,6 @@ export const SubscribeFormContainer = styled.div`
     line-height: 24px;
     letter-spacing: -0.015em;
 
-    &:hover {
-      color: ${({ theme }) => theme.colors.hover};
-    }
-
     @media (max-width: 768px) {
       width: 100%;
       margin-left: 0;

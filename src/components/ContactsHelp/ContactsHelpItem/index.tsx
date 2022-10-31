@@ -8,6 +8,7 @@ import {
   ContactsHelpText,
   ContactsHelpTitle,
   Icon,
+  TitleText,
 } from './styled'
 
 export const ContactsHelpItem: FC = () => {
@@ -17,11 +18,9 @@ export const ContactsHelpItem: FC = () => {
         <ContactsInfoItem key={uuidv4()}>
           <ContactsHelpTitle>
             <Icon src={icon} />
-            <span>{name}</span>
+            <TitleText>{name}</TitleText>
           </ContactsHelpTitle>
-          <ContactsHelpText>
-            {title}
-          </ContactsHelpText>
+          <ContactsHelpText>{title}</ContactsHelpText>
         </ContactsInfoItem>
       ))}
     </>

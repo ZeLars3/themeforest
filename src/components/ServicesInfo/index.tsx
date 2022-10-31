@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 import { SERVICES_ITEMS } from 'constants/index'
 
@@ -34,7 +33,7 @@ export const ServicesInfo: FC = () => {
           {SERVICES_ITEMS.map(
             ({ id, title, text, icon }) => (
               <ServicesItem
-                key={uuidv4()}
+                key={id}
                 id={id}
                 icon={icon}
                 title={title}

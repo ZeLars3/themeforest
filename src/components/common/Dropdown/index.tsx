@@ -1,16 +1,19 @@
-import { useNavigate } from 'react-router-dom'
+import {
+  NavigateFunction,
+  useNavigate,
+} from 'react-router-dom'
 import { ChangeEventHandler, FC } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 import { HEADER_DROPDOWN_ITEMS } from 'constants/headerDropdown'
 
-import { DropdownSelect, OptionStyled } from './styled'
+import { DropdownSelect, DropdownOption } from './styled'
 
 export const Dropdown: FC = () => {
-  const navigate = useNavigate()
+  const navigate: NavigateFunction = useNavigate()
 
   const handleNavigate: ChangeEventHandler<
-  HTMLSelectElement
+    HTMLSelectElement
   > = event => {
     navigate(event.target.value)
   }
@@ -19,13 +22,13 @@ export const Dropdown: FC = () => {
     <DropdownSelect
       defaultValue="Pages"
       onChange={handleNavigate}>
-      <OptionStyled hidden disabled value="Pages">
+      <DropdownOption hidden disabled value="Pages">
         Pages
-      </OptionStyled>
+      </DropdownOption>
       {HEADER_DROPDOWN_ITEMS.map(({ route, name }) => (
-        <OptionStyled key={uuidv4()} value={route}>
+        <DropdownOption key={uuidv4()} value={route}>
           {name}
-        </OptionStyled>
+        </DropdownOption>
       ))}
     </DropdownSelect>
   )

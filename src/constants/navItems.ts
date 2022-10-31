@@ -7,6 +7,11 @@ export const NAV_ITEMS = [
     path: Routes.Home,
   },
   {
+    id: 'solutions',
+    name: 'Solutions',
+    path: Routes.Solutions,
+  },
+  {
     id: 'aboutUs',
     name: 'About Us',
     path: Routes.AboutUs,
@@ -20,25 +25,5 @@ export const NAV_ITEMS = [
     id: 'contacts',
     name: 'Contacts',
     path: Routes.Contacts,
-  },
-  {
-    id: 'faq',
-    name: 'FAQ',
-    path: Routes.FAQs,
-  },
-  {
-    id: 'team',
-    name: 'Team',
-    path: Routes.OurTeam,
-  },
-  {
-    id: 'service',
-    name: 'Service',
-    path: Routes.Services,
-  },
-  {
-    id: 'solutions',
-    name: 'Solutions',
-    path: Routes.Solutions,
   },
 ]

@@ -5,9 +5,11 @@ export const DropdownSelect = styled.select`
   background: none;
   cursor: pointer;
   text-align: center;
+  font-weight: 500;
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.grey};
 `
 
-export const OptionStyled = styled.option``
+export const DropdownOption = styled.option``
