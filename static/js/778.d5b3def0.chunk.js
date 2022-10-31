@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[778],{4778:function(e,s,t){t.r(s);var n=t(6303),r=t(184);s.default=function(){return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(n.vf,{}),(0,r.jsx)(n.mv,{}),(0,r.jsx)(n.Px,{}),(0,r.jsx)(n.Hl,{}),(0,r.jsx)(n.WW,{})]})}}}]);
+//# sourceMappingURL=778.d5b3def0.chunk.js.map
