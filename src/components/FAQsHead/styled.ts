@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const FAQsHeadContainer = styled.section`
   padding-bottom: 120px;
-  background: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     padding-bottom: 50px;

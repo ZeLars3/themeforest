@@ -8,9 +8,9 @@ import {
 
 import { appActions } from 'store/slices'
 import { useActions } from 'hooks'
-import { MainLayout } from 'layouts/MainLayout'
+import { MainLayout } from 'layouts'
 
-const App: FC = () => {
+export const App: FC = () => {
   const [width, setWidth] = useState<number>(
     () => document.documentElement.clientWidth
   )
@@ -45,5 +45,3 @@ const App: FC = () => {
 
   return <MainLayout />
 }
-
-export default App

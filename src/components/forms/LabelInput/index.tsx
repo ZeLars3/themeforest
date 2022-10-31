@@ -1,7 +1,7 @@
 import { FC, ChangeEvent } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { LabelInputProps } from 'types'
+import { FieldsProps } from 'types'
 
 import {
   FieldLabel,
@@ -10,7 +10,7 @@ import {
   FieldMessage,
 } from './styled'
 
-export const LabelInput: FC<LabelInputProps> = ({
+export const LabelInput: FC<FieldsProps> = ({
   label,
   onChangeText,
   error,

@@ -9,5 +9,6 @@ export enum Routes {
     OurTeam = '/our-team',
     OurTeamSingle = '/our-team/:id',
     FAQs = '/faqs',
-    SolutionSingle = '/solution/:id',
+    SolutionSingle = '/solutions/:id',
+    ServiceSingle = '/services/:id'
 }

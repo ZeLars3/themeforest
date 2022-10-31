@@ -1,11 +1,11 @@
 import { memo, FC, ChangeEvent } from 'react'
 
-import { TextareaTextProps } from 'types'
+import { FieldsProps } from 'types'
 
 import { FieldMessage } from '../LabelInput/styled'
 import { TextareaField } from './styled'
 
-export const Textarea: FC<TextareaTextProps> = ({
+export const Textarea: FC<FieldsProps> = ({
   onChangeText,
   error,
   placeholder,

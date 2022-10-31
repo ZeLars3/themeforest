@@ -11,7 +11,10 @@ import {
   Icon,
 } from './styled'
 
-export const FAQsItem: FC<IFAQsItem> = ({ title, text }) => {
+export const FAQsItem: FC<IFAQsItem> = ({
+  title,
+  text,
+}) => {
   const [isShow, setIsShow] = useState<boolean>(false)
 
   const handleClickItem = (): void => {
@@ -24,7 +27,9 @@ export const FAQsItem: FC<IFAQsItem> = ({ title, text }) => {
         {title}
         <Icon src={isShow ? Minus : Plus} />
       </FAQsItemTitle>
-      {isShow && <FAQsItemSubtitle>{text}</FAQsItemSubtitle>}
+      {isShow && (
+        <FAQsItemSubtitle>{text}</FAQsItemSubtitle>
+      )}
     </FAQsItemContainer>
   )
 }

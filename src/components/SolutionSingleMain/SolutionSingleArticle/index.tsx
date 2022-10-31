@@ -14,7 +14,9 @@ import {
   SolutionSingleArticleWrapper,
 } from './styled'
 
-export const SolutionSingleArticle: FC<ISolutionSingleItem> = ({
+export const SolutionSingleArticle: FC<
+  ISolutionSingleItem
+> = ({
   id,
   name,
   text,
@@ -25,7 +27,9 @@ export const SolutionSingleArticle: FC<ISolutionSingleItem> = ({
   pageHeight,
   activeCategory,
 }) => {
-  const observerMargin: number = Math.floor(pageHeight as number / 2)
+  const observerMargin: number = Math.floor(
+    Number(pageHeight) / 2,
+  )
 
   useEffect(() => {
     const observerConfig = {
@@ -48,7 +52,7 @@ export const SolutionSingleArticle: FC<ISolutionSingleItem> = ({
       observerConfig,
     )
     observer.observe(refs[name].current)
-    
+
     return () => observer.disconnect()
   }, [
     activeCategory,
@@ -68,17 +72,14 @@ export const SolutionSingleArticle: FC<ISolutionSingleItem> = ({
       <SolutionContentText>{text}</SolutionContentText>
       {list && (
         <SolutionSingleArticleList>
-          {list.map(({ defenition, description }) => 
-              <SolutionSingleArticleItem key={uuidv4()}>
-                <ItemDefenition>
-                  {defenition}
-                </ItemDefenition>
-                <ItemDescription>
-                  {description}
-                </ItemDescription>
-              </SolutionSingleArticleItem>
-            )
-          }
+          {list.map(({ defenition, description }) => (
+            <SolutionSingleArticleItem key={uuidv4()}>
+              <ItemDefenition>{defenition}</ItemDefenition>
+              <ItemDescription>
+                {description}
+              </ItemDescription>
+            </SolutionSingleArticleItem>
+          ))}
         </SolutionSingleArticleList>
       )}
     </SolutionSingleArticleWrapper>

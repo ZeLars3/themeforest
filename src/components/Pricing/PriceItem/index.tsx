@@ -1,8 +1,17 @@
 import { FC, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import FluentCheckmark from 'assets/icons/fluentCheckmark.svg'
+import FluentCheckmark from 'assets/icons/checkmark.svg'
 import { IPriceItem } from 'types'
+import { Button } from 'components/common'
+import { CardModal } from 'portals'
+import {
+  CardPrice,
+  CardTitle,
+  Span,
+  TextWrapper,
+} from 'portals/CardModal/styled'
+import { PayPalButton } from 'components'
 
 import {
   PriceItemAdvantageItem,
@@ -12,63 +21,70 @@ import {
   PriceItemTitle,
   PriceItemWrapperInner,
   PriceToggleWrapper,
-  Icon
+  Icon,
 } from './styled'
-import { Button } from 'components/common'
 
 export const PriceItem: FC<IPriceItem> = ({
   title,
   price,
   features,
-  id
 }) => {
-  const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
-  const [selectedCard, setSelectCard] = useState<number>(1)
+  const [isOpenModal, setIsOpenModal] = useState <boolean>(false)
 
   const handleCallModal = (): void => {
     setIsOpenModal(!isOpenModal)
   }
 
-  const handleSelectPrice = () => {
-    setSelectCard(id)
-  }
-
   return (
-    <PriceItemContainer selected={selectedCard !== id ? 'select' : ''} onClick={handleSelectPrice}>
-      <PriceItemTitle>{title}</PriceItemTitle>
-      <PriceItemWrapperInner>
-        <PriceItemPrice>{price}</PriceItemPrice>
-        <PriceToggleWrapper>
-          <Button
-            size="small"
-            btnType="square">
-            Mo
-          </Button>
-          <Button
-            size="small"
-            btnType="square"
-            inversion>
-            Yr
-          </Button>
-        </PriceToggleWrapper>
-      </PriceItemWrapperInner>
-      <Button
-        size="large"
-        btnType="square"
-        clickHandle={handleCallModal}>
-        Choose plan
-      </Button>
-      <PriceItemAdvantages>
-        {
-          features.map(name => (
-            <PriceItemAdvantageItem
-              key={uuidv4()}
-              checkmark={FluentCheckmark}>
+    <>
+      <PriceItemContainer>
+        <PriceItemTitle>{title}</PriceItemTitle>
+        <PriceItemWrapperInner>
+          <PriceItemPrice>{price}</PriceItemPrice>
+          <PriceToggleWrapper>
+            <Button size="small" btnType="square">
+              Mo
+            </Button>
+            <Button size="small" btnType="square">
+              Yr
+            </Button>
+          </PriceToggleWrapper>
+        </PriceItemWrapperInner>
+        <Button
+          size="large"
+          btnType="square"
+          clickHandle={handleCallModal}>
+          Choose plan
+        </Button>
+        <PriceItemAdvantages>
+          {features.map(name => (
+            <PriceItemAdvantageItem key={uuidv4()}>
               <Icon src={FluentCheckmark} /> {name}
             </PriceItemAdvantageItem>
-          ))
-        }
-      </PriceItemAdvantages>
-    </PriceItemContainer>
+          ))}
+        </PriceItemAdvantages>
+      </PriceItemContainer>
+
+      <CardModal
+        open={isOpenModal}
+        onClose={handleCallModal}>
+        <TextWrapper>
+          <CardTitle>
+            Plan: <Span>{title}</Span>
+          </CardTitle>
+          <CardPrice>
+            Price: <Span>{price}</Span>
+          </CardPrice>
+        </TextWrapper>
+        <PriceItemAdvantages>
+          {features.map(name => (
+            <PriceItemAdvantageItem key={uuidv4()}>
+              <Icon src={FluentCheckmark} /> {name}
+            </PriceItemAdvantageItem>
+          ))}
+        </PriceItemAdvantages>
+        <PayPalButton />
+      </CardModal>
+    </>
   )
 }

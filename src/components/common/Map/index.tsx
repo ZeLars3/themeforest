@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { v4 as uuidv4 } from 'uuid'
 
 import LocationMarker from 'assets/icons/locationMarker.svg'
 import { MAP_MARKERS } from 'constants/mapMarkers'
+
 import { MapWrapper } from './styled'
 
 const markerIcon = new L.Icon({
@@ -23,9 +23,9 @@ export const Map: FC = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {MAP_MARKERS.map(({ street, position }) => (
+      {MAP_MARKERS.map(({ street, position, id }) => (
         <Marker
-          key={uuidv4()}
+          key={id}
           position={[position[0], position[1]]}
           icon={markerIcon}>
           <Popup>{street}</Popup>

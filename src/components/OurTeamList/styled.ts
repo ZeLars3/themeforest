@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const OurTeamListContainer = styled.div`
   padding: 120px 0 50px 0;
-  background: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 950px) {
     padding: 0 0 50px 0;

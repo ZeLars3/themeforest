@@ -1,6 +1,5 @@
 import { FC, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { v4 as uuidv4 } from 'uuid'
 import { useSelector } from 'react-redux'
 import {
   NavigateFunction,
@@ -76,10 +75,11 @@ export const Blog: FC = () => {
               scrollbar={SWIPER_CONFIG.scrollbar}
               modules={SWIPER_CONFIG.modules}>
               {BLOG_ITEMS.map(
-                ({ img, date, title, text }) => (
-                  <SwiperSlide key={uuidv4()}>
+                ({ img, date, title, text, id }) => (
+                  <SwiperSlide key={id}>
                     <BlogItem
                       img={img}
+                      id={id}
                       date={date}
                       title={title}
                       text={text}
@@ -90,9 +90,10 @@ export const Blog: FC = () => {
             </Swiper>
           ) : (
             BLOG_ITEMS.slice(0, 3).map(
-              ({ img, date, title, text }) => (
+              ({ img, date, title, text, id }) => (
                 <BlogItem
-                  key={uuidv4()}
+                  key={id}
+                  id={id}
                   img={img}
                   date={date}
                   title={title}

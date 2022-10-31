@@ -18,7 +18,7 @@ export const ContactFormContainer = styled.div`
   padding: 50px;
   margin: 0 auto;
   border-radius: 6px;
-  background-color: ${({theme}) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     width: 100%;
@@ -41,11 +41,6 @@ export const ContactFormContainer = styled.div`
       font-size: 14px;
       line-height: 24px;
       letter-spacing: -0.015em;
-      color: ${({theme}) => theme.colors.white};
-
-      &:hover {
-        background: ${({theme}) => theme.colors.hover};
-      }
     }
   }
 `

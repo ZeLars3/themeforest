@@ -6,7 +6,7 @@ import {
   SuccessStatistic,
 } from 'components'
 
-export const Services: FC = () => {
+const Services: FC = () => {
   return (
     <>
       <ServicesInfo />
@@ -15,3 +15,5 @@ export const Services: FC = () => {
     </>
   )
 }
+
+export default Services

@@ -15,19 +15,23 @@ export type ButtonSize =
   | 'base'
   | 'small'
 
-export type PositionType = 'center' | 'space-between'
-
 export type DefaultButtonPropsType = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >
 export type ButtonPropsType = DefaultButtonPropsType & {
-  btnType: ButtonType,
-  children?: React.ReactNode,
-  size: ButtonSize,
-  inversion?: boolean,
-  isDisable?: boolean,
-  icon?: typeof ReactComponent,
-  clickHandle?: () => void,
-  contentPosition?: PositionType,
+  btnType: ButtonType
+  children?: React.ReactNode
+  size: ButtonSize
+  inversion?: boolean
+  isDisable?: boolean
+  icon?: typeof ReactComponent
+  clickHandle?: () => void
+}
+
+export interface IButtonContainer {
+  btnType: ButtonType
+  size: ButtonSize
+  inversion?: boolean
+  isDisable?: boolean
 }

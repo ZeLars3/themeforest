@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const ServicesInfoContainer = styled.section`
   padding: 100px 0 20px 0;
-  background-color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     padding: 74px 0 20px 0;

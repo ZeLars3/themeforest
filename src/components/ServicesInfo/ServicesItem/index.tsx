@@ -1,6 +1,6 @@
 import { FC } from 'react'
+import { useLocation, Location } from 'react-router-dom'
 
-import { Routes } from 'enums'
 import { IServicesItem } from 'types'
 import ArrowRightSmall from 'assets/icons/arrowRightSmall.png'
 
@@ -19,12 +19,15 @@ export const ServicesItem: FC<IServicesItem> = ({
   text,
   icon,
 }) => {
+  const location: Location = useLocation()
+
   return (
     <ServiceItemContainer>
       <Icon src={icon} />
       <ServiceItemTitle>{title}</ServiceItemTitle>
       <ServiceItemText>{text}</ServiceItemText>
-      <ServiceItemLink href={Routes.Services + '/id=' + id}>
+      <ServiceItemLink
+        href={location.pathname + '/id=' + id}>
         <Button>
           Read more <Icon src={ArrowRightSmall} />
         </Button>

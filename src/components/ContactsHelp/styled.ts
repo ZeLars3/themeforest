@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ContactsHelpContainer = styled.section`
-  background: ${({ theme }) => theme.colors.white};
   padding-bottom: 120px;
 
   @media (max-width: 768px) {

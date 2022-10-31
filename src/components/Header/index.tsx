@@ -15,9 +15,9 @@ import {
   Icon,
   BurgerButton
 } from './styled'
-import { Navigation } from '../Navigation'
-import { Button } from '../Button'
-import { DemoVideo } from '../DemoVideo'
+import { Navigation } from '../common/Navigation'
+import { Button } from '../common/Button'
+import { DemoVideo } from '../common/DemoVideo'
 import { RootState } from 'store'
 
 export const Header: FC = () => {

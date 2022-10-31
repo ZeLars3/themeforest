@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const PriceItemContainer = styled.li<any> `
+export const PriceItemContainer =
+  styled.li <
+  any >
+  `
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -9,23 +12,19 @@ export const PriceItemContainer = styled.li<any> `
   padding: 35px 20px;
   border-radius: 6px;
   transition: 0.7s;
-  color: ${(props) => (props.selected ? 'black' : 'white')};
-  background-color: ${(props) =>
-    props.selected ? 'white' : 'blue'}; 
+  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.shadows.shadowCard3};
 
   button {
     width: 100%;
     padding: 10px 65px;
     border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
     color: ${({ theme }) => theme.colors.white};
-  }
-
-  button {
-    color: ${(props) =>
-      props.selected ? 'white' : 'blue'};
-    background-color: ${(props) =>
-      props.selected ? 'blue' : 'white'}; 
   }
 `
 
@@ -67,10 +66,12 @@ export const PriceItemAdvantages = styled.ul`
   margin: 20px 0;
 `
 
-export const PriceItemAdvantageItem = styled.li<{checkmark: string}>`
+export const PriceItemAdvantageItem = styled.li`
   display: flex;
   align-items: center;
   padding: 0 0 10px 0;
 `
 
-export const Icon = styled.img``
+export const Icon = styled.img`
+  color: ${({ theme }) => theme.colors.primary};
+`

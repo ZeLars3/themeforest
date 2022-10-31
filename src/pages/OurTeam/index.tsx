@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { OurTeamList, OutTeamHead } from 'components'
 
-export const OurTeam: FC = () => {
+const OurTeam: FC = () => {
   return (
     <>
       <OutTeamHead />
@@ -10,3 +10,5 @@ export const OurTeam: FC = () => {
     </>
   )
 }
+
+export default OurTeam

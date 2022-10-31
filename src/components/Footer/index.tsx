@@ -1,48 +1,66 @@
-import { FC, MouseEventHandler } from 'react'
+import {
+  FC,
+  MouseEventHandler,
+  useState,
+} from 'react'
 import {
   Link,
   NavigateFunction,
-  useNavigate
+  useNavigate,
 } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 
 import LogoIcon from 'assets/icons/logo_white.png'
+import Arrow from 'assets/icons/arrowDropdown.svg'
 import { Routes } from 'enums'
 import {
-  SOCIAL_MEDIA_ICONS,
+  FOOTER_CONTACTS,
   FOOTER_LINKS,
-  FOOTER_SERVICES
+  FOOTER_SERVICES,
 } from 'constants/index'
+import { SocialLinks } from 'components/common'
+import { useSelector } from 'react-redux'
+import { RootState } from 'store'
 
 import {
   FooterContainer,
-  FooterBlock,
   InfoContainer,
   LogoStyled,
-  IconContainer,
-  SocialIcon,
-  LinksContainerStyled,
-  ContactsContainerStyled,
+  WrapperText,
   HeadingText,
   FooterText,
   RightsContainer,
-  RightsText,
-  PrivacyText,
+  Text,
   LinkWrapper,
-  Wrapper
+  Wrapper,
+  FooterWrapper,
+  Icon,
+  FooterList,
 } from './styled'
 
 export const Footer: FC = () => {
   const navigate: NavigateFunction = useNavigate()
+  const [isShowDropDowm, setIsShowDropDowm] = useState(true)
+
+  const currentViewport: string = useSelector<RootState, string>(
+    ({ app }) => app.viewport,
+  )
+
   const handleNavigateFromLogo: MouseEventHandler<
-  HTMLImageElement
+    HTMLImageElement
   > = () => {
     navigate(Routes.Home)
   }
 
+  const handleClick = (): void => {
+    if (currentViewport !== 'desktop') {
+      setIsShowDropDowm(!isShowDropDowm)
+    }
+  }
+
   return (
-    <FooterBlock>
-      <FooterContainer>
+    <FooterContainer>
+      <FooterWrapper>
         <InfoContainer>
           <LogoStyled
             alt="Logo"
@@ -54,54 +72,62 @@ export const Footer: FC = () => {
             exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.
           </FooterText>
-          <IconContainer>
-            {SOCIAL_MEDIA_ICONS.map(path => (
-              <SocialIcon
-                alt={`${path}icon`}
-                src={path}
-                key={uuidv4()}
-              />
-            ))}
-          </IconContainer>
+          <SocialLinks />
         </InfoContainer>
-        <LinksContainerStyled>
-          <HeadingText>Quick Link</HeadingText>
-          {FOOTER_LINKS.map(({ route, name }) => (
-            <LinkWrapper key={uuidv4()}>
-              <Link to={route}>{name}</Link>
-            </LinkWrapper>
-          ))}
-        </LinksContainerStyled>
-        <LinksContainerStyled>
-          <HeadingText>Services</HeadingText>
-          {FOOTER_SERVICES.map(({ route, name }) => (
-            <LinkWrapper key={uuidv4()}>
-              <Link to={route}>{name}</Link>
-            </LinkWrapper>
-          ))}
-        </LinksContainerStyled>
-        <ContactsContainerStyled>
-          <HeadingText>Contact Info</HeadingText>
-          <LinkWrapper>ensome@info.co.us</LinkWrapper>
-          <LinkWrapper>+1 601-201-5580</LinkWrapper>
-          <LinkWrapper>
-            1642 Washington Avenue, Jackson, MS,
-            Mississippi, 39201
-          </LinkWrapper>
-        </ContactsContainerStyled>
-      </FooterContainer>
-
-      <FooterContainer>
-        <RightsContainer>
-          <RightsText>
-            Ensome© 2022 All Rights Reserved
-          </RightsText>
-          <Wrapper>
-            <PrivacyText>Privacy policy</PrivacyText>
-            <PrivacyText>Terms of us</PrivacyText>
-          </Wrapper>
-        </RightsContainer>
-      </FooterContainer>
-    </FooterBlock>
+        <WrapperText>
+          <HeadingText onClick={handleClick}>
+            Quick Link
+            <Icon src={Arrow} />
+          </HeadingText>
+          {isShowDropDowm && (
+            <FooterList>
+              {FOOTER_LINKS.map(({ route, name }) => (
+                <LinkWrapper key={uuidv4()}>
+                  <Link to={route}>{name}</Link>
+                </LinkWrapper>
+              ))}
+            </FooterList>
+          )}
+        </WrapperText>
+        <WrapperText>
+          <HeadingText onClick={handleClick}>
+            Services
+            <Icon src={Arrow} />
+          </HeadingText>
+          {isShowDropDowm && (
+            <FooterList>
+              {FOOTER_SERVICES.map(({ route, name }) => (
+                <LinkWrapper key={uuidv4()}>
+                  <Link to={route}>{name}</Link>
+                </LinkWrapper>
+              ))}
+            </FooterList>
+          )}
+        </WrapperText>
+        <WrapperText>
+          <HeadingText onClick={handleClick}>
+            Contact Info <Icon src={Arrow} />
+          </HeadingText>
+          {isShowDropDowm && (
+            <FooterList>
+              {FOOTER_CONTACTS.map(({ route, name }) => (
+                <LinkWrapper key={uuidv4()}>
+                  <Link to={route}>{name}</Link>
+                </LinkWrapper>
+              ))}
+            </FooterList>
+          )}
+        </WrapperText>
+      </FooterWrapper>
+      <RightsContainer>
+        <Text>
+          Ensome© 2022 All Rights Reserved
+        </Text>
+        <>
+          <Text color>Privacy policy</Text>
+          <Text color>Terms of us</Text>
+        </>
+      </RightsContainer>
+    </FooterContainer>
   )
 }

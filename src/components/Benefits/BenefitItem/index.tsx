@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 import { IBenefitItem } from 'types'
 
@@ -14,9 +13,10 @@ export const BenefitItem: FC<IBenefitItem> = ({
   title,
   text,
   icon,
+  id,
 }) => {
   return (
-    <BenefitListItem key={uuidv4()}>
+    <BenefitListItem key={id}>
       <Icon src={icon} />
       <BenefitItemTitle>{title}</BenefitItemTitle>
       <BenefitItemText>{text}</BenefitItemText>

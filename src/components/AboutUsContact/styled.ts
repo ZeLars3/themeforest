@@ -36,11 +36,6 @@ export const AboutUsContactWrapper = styled.div`
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.015em;
-      color: ${({ theme }) => theme.colors.white};
-
-      &:hover {
-        background: ${({theme}) => theme.colors.hover};
-      }
     }
   }
 `

@@ -8,7 +8,7 @@ import {
   Testimonials,
 } from 'components'
 
-export const Solutions: FC = () => {
+const Solutions: FC = () => {
   return (
     <>
       <SolutionsHead />
@@ -19,3 +19,5 @@ export const Solutions: FC = () => {
     </>
   )
 }
+
+export default Solutions

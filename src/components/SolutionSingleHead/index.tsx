@@ -3,8 +3,8 @@ import { FC } from 'react'
 import { Routes } from 'enums'
 
 import {
-    SolutionSingleHeadContainer,
-    SolutionSingleHeadLink,
+  SolutionSingleHeadContainer,
+  SolutionSingleHeadLink,
   SolutionSingleHeadPath,
   SolutionSingleHeadTitle,
   SolutionSingleHeadWrapper,
@@ -16,7 +16,9 @@ export const SolutionSingleHead: FC<{ title: string }> = ({
   return (
     <SolutionSingleHeadContainer>
       <SolutionSingleHeadWrapper>
-        <SolutionSingleHeadTitle>{title}</SolutionSingleHeadTitle>
+        <SolutionSingleHeadTitle>
+          {title}
+        </SolutionSingleHeadTitle>
         <SolutionSingleHeadPath>
           <SolutionSingleHeadLink href={Routes.Home}>
             Home

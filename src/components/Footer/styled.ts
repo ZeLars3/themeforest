@@ -1,17 +1,21 @@
 import styled from 'styled-components'
 
-export const FooterBlock = styled.footer`
-  flex-direction: column;
+export const FooterContainer = styled.footer`
+  padding-top: 50px;
   background-color: ${({ theme }) =>
     theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
 `
 
-export const FooterContainer = styled.div`
+export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1110px;
   margin: 0 auto;
-  padding-top: 50px;
 
   &:first-child {
     padding-bottom: 38px;
@@ -22,14 +26,19 @@ export const FooterContainer = styled.div`
   &:last-child {
     padding: 34px 0 30px 0;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 16px;
+  }
 `
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  & > * {
-    display: flex;
+  @media (max-width: 768px) {
+    padding-bottom: 11x;
   }
 `
 
@@ -37,25 +46,11 @@ export const LogoStyled = styled.img`
   width: 141px;
   height: 46px;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.white};
-`
 
-export const IconContainer = styled.div`
-  column-gap: 16px;
-`
-
-export const SocialIcon = styled.img`
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-`
-
-export const LinksContainerStyled = styled.div`
-  flex-direction: column;
-`
-
-export const ContactsContainerStyled = styled.div`
-  flex-direction: column;
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 30px;
+  }
 `
 
 export const HeadingText = styled.p`
@@ -64,6 +59,14 @@ export const HeadingText = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: 768px) {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid
+      ${({ theme }) => theme.colors.helperBlue2};
+  }
 `
 
 export const FooterText = styled.p`
@@ -73,21 +76,31 @@ export const FooterText = styled.p`
   line-height: 24px;
   color: ${({ theme }) => theme.colors.grey};
 
-  & > * {
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const LinkWrapper = styled.li`
+  list-style: none;
+  margin: 12px 0;
+  max-width: 235px;
+  color: ${({ theme }) => theme.colors.grey};
+
+  a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.grey};
   }
 `
 
-export const LinkWrapper = styled(FooterText)`
-  margin: 12px 0;
-  max-width: 235px;
-`
-
 export const RightsContainer = styled.div`
-  display: contents;
+  display: content;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -95,10 +108,26 @@ export const Wrapper = styled.div`
   gap: 95px;
 `
 
-export const RightsText = styled.p`
+export const Text =
+  styled.p <
+  any >
+  `
   color: ${({ theme }) => theme.colors.helperBlue2};
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 150%;
+    color: ${({ theme, color }) =>
+      color ? theme.colors.white : null};
+  }
 `
 
-export const PrivacyText = styled.p`
-  color: ${({ theme }) => theme.colors.helperBlue2};
+export const WrapperText = styled.div``
+export const FooterList = styled.ul``
+export const Icon = styled.img`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `

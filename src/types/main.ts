@@ -3,6 +3,8 @@ import { Routes } from 'enums'
 export interface ILinkItem {
     name: string
 	route: Routes
+    text?: string
+    title?: string
 }
 
 export interface IStatisticAmount {
@@ -11,6 +13,7 @@ export interface IStatisticAmount {
 }
 
 export interface IBenefitItem {
+    id: string | number
     title: string
     text: string
     icon: string
@@ -58,11 +61,13 @@ export interface IContactItem {
 }
 
 export interface IMapMarker {
+    id: number
     position: number[]
     street: string
 }
 
 export interface IFAQsItem {
+    id: string | number
     title: string
     text: string
 }
@@ -83,3 +88,10 @@ export interface ITeamItem {
     description?: string
   }
   
+export interface IServiceSingle {
+    id: string | number
+    title: string,
+    text: string,
+    img?: string,
+    list?: string[],
+}

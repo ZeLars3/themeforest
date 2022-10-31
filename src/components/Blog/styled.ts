@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const BlogContainer = styled.section`
   padding: 70px 0;
-  background-color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     padding: 50px 0;
@@ -18,17 +17,12 @@ export const BlogWrapper = styled.div`
 export const ButtonWrapper = styled.div`
   @media (max-width: 768px) {
     button {
-      color: ${({ theme }) => theme.colors.white};
       border: none;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
       padding: 15px 37px;
       width: 100%;
-
-      &:hover {
-        background: ${({ theme }) => theme.colors.hover};
-      }
     }
   }
 `

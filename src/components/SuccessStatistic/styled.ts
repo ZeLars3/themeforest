@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const StatisticContainer = styled.section`
-  background: ${({ theme }) => theme.colors.white};
-`
+export const StatisticContainer = styled.section``
 
 export const StatisticWrapper = styled.div`
   padding: 120px 0 80px 0;

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const TestimonialsContainer = styled.section`
-  background-color: ${({ theme }) => theme.colors.white};
   padding: 120px 0;
 
   @media (max-width: 768px) {

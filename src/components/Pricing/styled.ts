@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const PricingContainer = styled.section`
-  background-color: ${({ theme }) => theme.colors.white};
-`
+export const PricingContainer = styled.section``
 
 export const PricingWrapper = styled.div`
   max-width: 1110px;

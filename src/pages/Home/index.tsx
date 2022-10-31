@@ -12,7 +12,7 @@ import {
   Pricing,
 } from 'components'
 
-export const Home: FC = () => {
+const Home: FC = () => {
   return (
     <>
       <BasicInfo />
@@ -27,3 +27,5 @@ export const Home: FC = () => {
     </>
   )
 }
+
+export default Home

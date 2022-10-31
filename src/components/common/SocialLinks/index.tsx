@@ -13,7 +13,7 @@ export const SocialLinks: FC = () => {
   return (
     <SocialLinksContainer>
       <SocialLinksTitle>Follow us</SocialLinksTitle>
-      {SOCIAL_MEDIA_ICONS.map((path) => (
+      {SOCIAL_MEDIA_ICONS.map(path => (
         <SocialLinksIcon
           alt={`${path}icon`}
           src={path}

@@ -4,12 +4,12 @@ import { Button } from 'components/common'
 import { ContactForm } from 'components/forms/ContactForm'
 
 import {
-    AboutUsContactContainer,
-    AboutUsContactList,
-    AboutUsContactText,
-    AboutUsContactTitle,
-    AboutUsContactWrapper,
-    AboutUsContactWrapperText,
+  AboutUsContactContainer,
+  AboutUsContactList,
+  AboutUsContactText,
+  AboutUsContactTitle,
+  AboutUsContactWrapper,
+  AboutUsContactWrapperText,
 } from './styled'
 import { AboutUsContactItem } from './AboutUsContactItem'
 

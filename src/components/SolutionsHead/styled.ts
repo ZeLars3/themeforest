@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const SolutionsHeadContainer = styled.section`
   padding-bottom: 120px;
-  background: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
     padding-bottom: 50px;
@@ -56,8 +55,8 @@ export const SolutionsHeadPath = styled.div`
 `
 
 export const SolutionsHeadLink = styled.a`
-  color: ${({ theme }) => theme.colors.grey};
-  text-decoration: none;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.grey};
 `
 
 export const SolutionsHeadSubtitle = styled.p`

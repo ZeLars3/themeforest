@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Help, FAQsHead, FAQsList } from 'components'
 
-export const FAQs: FC = () => {
+const FAQs: FC = () => {
   return (
     <>
       <FAQsHead />
@@ -11,3 +11,5 @@ export const FAQs: FC = () => {
     </>
   )
 }
+
+export default FAQs

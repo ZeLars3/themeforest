@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 export const SubscribeContainer = styled.section<{ background: string }>`
   color: ${({ theme }) => theme.colors.white};
-  background-color: ${({ background, theme }) => background === 'primary' ? theme.colors.primary : theme.colors.secondary};
+  background-color: ${({ background, theme }) =>
+    background === 'primary'
+      ? theme.colors.primary
+      : theme.colors.secondary};
   border-bottom: 1px solid
     ${({ theme }) => theme.colors.helperBlue2};
 

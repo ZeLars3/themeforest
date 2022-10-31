@@ -21,8 +21,7 @@ export const Help: FC = () => {
         </HelpText>
         <Button
           size="big"
-          btnType="square"
-          contentPosition="center">
+          btnType="square">
           Contact us
         </Button>
       </HelpWrapper>

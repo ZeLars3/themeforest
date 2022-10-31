@@ -1,3 +1,3 @@
 export interface IErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean
 }

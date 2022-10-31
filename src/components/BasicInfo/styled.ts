@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const BasicInfoContainer = styled.section`
-  background-color: ${({ theme }) => theme.colors.white};
-`
+export const BasicInfoContainer = styled.section``
 
 export const BasicInfoWrapper = styled.div`
   position: relative;
@@ -74,6 +72,10 @@ export const BasicInfoButton = styled.button`
   border: 5px solid ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.hover};
+  }
 
   @media (max-width: 768px) {
     position: absolute;

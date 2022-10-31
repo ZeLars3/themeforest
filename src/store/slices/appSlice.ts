@@ -1,4 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {
+  createSlice,
+  PayloadAction,
+} from '@reduxjs/toolkit'
 
 import { initialState } from './initialState'
 
@@ -6,7 +9,10 @@ const appSlice = createSlice({
   name: 'app',
   initialState: initialState,
   reducers: {
-    setViewport(state, action: PayloadAction<{ value: string }>) {
+    setViewport(
+      state,
+      action: PayloadAction<{ value: string }>,
+    ) {
       state.viewport = action.payload.value
     },
   },
