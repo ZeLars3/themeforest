@@ -1,6 +1,6 @@
-import SolutionDiagram from 'assets/img/solutionDiagram.jpg'
-import SolutionPC from 'assets/img/solutionPC.jpg'
-import { ISolutionSingleItem } from 'types'
+import SolutionDiagram from '@/assets/img/solutionDiagram.jpg'
+import SolutionPC from '@/assets/img/solutionPC.jpg'
+import { ISolutionSingleItem } from '@/types'
 
 import { SOLUTION_SINGLE_ARTICLES } from './solutionSingleList'
 

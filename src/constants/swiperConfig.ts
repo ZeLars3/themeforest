@@ -71,7 +71,7 @@ export const SWIPER_CONFIG = {
   freeSpace: -40,
   spaceBetweenZero: 0,
   spaceBetweenComment: 30,
-  setCustomNavigation(
+  setCustomNavigation (
     prev: RefObject<HTMLButtonElement>,
     next: RefObject<HTMLButtonElement>
   ) {

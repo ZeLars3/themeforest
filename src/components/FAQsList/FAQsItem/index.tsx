@@ -1,15 +1,15 @@
 import { FC, useState } from 'react'
 
-import Plus from 'assets/icons/plus.svg'
-import Minus from 'assets/icons/minus.svg'
-import { IFAQsItem } from 'types'
+import Plus from '@/assets/icons/plus.svg'
+import Minus from '@/assets/icons/minus.svg'
+import { IFAQsItem } from '@/types'
 
 import {
   FAQsItemSubtitle,
   FAQsItemContainer,
   FAQsItemTitle,
-  Icon,
 } from './styled'
+import { Svgr } from '@/components/common'
 
 export const FAQsItem: FC<IFAQsItem> = ({
   title,
@@ -25,7 +25,7 @@ export const FAQsItem: FC<IFAQsItem> = ({
     <FAQsItemContainer onClick={handleClickItem}>
       <FAQsItemTitle isShow={isShow}>
         {title}
-        <Icon src={isShow ? Minus : Plus} />
+        <Svgr icon={isShow ? Minus : Plus} />
       </FAQsItemTitle>
       {isShow && (
         <FAQsItemSubtitle>{text}</FAQsItemSubtitle>

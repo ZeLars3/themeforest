@@ -1,10 +1,11 @@
 import { FC, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import LogoBlue from 'assets/icons/logo_blue.png'
-import MenuOpen from 'assets/icons/menu.svg'
-import MenuClose from 'assets/icons/menuClose.svg'
-import PlayIcon from 'assets/icons/play.png'
+import LogoBlue from '@/assets/icons/logo_blue.png'
+import MenuOpen from '@/assets/icons/menu.svg'
+import MenuClose from '@/assets/icons/menuClose.svg'
+import PlayIcon from '@/assets/icons/play.png'
+import { RootState } from '@/store'
 
 import {
   HeaderContainer,
@@ -13,17 +14,19 @@ import {
   HeaderWrapperButton,
   HeaderWrapperInner,
   Icon,
-  BurgerButton
+  BurgerButton,
 } from './styled'
-import { Navigation } from '../common/Navigation'
-import { Button } from '../common/Button'
-import { DemoVideo } from '../common/DemoVideo'
-import { RootState } from 'store'
+import {
+  Navigation,
+  Svgr,
+  DemoVideo,
+  Button,
+} from '../common'
 
 export const Header: FC = () => {
   const [isMenuOpen, setIsMenuOpen] =
     useState<boolean>(false)
-  const [isVideo, setIsVideo] = useState <boolean>(false)
+  const [isVideo, setIsVideo] = useState<boolean>(false)
 
   const currentViewport = useSelector<RootState, string>(
     ({ app }) => app.viewport
@@ -51,11 +54,13 @@ export const Header: FC = () => {
             <Icon src={LogoBlue} alt="Site logo" />
           </HeaderLogo>
           <BurgerButton onClick={handleMenuClick}>
-            {!isMenuOpen ? (
-              <Icon src={MenuOpen} />
-            ) : (
-              <Icon src={MenuClose} />
-            )}
+            {!isMenuOpen
+              ? (
+              <Svgr icon={MenuOpen} />
+                )
+              : (
+              <Svgr icon={MenuClose} />
+                )}
           </BurgerButton>
         </HeaderWrapperInner>
         <Navigation menu={isMenuOpen} />

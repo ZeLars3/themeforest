@@ -1,4 +1,4 @@
-import { IBenefitItem } from 'types'
+import { IBenefitItem } from '@/types'
 
 import { BENEFIT_ICONS } from './benefitIcons'
 

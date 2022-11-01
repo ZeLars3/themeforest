@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-export const PriceItemContainer =
-  styled.li <
-  any >
-  `
+export const PriceItemContainer = styled.li <any>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -70,8 +67,4 @@ export const PriceItemAdvantageItem = styled.li`
   display: flex;
   align-items: center;
   padding: 0 0 10px 0;
-`
-
-export const Icon = styled.img`
-  color: ${({ theme }) => theme.colors.primary};
 `

@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { RootState } from 'store'
-import { NAV_ITEMS } from 'constants/navItems'
-import { INavigation } from 'types'
+import { RootState } from '@/store'
+import { NAV_ITEMS } from '@/constants/navItems'
+import { INavigation } from '@/types'
 
 import { SocialLinks } from '../SocialLinks'
 import { Dropdown } from '../Dropdown'

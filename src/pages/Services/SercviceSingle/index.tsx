@@ -4,9 +4,9 @@ import {
   ServiceSingleList,
   AllServicesList,
   ServiceSingleHead,
-} from 'components'
-import { ContactsHelpItem } from 'components/ContactsHelp/ContactsHelpItem'
-import { Button } from 'components/common'
+} from '@/components'
+import { ContactsHelpItem } from '@/components/ContactsHelp/ContactsHelpItem'
+import { Button } from '@/components/common'
 
 import {
   ContactSubtitle,
@@ -31,7 +31,7 @@ const ServiceSingle: FC = () => {
               to you with 25 hours.
             </ContactSubtitle>
             <ContactsHelpItem />
-            <Button btnType={'round'} size={'big'}>
+            <Button btnType='round' size='big'>
               Contact Us
             </Button>
           </ContactWrapper>

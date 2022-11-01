@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   SWIPER_CONFIG,
   STATISTIC_COMPANY_ICONS,
-} from 'constants/index'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { RootState } from '@/store'
 
 import {
   AboutUsCustomersContainer,
@@ -21,7 +21,7 @@ import {
 
 export const AboutUsCustomers: FC = () => {
   const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+    ({ app, }) => app.viewport,
   )
 
   return (
@@ -44,11 +44,13 @@ export const AboutUsCustomers: FC = () => {
           </AboutUsCustomersSubtitle>
         </AboutUsCustomersWrapperText>
         <AboutUsCustomersList>
-          {currentViewport === 'desktop' ? (
-            STATISTIC_COMPANY_ICONS.map(icon => (
-              <CompanyIcon key={uuidv4()} src={icon} />
-            ))
-          ) : (
+          {currentViewport === 'desktop'
+            ? (
+              STATISTIC_COMPANY_ICONS.map(icon => (
+                <CompanyIcon key={uuidv4()} src={icon} />
+              ),)
+            )
+            : (
             <Swiper
               centeredSlidesBounds={
                 SWIPER_CONFIG.centeredSlidesBounds

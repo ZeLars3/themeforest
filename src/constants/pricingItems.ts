@@ -1,4 +1,4 @@
-import { IPriceItem } from 'types'
+import { IPriceItem } from '@/types'
 
 export const PRICING_ITEMS: IPriceItem[] = [
   {

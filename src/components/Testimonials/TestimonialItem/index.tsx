@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { ITestimonialItem } from 'types'
+import { ITestimonialItem } from '@/types'
 
 import {
   TestimonialItemContainer,

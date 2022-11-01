@@ -111,7 +111,6 @@ export const ProfileSocials = styled.ul`
   padding-top: 8px;
 `
 
-
 export const Link = styled.a`
   margin-right: 13px;
 `

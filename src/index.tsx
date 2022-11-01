@@ -4,12 +4,13 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
-import GlobalStyles from 'assets/styles/globalStyles'
-import theme from 'assets/styles/theme'
-import store from 'store'
+import GlobalStyles from '@/assets/styles/globalStyles'
+import theme from '@/assets/styles/theme'
+import store from '@/store'
 
 import { App } from './app'
 import reportWebVitals from './reportWebVitals'
+import { ErrorBoundary } from './components'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,7 +21,9 @@ root.render(
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-          <App />
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
         </ThemeProvider>
       </Provider>
     </BrowserRouter>

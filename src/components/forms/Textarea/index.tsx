@@ -1,6 +1,6 @@
 import { memo, FC, ChangeEvent } from 'react'
 
-import { FieldsProps } from 'types'
+import { FieldsProps } from '@/types'
 
 import { FieldMessage } from '../LabelInput/styled'
 import { TextareaField } from './styled'
@@ -16,7 +16,7 @@ export const Textarea: FC<FieldsProps> = ({
   const onChangeCallback = (
     e: ChangeEvent<HTMLInputElement>,
   ): void => {
-    onChangeText && onChangeText(e)
+    (onChangeText != null) && onChangeText(e)
   }
 
   return (

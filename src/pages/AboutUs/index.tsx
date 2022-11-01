@@ -8,7 +8,7 @@ import {
   AboutUsSay,
   AboutUsStatistic,
   Subscribe,
-} from 'components'
+} from '@/components'
 
 const AboutUs: FC = () => {
   return (

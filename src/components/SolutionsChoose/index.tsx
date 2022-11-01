@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { SOLUTION_ITEMS } from 'constants/index'
-import Solutions from 'assets/img/solutions.jpg'
+import { SOLUTION_ITEMS } from '@/constants/index'
+import Solutions from '@/assets/img/solutions.jpg'
 
 import {
   SolutionsChooseTitle,

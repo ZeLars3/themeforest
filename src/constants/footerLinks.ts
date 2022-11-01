@@ -1,5 +1,5 @@
-import { Routes } from 'enums'
-import { ILinkItem } from 'types'
+import { Routes } from '@/enums'
+import { ILinkItem } from '@/types'
 
 export const FOOTER_LINKS: ILinkItem[] = [
   { name: 'Home', route: Routes.Home },

@@ -4,8 +4,9 @@ import {
   useNavigate,
 } from 'react-router-dom'
 
-import ArrowRightSmall from 'assets/icons/arrowRightSmall.png'
-import { IBlogItem } from 'types'
+import ArrowRightSmall from '@/assets/icons/arrowRightSmall.png'
+import { IBlogItem } from '@/types'
+import { Routes } from '@/enums'
 
 import {
   BlogItemContainer,
@@ -17,7 +18,6 @@ import {
   Button,
   Icon,
 } from './styled'
-import { Routes } from 'enums'
 
 export const BlogItem: FC<IBlogItem> = ({
   img,

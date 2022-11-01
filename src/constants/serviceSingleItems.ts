@@ -1,6 +1,6 @@
-import SolutionDiagram from 'assets/img/solutionDiagram.jpg'
-import SolutionPC from 'assets/img/solutionPC.jpg'
-import { IServiceSingle } from 'types'
+import SolutionDiagram from '@/assets/img/solutionDiagram.jpg'
+import SolutionPC from '@/assets/img/solutionPC.jpg'
+import { IServiceSingle } from '@/types'
 
 export const SERVICE_SINLE_ITEMS: IServiceSingle[] = [
   {

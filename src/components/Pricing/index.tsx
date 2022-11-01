@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation } from 'swiper'
 import 'swiper/css'
@@ -8,7 +8,7 @@ import 'swiper/css/pagination'
 import {
   PRICING_ITEMS,
   SWIPER_CONFIG,
-} from 'constants/index'
+} from '@/constants/index'
 
 import { PriceItem } from './PriceItem'
 import {

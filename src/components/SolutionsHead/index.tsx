@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { RootState } from 'store'
-import { Routes } from 'enums'
+import { RootState } from '@/store'
+import { Routes } from '@/enums'
 
 import {
   SolutionsHeadContainer,

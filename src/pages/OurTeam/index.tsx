@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { OurTeamList, OutTeamHead } from 'components'
+import { OurTeamList, OutTeamHead } from '@/components'
 
 const OurTeam: FC = () => {
   return (

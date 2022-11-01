@@ -1,6 +1,6 @@
 import { FC, ChangeEvent } from 'react'
 
-import { FieldsProps } from 'types'
+import { FieldsProps } from '@/types'
 
 import {
   TextInputContainer,
@@ -19,7 +19,7 @@ export const TextInput: FC<FieldsProps> = ({
   const handleChangeCallback = (
     event: ChangeEvent<HTMLInputElement>,
   ): void => {
-    onChangeText && onChangeText(event)
+    (onChangeText != null) && onChangeText(event)
   }
 
   return (

@@ -1,7 +1,7 @@
 import { FC, useEffect, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 
-import { ICardModal } from 'types'
+import { ICardModal } from '@/types'
 
 import { Card, ModalBackground } from './styled'
 

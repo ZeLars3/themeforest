@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Help, FAQsHead, FAQsList } from 'components'
+import { Help, FAQsHead, FAQsList } from '@/components'
 
 const FAQs: FC = () => {
   return (

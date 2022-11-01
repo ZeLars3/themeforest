@@ -8,19 +8,19 @@ import {
   NavigateFunction,
   useNavigate,
 } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
 
-import LogoIcon from 'assets/icons/logo_white.png'
-import Arrow from 'assets/icons/arrowDropdown.svg'
-import { Routes } from 'enums'
+import LogoIcon from '@/assets/icons/logo_white.png'
+import Arrow from '@/assets/icons/arrowDropdown.svg'
+import { Routes } from '@/enums'
 import {
   FOOTER_CONTACTS,
   FOOTER_LINKS,
   FOOTER_SERVICES,
-} from 'constants/index'
-import { SocialLinks } from 'components/common'
-import { useSelector } from 'react-redux'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { SocialLinks } from '@/components/common'
+import { RootState } from '@/store'
 
 import {
   FooterContainer,
@@ -32,7 +32,6 @@ import {
   RightsContainer,
   Text,
   LinkWrapper,
-  Wrapper,
   FooterWrapper,
   Icon,
   FooterList,
@@ -47,7 +46,7 @@ export const Footer: FC = () => {
   )
 
   const handleNavigateFromLogo: MouseEventHandler<
-    HTMLImageElement
+  HTMLImageElement
   > = () => {
     navigate(Routes.Home)
   }
@@ -77,7 +76,7 @@ export const Footer: FC = () => {
         <WrapperText>
           <HeadingText onClick={handleClick}>
             Quick Link
-            <Icon src={Arrow} />
+            <Icon icon={Arrow} />
           </HeadingText>
           {isShowDropDowm && (
             <FooterList>
@@ -92,7 +91,7 @@ export const Footer: FC = () => {
         <WrapperText>
           <HeadingText onClick={handleClick}>
             Services
-            <Icon src={Arrow} />
+            <Icon icon={Arrow} />
           </HeadingText>
           {isShowDropDowm && (
             <FooterList>
@@ -106,7 +105,7 @@ export const Footer: FC = () => {
         </WrapperText>
         <WrapperText>
           <HeadingText onClick={handleClick}>
-            Contact Info <Icon src={Arrow} />
+            Contact Info <Icon icon={Arrow} />
           </HeadingText>
           {isShowDropDowm && (
             <FooterList>

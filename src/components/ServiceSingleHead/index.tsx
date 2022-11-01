@@ -2,9 +2,9 @@ import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
-import { RootState } from 'store'
-import { Routes } from 'enums'
-import { SERVICES_ITEMS } from 'constants/index'
+import { RootState } from '@/store'
+import { Routes } from '@/enums'
+import { SERVICES_ITEMS } from '@/constants/index'
 
 import {
   ServiceSingleHeadContainer,

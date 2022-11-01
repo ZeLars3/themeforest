@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Svgr } from '../common'
 
 export const FooterContainer = styled.footer`
   padding-top: 50px;
@@ -108,10 +109,7 @@ export const Wrapper = styled.div`
   gap: 95px;
 `
 
-export const Text =
-  styled.p <
-  any >
-  `
+export const Text = styled.p<any>`
   color: ${({ theme }) => theme.colors.helperBlue2};
 
   @media (max-width: 768px) {
@@ -122,12 +120,13 @@ export const Text =
   }
 `
 
-export const WrapperText = styled.div``
-export const FooterList = styled.ul``
-export const Icon = styled.img`
+export const Icon = styled(Svgr)`
   display: none;
 
   @media (max-width: 768px) {
     display: block;
   }
 `
+
+export const WrapperText = styled.div``
+export const FooterList = styled.ul``

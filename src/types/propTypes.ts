@@ -24,7 +24,7 @@ export interface INavigation {
 }
 
 export interface IButtonVideo {
-  handleClick(): void
+  handleClick: () => void
 }
 
 export interface IContactForm {
@@ -40,8 +40,8 @@ export type FieldsProps = DefaultInput & {
   error?: boolean
   message?: string
   placeholder?: string
-  bgColor?: 'white' | 'blue',
-  border?: boolean,
+  bgColor?: 'white' | 'blue'
+  border?: boolean
 }
 
 export interface ISolutionItem {
@@ -52,6 +52,5 @@ export interface ISolutionItem {
 export interface ICardModal {
   children: ReactNode
   open: boolean
-  onClose(): void
+  onClose: () => void
 }
-

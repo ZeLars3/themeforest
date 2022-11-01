@@ -6,7 +6,7 @@ import {
   SolutionsHead,
   SolutionsList,
   Testimonials,
-} from 'components'
+} from '@/components'
 
 const Solutions: FC = () => {
   return (

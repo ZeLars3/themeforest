@@ -4,7 +4,7 @@ import {
   Help,
   ServicesInfo,
   SuccessStatistic,
-} from 'components'
+} from '@/components'
 
 const Services: FC = () => {
   return (

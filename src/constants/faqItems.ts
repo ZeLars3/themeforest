@@ -1,4 +1,4 @@
-import { IFAQsItem } from 'types'
+import { IFAQsItem } from '@/types'
 
 export const FAQ_ITEMS: IFAQsItem[] = [
   {

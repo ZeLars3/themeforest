@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { ISolutionItem } from 'types'
-import Checkmark from 'assets/icons/checkmark.svg'
+import { ISolutionItem } from '@/types'
+import Checkmark from '@/assets/icons/checkmark.svg'
 
 import {
   SolutionsChooseItemWrapper,
@@ -17,7 +17,7 @@ export const SolutionsChooseItem: FC<ISolutionItem> = ({
   return (
     <SolutionsChooseItemWrapper>
       <SolutionsChooseItemTitle>
-        <Icon src={Checkmark} />
+        <Icon icon={Checkmark} />
         {title}
       </SolutionsChooseItemTitle>
       <SolutionsChooseItemText>

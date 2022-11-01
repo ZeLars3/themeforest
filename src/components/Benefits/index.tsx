@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   BENEFIT_ITEMS,
   SWIPER_CONFIG,
-} from 'constants/index'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { RootState } from '@/store'
 
 import { BenefitItem } from './BenefitItem'
 import {
@@ -40,7 +40,8 @@ export const Benefits: FC = () => {
           </BenefitsText>
         </TextWrapper>
         <BenefitsList>
-          {currentViewport === 'desktop' ? (
+          {currentViewport === 'desktop'
+            ? (
             <>
               <GroupWrapper>
                 {BENEFIT_ITEMS.slice(0, 2).map(
@@ -69,7 +70,8 @@ export const Benefits: FC = () => {
                 )}
               </GroupWrapper>
             </>
-          ) : (
+              )
+            : (
             <Swiper
               centeredSlidesBounds={
                 SWIPER_CONFIG.centeredSlidesBounds
@@ -93,7 +95,7 @@ export const Benefits: FC = () => {
                 ),
               )}
             </Swiper>
-          )}
+              )}
         </BenefitsList>
       </BenefitsWrapper>
     </BenefitsContainer>
