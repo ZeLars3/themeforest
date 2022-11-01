@@ -3,10 +3,10 @@ import { Component } from 'react'
 import { IErrorBoundary, IErrorBoundaryState } from '@/types'
 
 export class ErrorBoundary extends Component<
-  IErrorBoundary,
-  IErrorBoundaryState
+IErrorBoundary,
+IErrorBoundaryState
 > {
-  constructor(props: IErrorBoundary) {
+  constructor (props: IErrorBoundary) {
     super(props)
 
     this.state = {
@@ -14,7 +14,7 @@ export class ErrorBoundary extends Component<
     }
   }
 
-  static getDerivedStateFromError(
+  static getDerivedStateFromError (
     _: Error,
   ): IErrorBoundaryState {
     return {
@@ -22,7 +22,7 @@ export class ErrorBoundary extends Component<
     }
   }
 
-  render() {
+  render () {
     const { hasError } = this.state
     const { children } = this.props
 
@@ -33,4 +33,3 @@ export class ErrorBoundary extends Component<
     return children
   }
 }
-

@@ -19,7 +19,7 @@ export const TextInput: FC<FieldsProps> = ({
   const handleChangeCallback = (
     event: ChangeEvent<HTMLInputElement>,
   ): void => {
-    onChangeText && onChangeText(event)
+    (onChangeText != null) && onChangeText(event)
   }
 
   return (

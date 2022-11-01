@@ -15,7 +15,7 @@ import {
 } from './styled'
 
 export const SolutionSingleArticle: FC<
-  ISolutionSingleItem
+ISolutionSingleItem
 > = ({
   id,
   name,
@@ -33,7 +33,7 @@ export const SolutionSingleArticle: FC<
 
   useEffect(() => {
     const observerConfig = {
-      rootMargin: `0px 0px -400px 0px`,
+      rootMargin: '0px 0px -400px 0px'
     }
 
     const handleIntersection = (entries: any): void => {
@@ -70,7 +70,7 @@ export const SolutionSingleArticle: FC<
       </SolutionSingleArticleTitle>
       {img && <Img src={img} />}
       <SolutionContentText>{text}</SolutionContentText>
-      {list && (
+      {(list != null) && (
         <SolutionSingleArticleList>
           {list.map(({ defenition, description }) => (
             <SolutionSingleArticleItem key={uuidv4()}>

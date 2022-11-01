@@ -109,10 +109,7 @@ export const Wrapper = styled.div`
   gap: 95px;
 `
 
-export const Text =
-  styled.p <
-  any >
-  `
+export const Text = styled.p<any>`
   color: ${({ theme }) => theme.colors.helperBlue2};
 
   @media (max-width: 768px) {

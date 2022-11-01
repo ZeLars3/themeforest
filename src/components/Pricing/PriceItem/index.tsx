@@ -28,7 +28,7 @@ export const PriceItem: FC<IPriceItem> = ({
   price,
   features,
 }) => {
-  const [isOpenModal, setIsOpenModal] = useState <boolean>(false)
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
 
   const handleCallModal = (): void => {
     setIsOpenModal(!isOpenModal)

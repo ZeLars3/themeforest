@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-export const PriceItemContainer =
-  styled.li <
-  any >
-  `
+export const PriceItemContainer = styled.li <any>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -71,4 +68,3 @@ export const PriceItemAdvantageItem = styled.li`
   align-items: center;
   padding: 0 0 10px 0;
 `
-

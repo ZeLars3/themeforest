@@ -46,7 +46,7 @@ export const Footer: FC = () => {
   )
 
   const handleNavigateFromLogo: MouseEventHandler<
-    HTMLImageElement
+  HTMLImageElement
   > = () => {
     navigate(Routes.Home)
   }

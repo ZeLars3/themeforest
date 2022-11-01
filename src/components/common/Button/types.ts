@@ -16,8 +16,8 @@ export type ButtonSize =
   | 'small'
 
 export type DefaultButtonPropsType = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
+ButtonHTMLAttributes<HTMLButtonElement>,
+HTMLButtonElement
 >
 export type ButtonPropsType = DefaultButtonPropsType & {
   btnType: ButtonType

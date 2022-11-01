@@ -7,9 +7,9 @@ import { initialState } from './initialState'
 
 const appSlice = createSlice({
   name: 'app',
-  initialState: initialState,
+  initialState,
   reducers: {
-    setViewport(
+    setViewport (
       state,
       action: PayloadAction<{ value: string }>,
     ) {

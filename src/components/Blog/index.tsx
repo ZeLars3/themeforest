@@ -54,7 +54,8 @@ export const Blog: FC = () => {
           </BlogController>
         </BlogWrapperText>
         <BlogList>
-          {currentViewport === 'desktop' ? (
+          {currentViewport === 'desktop'
+            ? (
             <Swiper
               navigation={SWIPER_CONFIG.setCustomNavigation(
                 navigationPrevRef,
@@ -88,9 +89,10 @@ export const Blog: FC = () => {
                 ),
               )}
             </Swiper>
-          ) : (
-            BLOG_ITEMS.slice(0, 3).map(
-              ({ img, date, title, text, id }) => (
+              )
+            : (
+                BLOG_ITEMS.slice(0, 3).map(
+                  ({ img, date, title, text, id }) => (
                 <BlogItem
                   key={id}
                   id={id}
@@ -99,11 +101,13 @@ export const Blog: FC = () => {
                   title={title}
                   text={text}
                 />
-              ),
-            )
-          )}
+                  )
+                )
+              )}
         </BlogList>
-        {currentViewport === 'desktop' ? null : (
+        {currentViewport === 'desktop'
+          ? null
+          : (
           <ButtonWrapper>
             <Button
               size="big"
@@ -112,7 +116,7 @@ export const Blog: FC = () => {
               Learn more
             </Button>
           </ButtonWrapper>
-        )}
+            )}
       </BlogWrapper>
     </BlogContainer>
   )

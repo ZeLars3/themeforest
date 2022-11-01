@@ -7,9 +7,9 @@ import { AppDispatch } from '@/store'
 export const useAppDispatch = () => useDispatch<AppDispatch>()
 
 export const useActions = <T extends ActionCreatorsMapObject>(actions: T) => {
-    const dispatch = useAppDispatch()
-    return useMemo(
-      () => bindActionCreators(actions, dispatch),
-      [actions, dispatch],
-    )
-  }
+  const dispatch = useAppDispatch()
+  return useMemo(
+    () => bindActionCreators(actions, dispatch),
+    [actions, dispatch],
+  )
+}

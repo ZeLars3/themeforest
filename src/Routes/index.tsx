@@ -2,18 +2,17 @@ import { FC, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import { Routes as PathRoute } from '@/enums'
-import { OurTeamSingle } from '@/components'
-import { SolutionSingle } from '@/pages/Solutions/SolutionSingle'
-import ServiceSingle from '@/pages/Services/SercviceSingle'
 
-const Home = lazy(() => import('@/pages/Home'))
-const AboutUs = lazy(() => import('@/pages/AboutUs'))
-const Contacts = lazy(() => import('@/pages/Contacts'))
-const FAQs = lazy(() => import('@/pages/FAQs'))
-const Services = lazy(() => import('@/pages/Services'))
-const OurTeam = lazy(() => import('@/pages/OurTeam'))
-const Solutions = lazy(() => import('@/pages/Solutions'))
-
+const Home = lazy(async () => await import('@/pages/Home'))
+const AboutUs = lazy(async () => await import('@/pages/AboutUs'))
+const Contacts = lazy(async () => await import('@/pages/Contacts'))
+const FAQs = lazy(async () => await import('@/pages/FAQs'))
+const Services = lazy(async () => await import('@/pages/Services'))
+const OurTeam = lazy(async () => await import('@/pages/OurTeam'))
+const Solutions = lazy(async () => await import('@/pages/Solutions'))
+const ServiceSingle = lazy(async () => await import('@/pages/Services/SercviceSingle'))
+const SolutionSingle = lazy(async () => await import('@/pages/Solutions/SolutionSingle'))
+const OurTeamSingle = lazy(async () => await import('@/pages/OurTeam/OutTeamSingle'))
 
 const ContentRoutes: FC = () => (
   <Routes>

@@ -20,7 +20,7 @@ export const ServicesItem: FC<IServicesItem> = ({
   text,
   icon,
 }) => {
-  const location: Location = useLocation()  
+  const location: Location = useLocation()
 
   return (
     <ServiceItemContainer>

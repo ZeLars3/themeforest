@@ -11,7 +11,7 @@ import {
 } from './styled'
 
 export const Subscribe: FC<{
-  background: 'primary' | 'secondary',
+  background: 'primary' | 'secondary'
 }> = ({ background }) => {
   return (
     <SubscribeContainer background={background}>

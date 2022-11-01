@@ -40,7 +40,7 @@ export const FieldLabel = styled.label`
   font-size: 12px;
   line-height: 24px;
   letter-spacing: -0.015em;
-  color: ${({theme}) => theme.colors.grey}
+  color: ${({ theme }) => theme.colors.grey}
 `
 
 export const FieldMessage = styled.span`
@@ -48,5 +48,5 @@ export const FieldMessage = styled.span`
   z-index: 1;
   bottom: 0;
   right: 0;
-  color: ${({theme}) => theme.colors.red}
+  color: ${({ theme }) => theme.colors.red}
 `

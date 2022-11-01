@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { ReactComponent } from '*.svg'
 
-type SvgrIcon = {
-  icon: typeof ReactComponent,
-  handleClick?: () => void,
+interface SvgrIcon {
+  icon: typeof ReactComponent
+  handleClick?: () => void
 }
 
 export const Svgr: FC<SvgrIcon> = ({

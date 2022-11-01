@@ -7,7 +7,7 @@ export const FAQsItemContainer = styled.li`
   margin-bottom: 20px;
   border-radius: 6px;
   cursor: pointer;
-  border: 1px solid ${({theme}) => theme.colors.grey};
+  border: 1px solid ${({ theme }) => theme.colors.grey};
 
   &:last-child {
     margin-bottom: 0
@@ -40,7 +40,7 @@ export const FAQsItemSubtitle = styled.p`
   font-size: 20px;
   line-height: 33px;
   letter-spacing: -0.015em;
-  color: ${({ theme} ) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
 
   @media (max-width: 768px) {
     font-size: 14px;

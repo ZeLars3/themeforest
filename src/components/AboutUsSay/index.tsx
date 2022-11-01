@@ -39,7 +39,8 @@ export const AboutUsSay: FC = () => {
         <AboutUsSayTitle>
           What our customers say
         </AboutUsSayTitle>
-        {currentViewport === 'desktop' ? (
+        {currentViewport === 'desktop'
+          ? (
           <AboutUsSayController>
             <AboutUsSayButton
               ref={navigationPrevRef}>
@@ -49,7 +50,8 @@ export const AboutUsSay: FC = () => {
               <Icon src={ArrowRight} />
             </AboutUsSayButton>
           </AboutUsSayController>
-        ) : null}
+            )
+          : null}
       </AboutUsSayWrapper>
       <AboutUsSayList>
         <Swiper

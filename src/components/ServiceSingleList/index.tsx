@@ -27,16 +27,14 @@ export const ServiceSingleList: FC = () => {
               <ServiceInfoSectionText>
                 {text}
               </ServiceInfoSectionText>
-              {list && (
+              {list != null && (
                 <SolutionFeatures>
-                  {list.map(feature => {
-                    return (
-                      <SolutionFeatureItem key={uuidv4()}>
-                        <Svgr icon={Checkmark} />
-                        {feature}
-                      </SolutionFeatureItem>
-                    )
-                  })}
+                  {list.map(feature => (
+                    <SolutionFeatureItem key={uuidv4()}>
+                      <Svgr icon={Checkmark} />
+                      {feature}
+                    </SolutionFeatureItem>
+                  ))}
                 </SolutionFeatures>
               )}
               {img && <ServiceInfoSectionImage src={img} />}

@@ -25,9 +25,9 @@ export const ContactHelpForm = () => {
 
   const [email, username, theme, text] = helpFields
   const initialValues = contactFields.reduce<{ [key: string]: string }>((acc, { name }) => {
-      acc[name] = ''
-      return acc
-    }, {})
+    acc[name] = ''
+    return acc
+  }, {})
 
   const formik = useFormik({
     initialValues,
@@ -44,10 +44,10 @@ export const ContactHelpForm = () => {
     setDisabled(true)
     emailjs
       .sendForm(
-      process.env.REACT_APP_SERVICE_ID as string,
-      process.env.REACT_APP_TEMPLATE_ID as string,
-      contactHelpFormRef.current as HTMLFormElement,
-      process.env.REACT_APP_PUBLIC_KEY as string,
+        process.env.REACT_APP_SERVICE_ID as string,
+        process.env.REACT_APP_TEMPLATE_ID as string,
+        contactHelpFormRef.current as HTMLFormElement,
+        process.env.REACT_APP_PUBLIC_KEY as string,
       )
       .then(
         () => setMessage('success'),

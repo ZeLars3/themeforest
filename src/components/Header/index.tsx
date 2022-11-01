@@ -54,11 +54,13 @@ export const Header: FC = () => {
             <Icon src={LogoBlue} alt="Site logo" />
           </HeaderLogo>
           <BurgerButton onClick={handleMenuClick}>
-            {!isMenuOpen ? (
+            {!isMenuOpen
+              ? (
               <Svgr icon={MenuOpen} />
-            ) : (
+                )
+              : (
               <Svgr icon={MenuClose} />
-            )}
+                )}
           </BurgerButton>
         </HeaderWrapperInner>
         <Navigation menu={isMenuOpen} />

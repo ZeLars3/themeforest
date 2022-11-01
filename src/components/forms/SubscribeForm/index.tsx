@@ -30,7 +30,7 @@ export const SubscribeForm: FC = () => {
     validationSchema: sendEmailSchema,
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: (values, {resetForm}) => {
+    onSubmit: (values, { resetForm }) => {
       resetForm()
     },
   })

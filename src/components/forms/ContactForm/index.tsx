@@ -1,4 +1,4 @@
-import  { useRef, FC, useState } from 'react'
+import { useRef, FC, useState } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
 
@@ -26,7 +26,7 @@ export const ContactForm: FC<IContactForm> = ({ title, titleSize }) => {
     validationSchema: sendEmailSchema,
     validateOnChange: true,
     validateOnBlur: false,
-    onSubmit: (values, {resetForm}) => {
+    onSubmit: (values, { resetForm }) => {
       sendEmail()
       resetForm()
     },

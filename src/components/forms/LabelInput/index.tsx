@@ -21,7 +21,7 @@ export const LabelInput: FC<FieldsProps> = ({
   const onChangeCallback = (
     e: ChangeEvent<HTMLInputElement>,
   ) => {
-    onChangeText && onChangeText(e)
+    (onChangeText != null) && onChangeText(e)
   }
 
   return (

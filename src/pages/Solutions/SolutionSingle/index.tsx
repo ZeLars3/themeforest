@@ -9,7 +9,7 @@ import {
 import { SOLUTION_ITEMS } from '@/constants/index'
 import { IServicesItem } from '@/types'
 
-export const SolutionSingle: FC = () => {
+const SolutionSingle: FC = () => {
   const { pathname } = useLocation()
 
   const solution: IServicesItem = SOLUTION_ITEMS.filter(
@@ -25,3 +25,5 @@ export const SolutionSingle: FC = () => {
     </>
   )
 }
+
+export default SolutionSingle

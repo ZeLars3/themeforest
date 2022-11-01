@@ -70,7 +70,6 @@ export const BlogItemText = styled.p`
   }
 `
 
-
 export const Icon = styled.img`
   padding-left: 7px;
 `

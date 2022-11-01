@@ -16,7 +16,7 @@ export const Textarea: FC<FieldsProps> = ({
   const onChangeCallback = (
     e: ChangeEvent<HTMLInputElement>,
   ): void => {
-    onChangeText && onChangeText(e)
+    (onChangeText != null) && onChangeText(e)
   }
 
   return (
