@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Routes } from 'enums'
+import { Routes } from '@/enums'
 
 import {
   SolutionSingleHeadContainer,

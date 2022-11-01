@@ -4,10 +4,17 @@ import {
   useNavigate,
 } from 'react-router-dom'
 
-import { SERVICES_ITEMS } from 'constants/index'
-import ArrowRight from 'assets/icons/arrowRight.png'
-import { Routes } from 'enums'
-import { AllServicesItem, AllServicesListWrapper, AllServicesWrapper, Icon, Title } from './styled'
+import { SERVICES_ITEMS } from '@/constants/index'
+import ArrowRight from '@/assets/icons/arrowRight.png'
+import { Routes } from '@/enums'
+
+import {
+  AllServicesItem,
+  AllServicesListWrapper,
+  AllServicesWrapper,
+  Title,
+  Icon,
+} from './styled'
 
 export const AllServicesList: FC = () => {
   const navigate: NavigateFunction = useNavigate()
@@ -25,7 +32,7 @@ export const AllServicesList: FC = () => {
           return (
             <AllServicesItem
               key={id}
-              onClick={serviceItemClickHandle(id as string)}>
+              onClick={serviceItemClickHandle(String(id))}>
               {title} <Icon src={ArrowRight} />
             </AllServicesItem>
           )

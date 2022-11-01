@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import {
   STATISTIC_AMOUNT,
   STATISTIC_COMPANY_ICONS,
-} from 'constants/index'
+} from '@/constants/index'
 
 import {
   StatisticWrapperInner,

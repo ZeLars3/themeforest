@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { Button } from 'components/common'
-import { ContactForm } from 'components/forms/ContactForm'
+import { Button } from '@/components/common'
+import { ContactForm } from '@/components/forms/ContactForm'
 
 import {
   AboutUsContactContainer,

@@ -1,7 +1,7 @@
-import { IContactItem } from 'types'
-import Call from 'assets/icons/call.svg'
-import Mail from 'assets/icons/mail.svg'
-import Location from 'assets/icons/locationMarker.svg'
+import { IContactItem } from '@/types'
+import Call from '@/assets/icons/call.svg'
+import Mail from '@/assets/icons/mail.svg'
+import Location from '@/assets/icons/locationMarker.svg'
 
 export const CONTACT_ITEMS: IContactItem[] = [
   {

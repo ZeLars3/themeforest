@@ -72,6 +72,3 @@ export const PriceItemAdvantageItem = styled.li`
   padding: 0 0 10px 0;
 `
 
-export const Icon = styled.img`
-  color: ${({ theme }) => theme.colors.primary};
-`

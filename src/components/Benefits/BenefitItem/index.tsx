@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { IBenefitItem } from 'types'
+import { IBenefitItem } from '@/types'
 
 import {
   BenefitItemText,

@@ -5,11 +5,11 @@ import {
 } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { RootState } from 'store'
-import { Routes } from 'enums'
-import { Button } from 'components/common'
-import TeamDiscussion from 'assets/img/teamDiscussion.jpg'
-import TeamDiscussionSmall from 'assets/img/teamDiscussionSmall.jpg'
+import { RootState } from '@/store'
+import { Routes } from '@/enums'
+import { Button } from '@/components/common'
+import TeamDiscussion from '@/assets/img/teamDiscussion.jpg'
+import TeamDiscussionSmall from '@/assets/img/teamDiscussionSmall.jpg'
 
 import {
   SolutionContainer,

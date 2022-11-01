@@ -10,7 +10,7 @@ import {
   Testimonials,
   Blog,
   Pricing,
-} from 'components'
+} from '@/components'
 
 const Home: FC = () => {
   return (

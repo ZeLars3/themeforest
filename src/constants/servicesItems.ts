@@ -1,4 +1,4 @@
-import { IServicesItem } from 'types'
+import { IServicesItem } from '@/types'
 
 import { SERVICES_ICONS } from './servicesIcons'
 

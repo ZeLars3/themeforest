@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Svgr } from '@/components/common'
+
 export const SolutionsChooseItemWrapper = styled.li`
   padding-bottom: 30px;
   list-style: none;
@@ -37,6 +39,8 @@ export const SolutionsChooseItemText = styled.p`
   }
 `
 
-export const Icon = styled.img`
-  margin-right: 10px;
+export const Icon = styled(Svgr)`
+  svg {
+    margin-right: 10px;
+  }
 `

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { Routes } from 'enums'
-import { ITestimonialItem } from 'types'
+import { Routes } from '@/enums'
+import { ITestimonialItem } from '@/types'
 
 import {
   AboutUsSayItemAvatar,

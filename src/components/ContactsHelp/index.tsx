@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { ContactHelpForm } from 'components/forms/ContactHelpForm'
-import { Routes } from 'enums'
+import { ContactHelpForm } from '@/components/forms/ContactHelpForm'
+import { Routes } from '@/enums'
 
 import { ContactsHelpItem } from './ContactsHelpItem'
 import {

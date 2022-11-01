@@ -38,11 +38,12 @@ export const SolutionFeatureItem = styled.li`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+
+  svg {
+    padding-right: 7px;
+  }
 `
 
-export const Icon = styled.img`
-  padding-right: 7px;
-`
 export const ServiceSingleListWrapper = styled.div`
   max-width: 400px;
 `

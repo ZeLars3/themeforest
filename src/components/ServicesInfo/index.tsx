@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { SERVICES_ITEMS } from 'constants/index'
+import { SERVICES_ITEMS } from '@/constants/index'
 
 import {
   ServicesInfoContainer,

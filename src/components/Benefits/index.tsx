@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   BENEFIT_ITEMS,
   SWIPER_CONFIG,
-} from 'constants/index'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { RootState } from '@/store'
 
 import { BenefitItem } from './BenefitItem'
 import {

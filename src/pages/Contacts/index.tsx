@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { Map } from 'components/common'
-import { ContactsHelp } from 'components'
+import { Map } from '@/components/common'
+import { ContactsHelp } from '@/components'
 
 const Contacts: FC = () => {
   return (

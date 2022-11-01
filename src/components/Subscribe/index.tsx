@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { SubscribeForm } from 'components/forms/SubscribeForm'
+import { SubscribeForm } from '@/components/forms/SubscribeForm'
 
 import {
   SubscribeContainer,

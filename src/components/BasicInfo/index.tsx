@@ -5,9 +5,10 @@ import {
 } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { Routes } from 'enums'
-import InfoBig from 'assets/img/infoBig.jpg'
-import InfoSmall from 'assets/img/infoSmall.jpg'
+import { Routes } from '@/enums'
+import InfoBig from '@/assets/img/infoBig.jpg'
+import InfoSmall from '@/assets/img/infoSmall.jpg'
+import { RootState } from '@/store'
 
 import {
   Img,
@@ -20,7 +21,6 @@ import {
   BasicInfoWrapperText,
   BasicInfoContainer,
 } from './styled'
-import { RootState } from 'store'
 
 export const BasicInfo: FC = () => {
   const navigate: NavigateFunction = useNavigate()

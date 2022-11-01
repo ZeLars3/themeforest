@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
 
-import { Button, TextInput } from 'components/common'
+import { Button, TextInput } from '@/components/common'
 
 import {
   ContactHelpContainer,

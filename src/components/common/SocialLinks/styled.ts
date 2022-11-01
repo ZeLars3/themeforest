@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Svgr } from '../Svgr'
+
 export const SocialLinksContainer = styled.ul`
   display: flex;
   align-items: center;
@@ -18,13 +20,15 @@ export const SocialLinksTitle = styled.h2`
   }
 `
 
-export const SocialLinksIcon = styled.img`
-  margin-right: 13px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
+export const SocialLinksIcon = styled(Svgr)`
+  svg {
+    margin-right: 13px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `

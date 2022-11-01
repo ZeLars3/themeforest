@@ -1,4 +1,4 @@
-import { IStatisticAmount } from 'types'
+import { IStatisticAmount } from '@/types'
 
 export const STATISTIC_AMOUNT: IStatisticAmount[] = [
   {

@@ -6,9 +6,9 @@ import {
   SetStateAction,
 } from 'react'
 
-import { appActions } from 'store/slices'
-import { useActions } from 'hooks'
-import { MainLayout } from 'layouts'
+import { appActions } from '@/store/slices'
+import { useActions } from '@/hooks'
+import { MainLayout } from '@/layouts'
 
 export const App: FC = () => {
   const [width, setWidth] = useState<number>(

@@ -1,6 +1,6 @@
 import { FC, ChangeEvent } from 'react'
 
-import { FieldsProps } from 'types'
+import { FieldsProps } from '@/types'
 
 import {
   TextInputContainer,

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { ServicesItem } from 'components/ServicesInfo/ServicesItem'
-import { SOLUTION_ITEMS } from 'constants/index'
+import { ServicesItem } from '@/components/ServicesInfo/ServicesItem'
+import { SOLUTION_ITEMS } from '@/constants/index'
 
 import {
   SolutionsListWrapper,

@@ -6,12 +6,12 @@ import {
   useNavigate,
 } from 'react-router-dom'
 
-import ArrowLeft from 'assets/icons/arrowLeft.png'
-import ArrowRight from 'assets/icons/arrowRight.png'
-import { SWIPER_CONFIG, BLOG_ITEMS } from 'constants/index'
-import { Routes } from 'enums'
-import { Button } from 'components/common'
-import { RootState } from 'store'
+import ArrowLeft from '@/assets/icons/arrowLeft.png'
+import ArrowRight from '@/assets/icons/arrowRight.png'
+import { SWIPER_CONFIG, BLOG_ITEMS } from '@/constants/index'
+import { Routes } from '@/enums'
+import { Button } from '@/components/common'
+import { RootState } from '@/store'
 
 import { BlogItem } from './BlogItem'
 import {

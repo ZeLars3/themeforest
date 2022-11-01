@@ -1,4 +1,4 @@
-import { ITestimonialItem } from 'types'
+import { ITestimonialItem } from '@/types'
 
 import { TESTIMONIALS_ICONS } from './testimonialIcons'
 

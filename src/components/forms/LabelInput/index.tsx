@@ -1,7 +1,7 @@
 import { FC, ChangeEvent } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { FieldsProps } from 'types'
+import { FieldsProps } from '@/types'
 
 import {
   FieldLabel,

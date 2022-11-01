@@ -1,6 +1,6 @@
 import { memo, FC, ChangeEvent } from 'react'
 
-import { FieldsProps } from 'types'
+import { FieldsProps } from '@/types'
 
 import { FieldMessage } from '../LabelInput/styled'
 import { TextareaField } from './styled'

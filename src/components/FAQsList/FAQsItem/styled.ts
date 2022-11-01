@@ -47,5 +47,3 @@ export const FAQsItemSubtitle = styled.p`
     line-height: 24px;
   }
 `
-
-export const Icon = styled.img``

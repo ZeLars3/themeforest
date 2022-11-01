@@ -2,8 +2,8 @@ import  { useRef, FC, useState } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
 
-import { IContactForm } from 'types'
-import { Button } from 'components/common'
+import { IContactForm } from '@/types'
+import { Button } from '@/components/common'
 
 import { ContactFormContainer, FormLegend } from './styled'
 import { contactFields, sendEmailSchema } from '../validationSchema'

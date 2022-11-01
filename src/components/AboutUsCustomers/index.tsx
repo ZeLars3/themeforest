@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   SWIPER_CONFIG,
   STATISTIC_COMPANY_ICONS,
-} from 'constants/index'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { RootState } from '@/store'
 
 import {
   AboutUsCustomersContainer,

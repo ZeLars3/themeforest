@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import ArrowLeft from 'assets/icons/arrowLeft.png'
-import ArrowRight from 'assets/icons/arrowRight.png'
+import ArrowLeft from '@/assets/icons/arrowLeft.png'
+import ArrowRight from '@/assets/icons/arrowRight.png'
 import {
   SWIPER_CONFIG,
   TESTIMONIAL_ITEMS,
-} from 'constants/index'
-import { RootState } from 'store'
+} from '@/constants/index'
+import { RootState } from '@/store'
 
 import {
   AboutUsSayContainer,

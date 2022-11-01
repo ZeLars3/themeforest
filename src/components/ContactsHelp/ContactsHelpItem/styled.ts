@@ -8,6 +8,12 @@ export const ContactsInfoItem = styled.li`
   @media (max-width: 768px) {
     margin: 0 0 20px 0;
   }
+
+  svg {
+    max-width: 20px;
+    margin-right: 14.5px;
+    fill: ${({ theme }) => theme.colors.black};
+  }
 `
 
 export const ContactsHelpTitle = styled.h4`
@@ -26,12 +32,6 @@ export const ContactsHelpText = styled.p`
   line-height: 28px;
   letter-spacing: -0.015em;
   color: ${({ theme }) => theme.colors.grey};
-`
-
-export const Icon = styled.img`
-  max-width: 20px;
-  margin-right: 14.5px;
-  fill: ${({ theme }) => theme.colors.black};
 `
 
 export const TitleText = styled.span``

@@ -5,9 +5,9 @@ import {
   Help,
   SolutionSingleHead,
   SolutionSingleMain,
-} from 'components'
-import { SOLUTION_ITEMS } from 'constants/index'
-import { IServicesItem } from 'types'
+} from '@/components'
+import { SOLUTION_ITEMS } from '@/constants/index'
+import { IServicesItem } from '@/types'
 
 export const SolutionSingle: FC = () => {
   const { pathname } = useLocation()

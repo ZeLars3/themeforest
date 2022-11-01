@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { ActionCreatorsMapObject, bindActionCreators } from 'redux'
 
-import { AppDispatch } from 'store'
+import { AppDispatch } from '@/store'
 
 export const useAppDispatch = () => useDispatch<AppDispatch>()
 

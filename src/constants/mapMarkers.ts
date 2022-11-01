@@ -1,4 +1,4 @@
-import { IMapMarker } from 'types'
+import { IMapMarker } from '@/types'
 
 export const MAP_MARKERS: IMapMarker[] = [
   {

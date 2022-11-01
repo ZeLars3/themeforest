@@ -5,7 +5,7 @@ import {
 import { ChangeEventHandler, FC } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { HEADER_DROPDOWN_ITEMS } from 'constants/headerDropdown'
+import { HEADER_DROPDOWN_ITEMS } from '@/constants/headerDropdown'
 
 import { DropdownSelect, DropdownOption } from './styled'
 

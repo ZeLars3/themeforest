@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-import { IErrorBoundary, IErrorBoundaryState } from 'types'
+import { IErrorBoundary, IErrorBoundaryState } from '@/types'
 
 export class ErrorBoundary extends Component<
   IErrorBoundary,

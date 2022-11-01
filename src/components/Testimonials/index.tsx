@@ -6,12 +6,12 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import ArrowLeft from 'assets/icons/arrowLeft.png'
-import ArrowRight from 'assets/icons/arrowRight.png'
+import ArrowLeft from '@/assets/icons/arrowLeft.png'
+import ArrowRight from '@/assets/icons/arrowRight.png'
 import {
   SWIPER_CONFIG,
   TESTIMONIAL_ITEMS,
-} from 'constants/index'
+} from '@/constants/index'
 
 import {
   TestimonialButton,

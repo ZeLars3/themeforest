@@ -3,8 +3,8 @@ import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
 import { useSelector } from 'react-redux'
 
-import { TextInput, Button } from 'components/common'
-import { RootState } from 'store'
+import { TextInput, Button } from '@/components/common'
+import { RootState } from '@/store'
 
 import { sendEmailSchema, subscribeFields } from '../validationSchema'
 import { Form, SubscribeFormContainer } from './styled'

@@ -1,4 +1,4 @@
-import { ISolutionSingleArticle } from 'types'
+import { ISolutionSingleArticle } from '@/types'
 
 export const SOLUTION_SINGLE_ARTICLES: ISolutionSingleArticle[] =
   [

@@ -1,18 +1,19 @@
 import { FC, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { Routes as PathRoute } from 'enums'
-import { OurTeamSingle } from 'components'
-import { SolutionSingle } from 'pages/Solutions/SolutionSingle'
+import { Routes as PathRoute } from '@/enums'
+import { OurTeamSingle } from '@/components'
+import { SolutionSingle } from '@/pages/Solutions/SolutionSingle'
+import ServiceSingle from '@/pages/Services/SercviceSingle'
 
-const Home = lazy(() => import('pages/Home'))
-const AboutUs = lazy(() => import('pages/AboutUs'))
-const Contacts = lazy(() => import('pages/Contacts'))
-const FAQs = lazy(() => import('pages/FAQs'))
-const Services = lazy(() => import('pages/Services'))
-const OurTeam = lazy(() => import('pages/OurTeam'))
-const Solutions = lazy(() => import('pages/Solutions'))
-const ServiceSingle = lazy(() => import('pages/Services/SercviceSingle'))
+const Home = lazy(() => import('@/pages/Home'))
+const AboutUs = lazy(() => import('@/pages/AboutUs'))
+const Contacts = lazy(() => import('@/pages/Contacts'))
+const FAQs = lazy(() => import('@/pages/FAQs'))
+const Services = lazy(() => import('@/pages/Services'))
+const OurTeam = lazy(() => import('@/pages/OurTeam'))
+const Solutions = lazy(() => import('@/pages/Solutions'))
+
 
 const ContentRoutes: FC = () => (
   <Routes>

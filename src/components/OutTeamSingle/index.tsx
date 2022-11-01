@@ -2,11 +2,10 @@ import { FC } from 'react'
 import { useLocation } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 
-import { TEAM_ITEMS } from 'constants/teamItems'
-import { SocialLinksIcon } from 'components/common/SocialLinks/styled'
-import { ContactForm } from 'components/forms/ContactForm'
-import { ITeamItem } from 'types'
-import { Routes } from 'enums'
+import { TEAM_ITEMS } from '@/constants/teamItems'
+import { ContactForm } from '@/components/forms/ContactForm'
+import { ITeamItem } from '@/types'
+import { Routes } from '@/enums'
 
 import {
   OurTeamSingleInfoItem,
@@ -25,6 +24,7 @@ import {
   OurTeamSinglePath,
   Link,
 } from './styled'
+import { Svgr } from '../common'
 
 export const OurTeamSingle: FC = () => {
   const { pathname } = useLocation()
@@ -68,9 +68,8 @@ export const OurTeamSingle: FC = () => {
             <ProfileSocials>
               {socials.map(({ name, path }) => (
                 <Link href={path} key={uuidv4()}>
-                  <SocialLinksIcon
-                    alt={`${path}icon`}
-                    src={name}
+                  <Svgr
+                    icon={name}
                   />
                 </Link>
               ))}

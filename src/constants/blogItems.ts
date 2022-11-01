@@ -1,7 +1,7 @@
-import { IBlogItem } from 'types'
-import FirstBlog from 'assets/img/firstBlog.jpg'
-import SecondBlog from 'assets/img/secondBlog.jpg'
-import ThirdBlog from 'assets/img/thirdBlog.jpg'
+import { IBlogItem } from '@/types'
+import FirstBlog from '@/assets/img/firstBlog.jpg'
+import SecondBlog from '@/assets/img/secondBlog.jpg'
+import ThirdBlog from '@/assets/img/thirdBlog.jpg'
 
 export const BLOG_ITEMS: IBlogItem[] = [
   {

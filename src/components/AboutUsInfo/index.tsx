@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import Team from 'assets/img/team.jpg'
-import TeamMission from 'assets/img/teamMission.jpg'
+import Team from '@/assets/img/team.jpg'
+import TeamMission from '@/assets/img/teamMission.jpg'
 
 import {
   AboutUsInfoContainer,

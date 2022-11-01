@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { TEAM_ITEMS } from 'constants/teamItems'
+import { TEAM_ITEMS } from '@/constants/teamItems'
 
 import { OurTeamItem } from './OurTeamItem'
 import {

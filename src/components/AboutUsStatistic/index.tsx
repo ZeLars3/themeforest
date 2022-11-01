@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { STATISTIC_AMOUNT } from 'constants/statisticAmount'
+import { STATISTIC_AMOUNT } from '@/constants/statisticAmount'
 
 import {
   AboutUsStatisticContainer,

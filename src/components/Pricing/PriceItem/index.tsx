@@ -1,17 +1,17 @@
 import { FC, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import FluentCheckmark from 'assets/icons/checkmark.svg'
-import { IPriceItem } from 'types'
-import { Button } from 'components/common'
-import { CardModal } from 'portals'
+import FluentCheckmark from '@/assets/icons/checkmark.svg'
+import { IPriceItem } from '@/types'
+import { Button, Svgr } from '@/components/common'
+import { CardModal } from '@/portals'
 import {
   CardPrice,
   CardTitle,
   Span,
   TextWrapper,
-} from 'portals/CardModal/styled'
-import { PayPalButton } from 'components'
+} from '@/portals/CardModal/styled'
+import { PayPalButton } from '@/components'
 
 import {
   PriceItemAdvantageItem,
@@ -21,7 +21,6 @@ import {
   PriceItemTitle,
   PriceItemWrapperInner,
   PriceToggleWrapper,
-  Icon,
 } from './styled'
 
 export const PriceItem: FC<IPriceItem> = ({
@@ -59,7 +58,7 @@ export const PriceItem: FC<IPriceItem> = ({
         <PriceItemAdvantages>
           {features.map(name => (
             <PriceItemAdvantageItem key={uuidv4()}>
-              <Icon src={FluentCheckmark} /> {name}
+              <Svgr icon={FluentCheckmark} /> {name}
             </PriceItemAdvantageItem>
           ))}
         </PriceItemAdvantages>
@@ -79,7 +78,7 @@ export const PriceItem: FC<IPriceItem> = ({
         <PriceItemAdvantages>
           {features.map(name => (
             <PriceItemAdvantageItem key={uuidv4()}>
-              <Icon src={FluentCheckmark} /> {name}
+              <Svgr icon={FluentCheckmark} /> {name}
             </PriceItemAdvantageItem>
           ))}
         </PriceItemAdvantages>

@@ -4,8 +4,8 @@ import {
   useNavigate,
 } from 'react-router-dom'
 
-import { Button } from 'components/common'
-import { Routes } from 'enums'
+import { Button } from '@/components/common'
+import { Routes } from '@/enums'
 
 import {
   BusinessWrapperInner,

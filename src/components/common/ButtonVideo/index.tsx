@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import Play from 'assets/icons/play.png'
-import { IButtonVideo } from 'types'
+import Play from '@/assets/icons/play.png'
+import { IButtonVideo } from '@/types'
 
 import {
   ButtonStyled,

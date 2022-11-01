@@ -1,5 +1,5 @@
-import { Routes } from 'enums'
-import { ILinkItem } from 'types'
+import { Routes } from '@/enums'
+import { ILinkItem } from '@/types'
 
 export const HEADER_DROPDOWN_ITEMS: ILinkItem[] = [
   { name: 'Services', route: Routes.Services },
