@@ -1,0 +1,2 @@
+/*! For license information please see 12.bundle.js.LICENSE.txt */
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[12],{9012:function(e,s,t){t.r(s);var n=t(5893),r=t(233);s.default=function(){return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.vf,{}),(0,n.jsx)(r.mv,{}),(0,n.jsx)(r.Px,{}),(0,n.jsx)(r.Hl,{}),(0,n.jsx)(r.WW,{})]})}}}]);

@@ -1,0 +1,2 @@
+/*! For license information please see 310.bundle.js.LICENSE.txt */
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[310],{6310:function(s,e,r){r.r(e);var t=r(5893),n=r(233);e.default=function(){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(n.FH,{}),(0,t.jsx)(n.RI,{}),(0,t.jsx)(n.iA,{}),(0,t.jsx)(n.wM,{}),(0,t.jsx)(n.hw,{}),(0,t.jsx)(n.HC,{}),(0,t.jsx)(n.xs,{background:"primary"})]})}}}]);

@@ -1,0 +1,2 @@
+/*! For license information please see 769.bundle.js.LICENSE.txt */
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[769],{6769:function(e,s,t){t.r(s);var r=t(5893),n=t(233);s.default=function(){return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(n.e6,{}),(0,r.jsx)(n.Vr,{}),(0,r.jsx)(n.WW,{})]})}}}]);
