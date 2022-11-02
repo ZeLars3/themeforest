@@ -3,13 +3,12 @@ import {
   NavigateFunction,
   useNavigate,
 } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
-import { RootState } from '@/store'
 import { Routes } from '@/enums'
 import { Button } from '@/components/common'
 import TeamDiscussion from '@/assets/img/teamDiscussion.jpg'
 import TeamDiscussionSmall from '@/assets/img/teamDiscussionSmall.jpg'
+import { useTypedSelector } from '@/hooks'
 
 import {
   SolutionContainer,
@@ -23,7 +22,9 @@ import {
 
 export const NewSolutions: FC = () => {
   const navigate: NavigateFunction = useNavigate()
-  const currentViewport: string = useSelector<RootState, string>(({ app }) => app.viewport)
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
+  )
 
   const handleNavigate = (): void => {
     navigate(Routes.Solutions)

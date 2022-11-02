@@ -1,10 +1,9 @@
 import { FC, FormEvent, useRef, useState } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
-import { useSelector } from 'react-redux'
 
 import { TextInput, Button } from '@/components/common'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import { sendEmailSchema, subscribeFields } from '../validationSchema'
 import { Form, SubscribeFormContainer } from './styled'
@@ -15,8 +14,8 @@ export const SubscribeForm: FC = () => {
   const [_, setMessage] = useState<string>('')
   const [disabled, setDisabled] = useState<boolean>(false)
 
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
   const initialValues = subscribeFields.reduce<{ [key: string]: string }>((acc, { name }) => {
     acc[name] = ''

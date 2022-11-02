@@ -18,7 +18,7 @@ module.exports = {
       systemvars: true,
     }),
     new HtmlWebpackPlugin({
-      title: 'React Project Template',
+      title: 'Themeforest',
       template: './public/index.html',
     }),
   ],

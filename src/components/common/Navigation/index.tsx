@@ -1,9 +1,8 @@
 import { FC } from 'react'
-import { useSelector } from 'react-redux'
 
-import { RootState } from '@/store'
 import { NAV_ITEMS } from '@/constants/navItems'
 import { INavigation } from '@/types'
+import { useTypedSelector } from '@/hooks'
 
 import { SocialLinks } from '../SocialLinks'
 import { Dropdown } from '../Dropdown'
@@ -14,10 +13,9 @@ import {
 } from './styles'
 
 export const Navigation: FC<INavigation> = ({ menu }) => {
-  const currentViewport: string = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
-
   return (
     <NavigationContainer>
       {menu && (

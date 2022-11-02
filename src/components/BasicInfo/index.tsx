@@ -3,12 +3,11 @@ import {
   NavigateFunction,
   useNavigate,
 } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 import { Routes } from '@/enums'
 import InfoBig from '@/assets/img/infoBig.jpg'
 import InfoSmall from '@/assets/img/infoSmall.jpg'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import {
   Img,
@@ -25,8 +24,8 @@ import {
 export const BasicInfo: FC = () => {
   const navigate: NavigateFunction = useNavigate()
 
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   const handleNavigate = (): void => {

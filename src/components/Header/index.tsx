@@ -1,11 +1,10 @@
 import { FC, useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 import LogoBlue from '@/assets/icons/logo_blue.png'
 import MenuOpen from '@/assets/icons/menu.svg'
 import MenuClose from '@/assets/icons/menuClose.svg'
 import PlayIcon from '@/assets/icons/play.png'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import {
   HeaderContainer,
@@ -28,8 +27,8 @@ export const Header: FC = () => {
     useState<boolean>(false)
   const [isVideo, setIsVideo] = useState<boolean>(false)
 
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   useEffect(() => {

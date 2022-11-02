@@ -1,12 +1,11 @@
 import { FC } from 'react'
-import { useSelector } from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {
   BENEFIT_ITEMS,
   SWIPER_CONFIG,
 } from '@/constants/index'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import { BenefitItem } from './BenefitItem'
 import {
@@ -20,8 +19,8 @@ import {
 } from './styled'
 
 export const Benefits: FC = () => {
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   return (

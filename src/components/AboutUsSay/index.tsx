@@ -1,6 +1,5 @@
 import { FC, useRef } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { useSelector } from 'react-redux'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -10,7 +9,7 @@ import {
   SWIPER_CONFIG,
   TESTIMONIAL_ITEMS,
 } from '@/constants/index'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import {
   AboutUsSayContainer,
@@ -29,8 +28,8 @@ export const AboutUsSay: FC = () => {
   const navigationPrevRef = useRef <HTMLButtonElement>(null)
   const navigationNextRef = useRef<HTMLButtonElement>(null)
 
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   return (

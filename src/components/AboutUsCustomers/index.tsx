@@ -1,13 +1,12 @@
 import { FC } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { useSelector } from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { useTypedSelector } from '@/hooks'
 import {
   SWIPER_CONFIG,
   STATISTIC_COMPANY_ICONS,
 } from '@/constants/index'
-import { RootState } from '@/store'
 
 import {
   AboutUsCustomersContainer,
@@ -20,8 +19,8 @@ import {
 } from './styled'
 
 export const AboutUsCustomers: FC = () => {
-  const currentViewport = useSelector<RootState, string>(
-    ({ app, }) => app.viewport,
+  const currentViewport = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   return (
@@ -44,13 +43,11 @@ export const AboutUsCustomers: FC = () => {
           </AboutUsCustomersSubtitle>
         </AboutUsCustomersWrapperText>
         <AboutUsCustomersList>
-          {currentViewport === 'desktop'
-            ? (
-              STATISTIC_COMPANY_ICONS.map(icon => (
-                <CompanyIcon key={uuidv4()} src={icon} />
-              ),)
-            )
-            : (
+          {currentViewport === 'desktop' ? (
+            STATISTIC_COMPANY_ICONS.map((icon) => (
+              <CompanyIcon key={uuidv4()} src={icon} />
+            ))
+          ) : (
             <Swiper
               centeredSlidesBounds={
                 SWIPER_CONFIG.centeredSlidesBounds
@@ -61,7 +58,7 @@ export const AboutUsCustomers: FC = () => {
               grabCursor={SWIPER_CONFIG.grabCursor}
               scrollbar={SWIPER_CONFIG.scrollbar}
               modules={SWIPER_CONFIG.modules}>
-              {STATISTIC_COMPANY_ICONS.map(icon => (
+              {STATISTIC_COMPANY_ICONS.map((icon) => (
                 <SwiperSlide key={uuidv4()}>
                   <CompanyIcon src={icon} />
                 </SwiperSlide>

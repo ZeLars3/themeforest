@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import { useSelector } from 'react-redux'
 
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 import { Routes } from '@/enums'
 
 import {
@@ -15,8 +14,8 @@ import {
 } from './styled'
 
 export const FAQsHead: FC = () => {
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
 
   return (

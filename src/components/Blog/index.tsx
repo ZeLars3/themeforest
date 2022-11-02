@@ -1,6 +1,5 @@
 import { FC, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useSelector } from 'react-redux'
 import {
   NavigateFunction,
   useNavigate,
@@ -11,7 +10,7 @@ import ArrowRight from '@/assets/icons/arrowRight.png'
 import { SWIPER_CONFIG, BLOG_ITEMS } from '@/constants/index'
 import { Routes } from '@/enums'
 import { Button } from '@/components/common'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import { BlogItem } from './BlogItem'
 import {
@@ -31,10 +30,10 @@ export const Blog: FC = () => {
   const navigationNextRef = useRef(null)
   const navigate: NavigateFunction = useNavigate()
 
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
-
+  
   const handleNavigate = (): void => {
     navigate(Routes.Solutions)
   }

@@ -8,7 +8,6 @@ import {
   NavigateFunction,
   useNavigate,
 } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
 
 import LogoIcon from '@/assets/icons/logo_white.png'
@@ -20,7 +19,7 @@ import {
   FOOTER_SERVICES,
 } from '@/constants/index'
 import { SocialLinks } from '@/components/common'
-import { RootState } from '@/store'
+import { useTypedSelector } from '@/hooks'
 
 import {
   FooterContainer,
@@ -41,10 +40,9 @@ export const Footer: FC = () => {
   const navigate: NavigateFunction = useNavigate()
   const [isShowDropDowm, setIsShowDropDowm] = useState(true)
 
-  const currentViewport: string = useSelector<RootState, string>(
+  const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
   )
-
   const handleNavigateFromLogo: MouseEventHandler<
   HTMLImageElement
   > = () => {

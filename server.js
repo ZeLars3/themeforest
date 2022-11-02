@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 app.use(express.static(__dirname))
 app.use(express.static(path.join(__dirname, 'build')))
 
-app.get('/*', function(res) {
+app.get('/*', function (res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 

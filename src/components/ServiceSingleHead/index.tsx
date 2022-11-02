@@ -1,10 +1,9 @@
 import { FC } from 'react'
-import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
-import { RootState } from '@/store'
 import { Routes } from '@/enums'
 import { SERVICES_ITEMS } from '@/constants/index'
+import { useTypedSelector } from '@/hooks'
 
 import {
   ServiceSingleHeadContainer,
@@ -16,8 +15,8 @@ import {
 } from './styled'
 
 export const ServiceSingleHead: FC = () => {
-  const currentViewport = useSelector<RootState, string>(
-    ({ app }) => app.viewport
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
   )
   const { pathname } = useLocation()
   const service = SERVICES_ITEMS.filter(

@@ -13,6 +13,8 @@ const Solutions = lazy(async () => await import('@/pages/Solutions'))
 const ServiceSingle = lazy(async () => await import('@/pages/Services/SercviceSingle'))
 const SolutionSingle = lazy(async () => await import('@/pages/Solutions/SolutionSingle'))
 const OurTeamSingle = lazy(async () => await import('@/pages/OurTeam/OutTeamSingle'))
+const NotFound = lazy(async () => await import('@/pages/NotFound'))
+
 
 const ContentRoutes: FC = () => (
   <Routes>
@@ -43,6 +45,10 @@ const ContentRoutes: FC = () => (
     <Route
       path={PathRoute.SolutionSingle}
       element={<SolutionSingle />}
+    />
+     <Route
+      path={PathRoute.NotFound}
+      element={<NotFound />}
     />
   </Routes>
 )
