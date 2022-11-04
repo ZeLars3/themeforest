@@ -59,6 +59,7 @@ export const BasicInfo: FC = () => {
               ? InfoBig
               : InfoSmall
           }
+          alt="info"
         />
       </BasicInfoImgWrapper>
     </BasicInfoContainer>

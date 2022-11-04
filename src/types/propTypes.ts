@@ -54,3 +54,10 @@ export interface ICardModal {
   open: boolean
   onClose: () => void
 }
+
+export interface IBlogNewsItem {
+  title: string
+  text: string
+  image: string
+  id?: string | number
+}

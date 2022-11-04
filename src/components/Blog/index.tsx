@@ -25,7 +25,7 @@ import {
   ButtonWrapper,
 } from './styled'
 
-export const Blog: FC = () => {
+export const OurBlog: FC = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
   const navigate: NavigateFunction = useNavigate()
@@ -45,10 +45,10 @@ export const Blog: FC = () => {
           <BlogTitle>Our blog</BlogTitle>
           <BlogController>
             <SelectButton ref={navigationPrevRef}>
-              <Icon src={ArrowLeft} />
+              <Icon src={ArrowLeft} alt="previous slide" />
             </SelectButton>
             <SelectButton ref={navigationNextRef}>
-              <Icon src={ArrowRight} />
+              <Icon src={ArrowRight} alt="next slide" />
             </SelectButton>
           </BlogController>
         </BlogWrapperText>

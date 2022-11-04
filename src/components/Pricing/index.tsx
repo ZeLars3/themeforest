@@ -27,7 +27,7 @@ export const Pricing: FC = () => {
         <PricingTitle>Our pricing</PricingTitle>
         <PriceList>
           <Swiper
-            spaceBetween={SWIPER_CONFIG.spaceBetweenZero}
+            spaceBetween={SWIPER_CONFIG.freeSpace}
             breakpoints={SWIPER_CONFIG.pricingBreakPoints}
             grabCursor={SWIPER_CONFIG.grabCursor}
             scrollbar={SWIPER_CONFIG.scrollbar}

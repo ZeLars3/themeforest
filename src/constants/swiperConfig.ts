@@ -29,7 +29,7 @@ export const SWIPER_CONFIG = {
   pricingBreakPoints: {
     360: {
       slidesPerView: 1,
-      spaceBetween: -80,
+      spaceBetween: -40,
     },
     768: {
       slidesPerView: 3,
@@ -83,7 +83,6 @@ export const SWIPER_CONFIG = {
   priceSliderStyles: {
     width: '100%',
     padding: '0 10px',
-    overflow: 'visible',
   },
   commentSliderStyles: {
     width: '100%',

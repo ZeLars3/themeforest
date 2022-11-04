@@ -38,10 +38,10 @@ export const Testimonials: FC = () => {
           <TestimonialButton
             disabled={true}
             ref={navigationPrevRef}>
-            <Icon src={ArrowLeft} />
+            <Icon src={ArrowLeft} alt="previous slide" />
           </TestimonialButton>
           <TestimonialButton ref={navigationNextRef}>
-            <Icon src={ArrowRight} />
+            <Icon src={ArrowRight} alt="next slide" />
           </TestimonialButton>
         </TestimonialsController>
       </TestimonialsWrapper>

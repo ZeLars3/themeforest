@@ -37,7 +37,7 @@ export const ServiceSingleList: FC = () => {
                   ))}
                 </SolutionFeatures>
               )}
-              {img && <ServiceInfoSectionImage src={img} />}
+              {img && <ServiceInfoSectionImage src={img} alt="service info" />}
             </Fragment>
           )
         },

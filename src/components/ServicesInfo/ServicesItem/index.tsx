@@ -30,7 +30,7 @@ export const ServicesItem: FC<IServicesItem> = ({
       <ServiceItemLink
         href={location.pathname + `/id=${id}`}>
         <Button>
-          Read more <Icon src={ArrowRightSmall} />
+          Read more <Icon src={ArrowRightSmall} alt="read more" />
         </Button>
       </ServiceItemLink>
     </ServiceItemContainer>

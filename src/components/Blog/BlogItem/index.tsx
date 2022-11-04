@@ -40,7 +40,7 @@ export const BlogItem: FC<IBlogItem> = ({
         <BlogItemTitle>{title}</BlogItemTitle>
         <BlogItemText>{text}</BlogItemText>
         <Button onClick={handleNavigate}>
-          Read more <Icon src={ArrowRightSmall} />
+          Read more <Icon src={ArrowRightSmall} alt="read more" />
         </Button>
       </BlogItemWrapper>
     </BlogItemContainer>

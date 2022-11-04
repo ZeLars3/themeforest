@@ -8,7 +8,7 @@ import {
   Benefits,
   BasicInfo,
   Testimonials,
-  Blog,
+  OurBlog,
   Pricing,
 } from '@/components'
 
@@ -22,7 +22,7 @@ const Home: FC = () => {
       <Benefits />
       <Testimonials />
       <Pricing />
-      <Blog />
+      <OurBlog />
       <Help />
     </>
   )

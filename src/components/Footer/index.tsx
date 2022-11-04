@@ -121,8 +121,8 @@ export const Footer: FC = () => {
           Ensome© 2022 All Rights Reserved
         </Text>
         <>
-          <Text color>Privacy policy</Text>
-          <Text color>Terms of us</Text>
+          <Text $color={true}>Privacy policy</Text>
+          <Text $color={true}>Terms of us</Text>
         </>
       </RightsContainer>
     </FooterContainer>

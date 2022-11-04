@@ -44,7 +44,7 @@ export const AboutUsCustomers: FC = () => {
         </AboutUsCustomersWrapperText>
         <AboutUsCustomersList>
           {currentViewport === 'desktop' ? (
-            STATISTIC_COMPANY_ICONS.map((icon) => (
+            STATISTIC_COMPANY_ICONS.map(icon => (
               <CompanyIcon key={uuidv4()} src={icon} />
             ))
           ) : (
@@ -58,9 +58,9 @@ export const AboutUsCustomers: FC = () => {
               grabCursor={SWIPER_CONFIG.grabCursor}
               scrollbar={SWIPER_CONFIG.scrollbar}
               modules={SWIPER_CONFIG.modules}>
-              {STATISTIC_COMPANY_ICONS.map((icon) => (
+              {STATISTIC_COMPANY_ICONS.map(icon => (
                 <SwiperSlide key={uuidv4()}>
-                  <CompanyIcon src={icon} />
+                  <CompanyIcon src={icon} alt="company" />
                 </SwiperSlide>
               ))}
             </Swiper>

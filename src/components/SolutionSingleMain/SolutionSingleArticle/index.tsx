@@ -68,7 +68,7 @@ ISolutionSingleItem
       <SolutionSingleArticleTitle ref={refs[name]} id={id}>
         {name}
       </SolutionSingleArticleTitle>
-      {img && <Img src={img} />}
+      {img && <Img src={img} alt={name} />}
       <SolutionContentText>{text}</SolutionContentText>
       {(list != null) && (
         <SolutionSingleArticleList>

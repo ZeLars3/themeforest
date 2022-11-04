@@ -33,7 +33,7 @@ export const AllServicesList: FC = () => {
             <AllServicesItem
               key={id}
               onClick={serviceItemClickHandle(String(id))}>
-              {title} <Icon src={ArrowRight} />
+              {title} <Icon src={ArrowRight} alt="about service" />
             </AllServicesItem>
           )
         })}

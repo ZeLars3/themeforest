@@ -43,10 +43,10 @@ export const AboutUsSay: FC = () => {
           <AboutUsSayController>
             <AboutUsSayButton
               ref={navigationPrevRef}>
-              <Icon src={ArrowLeft} />
+              <Icon src={ArrowLeft} alt="previous slide" />
             </AboutUsSayButton>
             <AboutUsSayButton ref={navigationNextRef}>
-              <Icon src={ArrowRight} />
+              <Icon src={ArrowRight} alt="next slide" />
             </AboutUsSayButton>
           </AboutUsSayController>
             )

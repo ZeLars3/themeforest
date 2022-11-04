@@ -47,8 +47,12 @@ export const SuccessStatistic: FC = () => {
           </StatisticText>
         </StatisticWrapperInner>
         <StatisticCompanies>
-          {STATISTIC_COMPANY_ICONS.map((icon) => (
-            <CompanyIcon key={uuidv4()} src={icon} />
+          {STATISTIC_COMPANY_ICONS.map(icon => (
+            <CompanyIcon
+              key={uuidv4()}
+              src={icon}
+              alt="company"
+            />
           ))}
         </StatisticCompanies>
       </StatisticWrapper>

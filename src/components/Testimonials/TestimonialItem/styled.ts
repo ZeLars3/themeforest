@@ -48,10 +48,14 @@ export const TestimonialItemPosition = styled.p`
 `
 
 export const TestimonialItemText = styled.p`
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  color: ${({ theme }) => theme.colors.grey};
+
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 24px;
-    color: ${({ theme }) => theme.colors.grey};
   }
 `
 

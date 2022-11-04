@@ -8,6 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -27,7 +28,6 @@
     },
   },
   "include": [
-    "src",
-    "css.d.ts",
+    "src"
   ]
 }

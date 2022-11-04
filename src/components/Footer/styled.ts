@@ -115,8 +115,8 @@ export const Text = styled.p<any>`
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 150%;
-    color: ${({ theme, color }) =>
-      color ? theme.colors.white : null};
+    color: ${({ theme, $color }) =>
+    $color ? theme.colors.white : null};
   }
 `
 

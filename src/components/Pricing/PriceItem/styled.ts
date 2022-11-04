@@ -23,6 +23,10 @@ export const PriceItemContainer = styled.li <any>`
     letter-spacing: -0.01em;
     color: ${({ theme }) => theme.colors.white};
   }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 `
 
 export const PriceItemTitle = styled.h3`

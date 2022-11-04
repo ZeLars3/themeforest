@@ -89,7 +89,6 @@ export const BasicInfoButton = styled.button`
 export const BasicInfoImgWrapper = styled.div`
   display: flex;
   justify-content: center;
-  height: 590px;
 
   @media (max-width: 768px) {
     height: auto;
@@ -99,4 +98,6 @@ export const BasicInfoImgWrapper = styled.div`
   }
 `
 
-export const Img = styled.img``
+export const Img = styled.img`
+  max-width: 100%;
+`

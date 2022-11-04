@@ -52,7 +52,9 @@ export const Header: FC = () => {
           <HeaderLogo>
             <Icon src={LogoBlue} alt="Site logo" />
           </HeaderLogo>
-          <BurgerButton onClick={handleMenuClick}>
+          <BurgerButton
+            onClick={handleMenuClick}
+            aria-label="Open-close menu">
             {!isMenuOpen
               ? (
               <Svgr icon={MenuOpen} />
