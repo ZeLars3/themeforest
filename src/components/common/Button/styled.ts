@@ -1,29 +1,18 @@
 import styled from 'styled-components'
+import Button from '@mui/material/Button'
 
-import { IButtonContainer } from './types'
-
-export const ButtonContainer = styled.button <IButtonContainer>`
-  display: flex;
+export const ButtonContainer = styled(Button)`
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 125px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 6px !important;
   transition: 0.7s;
-  cursor: pointer;
-  background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white};
-  box-shadow: ${({ isDisable }) =>
-    isDisable
-      ? 'none'
-      : '0px 12px 30px rgba(24, 92, 255, 0.18)'};
-  
-  &:disabled {
-    background: ${({ theme }) => theme.colors.grey};
-    border: 1px solid ${({ theme }) => theme.colors.black};
-  }
+  text-transform: none !important;
+  background-color: ${({ theme }) => theme.colors.primary} !important;
+  color: ${({ theme }) => theme.colors.white} !important;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.hover};
+    background: ${({ theme }) => theme.colors.hover} !important;
   }
 `

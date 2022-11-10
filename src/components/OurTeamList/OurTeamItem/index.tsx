@@ -16,13 +16,10 @@ export const OurTeamItem: FC<ITeamItem> = ({
   position,
   avatar,
   id,
-  isMargin,
 }) => {
   return (
-    <OurTeamItemContainer
-      avatar={avatar}
-      isMargin={isMargin}>
-      <OurTeamItemWrapper>
+    <OurTeamItemContainer>
+      <OurTeamItemWrapper avatar={avatar}>
         <OurTeamItemName>
           <OurTeamItemLink
             href={Routes.OurTeam + '/id=' + id}>

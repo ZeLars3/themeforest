@@ -25,7 +25,7 @@ import {
 export const Header: FC = () => {
   const [isMenuOpen, setIsMenuOpen] =
     useState<boolean>(false)
-  const [isVideo, setIsVideo] = useState<boolean>(false)
+  const [isVideo, setIsVideo] = useState <boolean>(false)
 
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
@@ -47,7 +47,12 @@ export const Header: FC = () => {
 
   return (
     <HeaderContainer>
-      <HeaderWrapper>
+      <HeaderWrapper
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          maxWidth: 1110,
+        }}>
         <HeaderWrapperInner>
           <HeaderLogo>
             <Icon src={LogoBlue} alt="Site logo" />
@@ -55,27 +60,27 @@ export const Header: FC = () => {
           <BurgerButton
             onClick={handleMenuClick}
             aria-label="Open-close menu">
-            {!isMenuOpen
-              ? (
+            {!isMenuOpen ? (
               <Svgr icon={MenuOpen} />
-                )
-              : (
+            ) : (
               <Svgr icon={MenuClose} />
-                )}
+            )}
           </BurgerButton>
         </HeaderWrapperInner>
         <Navigation menu={isMenuOpen} />
         <HeaderWrapperButton>
           <Button
-            size="medium"
-            btnType="square"
+            variant="contained"
             clickHandle={handleCallDemo}>
             <Icon src={PlayIcon} alt="Play Demo" />
             Watch the demo
           </Button>
         </HeaderWrapperButton>
       </HeaderWrapper>
-      {isVideo && <DemoVideo />}
+      <DemoVideo
+        isOpen={isVideo}
+        onClose={handleCallDemo}
+      />
     </HeaderContainer>
   )
 }

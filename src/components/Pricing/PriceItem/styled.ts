@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PriceItemContainer = styled.li <any>`
+export const PriceItemContainer = styled.li<any>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,13 +15,11 @@ export const PriceItemContainer = styled.li <any>`
 
   button {
     width: 100%;
-    padding: 10px 65px;
-    border: none;
+    padding: 10px 0;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
-    color: ${({ theme }) => theme.colors.white};
   }
 
   @media (max-width: 768px) {
@@ -38,9 +36,16 @@ export const PriceItemTitle = styled.h3`
 
 export const PriceItemWrapperInner = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   margin: 20px 0 30px 0;
+
+  button {
+    width: 41px;
+    height: 32px;
+    text-transform: none;
+  }
 `
 
 export const PriceItemPrice = styled.h4`
@@ -48,19 +53,6 @@ export const PriceItemPrice = styled.h4`
   font-size: 26px;
   line-height: 40px;
   letter-spacing: -0.015em;
-`
-
-export const PriceToggleWrapper = styled.p`
-  flex-grow: 2;
-  display: flex;
-  justify-content: flex-end;
-
-  button {
-    max-width: 41px;
-    max-height: 32px;
-    margin-left: 15px;
-    padding: 4px 13.5px;
-  }
 `
 
 export const PriceItemAdvantages = styled.ul`

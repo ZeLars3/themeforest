@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useCallback, useState } from 'react'
 
 import { FAQ_ITEMS } from '@/constants/faqItems'
 
@@ -9,6 +9,13 @@ import {
 } from './styled'
 
 export const FAQsList: FC = () => {
+  const [activeId, setActiveId] = useState <number>(0)
+
+  const handleClickDropdown = (id: number) => (): void =>
+    setActiveId((prevId: number) =>
+      prevId === id ? 0 : id,
+    )
+
   return (
     <FAQsListContainer>
       <FAQsListWrapper>
@@ -18,6 +25,8 @@ export const FAQsList: FC = () => {
             id={id}
             title={title}
             text={text}
+            isActive={activeId === id}
+            handleClick={handleClickDropdown(Number(id))}
           />
         ))}
       </FAQsListWrapper>

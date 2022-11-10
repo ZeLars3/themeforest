@@ -96,8 +96,7 @@ export const ContactHelpForm = () => {
         />
         <Button
           type="submit"
-          size="form"
-          btnType="square">
+          variant='contained'>
           Send
         </Button>
       </HelpForm>

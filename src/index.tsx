@@ -7,10 +7,11 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '@/assets/styles/globalStyles'
 import theme from '@/assets/styles/theme'
 import store from '@/store'
+import { ErrorBoundary } from '@/components'
+import { ScrollToTop } from '@/helpers'
 
 import { App } from './app'
 import reportWebVitals from './reportWebVitals'
-import { ErrorBoundary } from './components'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,6 +19,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ScrollToTop />
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
@@ -27,7 +29,7 @@ root.render(
         </ThemeProvider>
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
 
 reportWebVitals()

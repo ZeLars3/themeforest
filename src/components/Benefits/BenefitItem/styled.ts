@@ -4,6 +4,7 @@ export const BenefitListItem = styled.li`
   display: flex;
   flex-direction: column;
   padding: 25px;
+  border-radius: 6px;
   background-color: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.shadows.shadowCard3};
 

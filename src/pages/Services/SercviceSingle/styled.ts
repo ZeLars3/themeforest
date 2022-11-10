@@ -19,7 +19,6 @@ export const ContactWrapper = styled.div`
     margin-top: 40px;
     padding: 15px 0;
     width: 100%;
-    border: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;

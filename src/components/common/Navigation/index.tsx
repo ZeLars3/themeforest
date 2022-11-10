@@ -5,7 +5,6 @@ import { INavigation } from '@/types'
 import { useTypedSelector } from '@/hooks'
 
 import { SocialLinks } from '../SocialLinks'
-import { Dropdown } from '../Dropdown'
 import {
   NavigationContainer,
   NavigationList,
@@ -20,13 +19,7 @@ export const Navigation: FC<INavigation> = ({ menu }) => {
     <NavigationContainer>
       {menu && (
         <NavigationList>
-          {NAV_ITEMS.slice(0, 2).map(({ id, name, path }) => (
-            <NavigationListItem to={path} key={id}>
-              {name}
-            </NavigationListItem>
-          ))}
-          <Dropdown />
-          {NAV_ITEMS.slice(2).map(({ id, name, path }) => (
+          {NAV_ITEMS.map(({ id, name, path }) => (
             <NavigationListItem to={path} key={id}>
               {name}
             </NavigationListItem>

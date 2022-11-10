@@ -45,17 +45,11 @@ export const BusinessWrapperInner = styled.div`
   padding-left: 30px;
 
   button {
-    color: ${({ theme }) => theme.colors.white};
-    border: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    padding: 15px 37px;
-    width: 185px;
-
-    &:hover {
-      background: ${({ theme }) => theme.colors.hover};
-    }
+    padding: 15px 35px;
+    width: 190px;
   }
 
   @media (max-width: 768px) {

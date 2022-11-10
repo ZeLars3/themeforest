@@ -91,11 +91,18 @@ export const LinkWrapper = styled.li`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.grey};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.tertiary};
+    }
   }
 `
 
 export const RightsContainer = styled.div`
-  display: content;
+  max-width: 1110px;
+  padding: 35px 0;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 
@@ -109,14 +116,21 @@ export const Wrapper = styled.div`
   gap: 95px;
 `
 
-export const Text = styled.p<any>`
+export const Text =
+  styled.p <
+  any >
+  `
   color: ${({ theme }) => theme.colors.helperBlue2};
+
+  &:first-child {
+    margin-right: 95px;
+  }
 
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 150%;
     color: ${({ theme, $color }) =>
-    $color ? theme.colors.white : null};
+      $color ? theme.colors.white : null};
   }
 `
 
@@ -126,6 +140,10 @@ export const Icon = styled(Svgr)`
   @media (max-width: 768px) {
     display: block;
   }
+`
+
+export const TextWrapper = styled.div`
+  display: flex;
 `
 
 export const WrapperText = styled.div``

@@ -70,6 +70,8 @@ export interface IFAQsItem {
   id: string | number
   title: string
   text: string
+  isActive?: boolean
+  handleClick? (): void
 }
 
 interface IProfileSocialItem {

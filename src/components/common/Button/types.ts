@@ -20,17 +20,18 @@ ButtonHTMLAttributes<HTMLButtonElement>,
 HTMLButtonElement
 >
 export type ButtonPropsType = DefaultButtonPropsType & {
-  btnType: ButtonType
+  btnType?: ButtonType
   children?: React.ReactNode
-  size: ButtonSize
+  size?: ButtonSize
   inversion?: boolean
   isDisable?: boolean
   icon?: typeof ReactComponent
   clickHandle?: () => void
+  variant: 'text' | 'outlined' | 'contained'
 }
 
 export interface IButtonContainer {
-  btnType: ButtonType
+  btnType?: ButtonType
   size: ButtonSize
   inversion?: boolean
   isDisable?: boolean

@@ -61,3 +61,8 @@ export interface IBlogNewsItem {
   image: string
   id?: string | number
 }
+
+export interface IDemoVideo {
+  isOpen: boolean
+  onClose: () => void
+}

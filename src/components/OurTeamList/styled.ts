@@ -8,17 +8,16 @@ export const OurTeamListContainer = styled.div`
   }
 `
 
-export const OurTeamListWrapper = styled.ul`
+export const OurTeamListWrapper = styled.ul<any>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   max-width: 1110px;
-  min-height: 500px;
   padding: 70px 0;
   margin: 0 auto;
   background: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     grid-gap: 8px;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 16px;

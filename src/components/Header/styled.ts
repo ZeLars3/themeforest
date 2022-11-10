@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Box from '@mui/material/Box'
 
 export const HeaderContainer = styled.header`
   background-color: ${({ theme }) =>
@@ -6,17 +7,12 @@ export const HeaderContainer = styled.header`
   padding: 40px 0;
 
   @media (max-width: 768px) {
-    background-color: ${({ theme }) => theme.colors.white};
     padding: 20px 0 0 0;
+    background-color: ${({ theme }) => theme.colors.white};
   }
 `
 
-export const HeaderWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1110px;
-  min-width: 360px;
+export const HeaderWrapper = styled(Box)`
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -42,14 +38,19 @@ export const HeaderWrapperInner = styled.div`
 
 export const HeaderWrapperButton = styled.div`
   button {
-    width: 168px;
     padding: 10px 13px;
     border: none;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
+    text-transform: none;
     color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.primary};
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.hover};
+    }
 
     img {
       padding-right: 10px;

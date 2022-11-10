@@ -55,8 +55,7 @@ export const NewSolutions: FC = () => {
             beatae vitae dicta sunt explicabo.
           </SolutionText>
           <Button
-            size="big"
-            btnType="square"
+            variant='contained'
             clickHandle={handleNavigate}>
             Learn more
           </Button>

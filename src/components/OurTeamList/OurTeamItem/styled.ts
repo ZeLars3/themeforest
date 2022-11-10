@@ -1,51 +1,45 @@
 import styled from 'styled-components'
 
-export const OurTeamItemContainer = styled.li<{ avatar: string, isMargin?: boolean }>`
-  width: 350px;
+export const OurTeamItemContainer = styled.li`
+  width: 100%;
   height: 500px;
+  max-width: 400px;
   list-style: none;
-  margin: -${({ isMargin }) => isMargin && '60px 0 30px 0'};
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 500px;
-    background-image: ${({ avatar }) => `url(${avatar})`};
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
+  &:nth-child(3n + 2) {
+    margin-top: -60px;
   }
 
-  @media (max-width: 950px) {
-    width: 160px;
-    height: 220px;
-    background-size: 160px 220px;
-    margin: 0 auto;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+
+    &:nth-child(3n + 2) {
+      margin-top: 0;
+    }
 
     &:nth-child(2n) {
       margin-top: -60px;
     }
+  }
 
-    &::before {
-      width: 160px;
-      height: 220px;
-    }
+  @media (max-width: 450px) {
+    height: 220px;
+    max-width: 160px;
   }
 `
 
-export const OurTeamItemWrapper = styled.div`
-  position: relative;
+export const OurTeamItemWrapper = styled.div <{ avatar: string } >`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
   height: 100%;
   padding: 25px;
-  background: linear-gradient(180deg, rgba(40, 50, 66, 0) 43.61%, #283242 100.37%);
   border-radius: 6px;
+  background-image: ${({ avatar }) => `url(${avatar})`};
+  background-size: cover;
+  background-position: center;
 
   @media (max-width: 768px) {
     padding: 6px 15px;

@@ -82,7 +82,7 @@ export const SWIPER_CONFIG = {
   },
   priceSliderStyles: {
     width: '100%',
-    padding: '0 10px',
+    padding: '10px',
   },
   commentSliderStyles: {
     width: '100%',

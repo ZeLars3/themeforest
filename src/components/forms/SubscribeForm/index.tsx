@@ -13,6 +13,7 @@ init(process.env.REACT_APP_PUBLIC_KEY as string)
 export const SubscribeForm: FC = () => {
   const [_, setMessage] = useState<string>('')
   const [disabled, setDisabled] = useState<boolean>(false)
+  const subscribeRef = useRef<HTMLFormElement>(null)
 
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
@@ -22,23 +23,14 @@ export const SubscribeForm: FC = () => {
     return acc
   }, {})
 
-  const subscribeRef = useRef<HTMLFormElement>(null)
-
   const formik = useFormik({
-    initialValues,
+    initialValues: initialValues,
     validationSchema: sendEmailSchema,
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: (values, { resetForm }) => {
-      resetForm()
-    },
-  })
-
-  const sendEmail = (event: FormEvent<HTMLFormElement>): void => {
-    event.preventDefault()
-
-    setDisabled(true)
-    emailjs
+    onSubmit: (_, { resetForm }) => {
+      setDisabled(true)
+      emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID as string,
         'template_98jhgo7',
@@ -46,15 +38,19 @@ export const SubscribeForm: FC = () => {
         process.env.REACT_APP_PUBLIC_KEY as string,
       )
       .then(
-        () => setMessage('success'),
+        () => {
+          setMessage('success')
+          resetForm()
+        },
         () => setMessage('error')
       )
       .finally(() => setDisabled(false))
-  }
+    },
+  })
 
   return (
     <SubscribeFormContainer>
-      <Form ref={subscribeRef} onSubmit={sendEmail}>
+      <Form ref={subscribeRef} onSubmit={formik.handleSubmit}>
         {
           subscribeFields.map(({ name, placeholder }) => (
             <TextInput
@@ -69,11 +65,9 @@ export const SubscribeForm: FC = () => {
           ))
         }
         <Button
-          size='form'
           type='submit'
-          btnType='square'
           isDisable={disabled}
-        >
+          variant='contained'>
           {currentViewport === 'desktop' ? 'Send' : 'Subscribe'}
         </Button>
       </Form>

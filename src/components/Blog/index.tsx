@@ -15,7 +15,6 @@ import { useTypedSelector } from '@/hooks'
 import { BlogItem } from './BlogItem'
 import {
   BlogList,
-  SelectButton,
   BlogContainer,
   BlogController,
   BlogTitle,
@@ -24,6 +23,7 @@ import {
   BlogWrapper,
   ButtonWrapper,
 } from './styled'
+import { TestimonialButton } from '../Testimonials/styled'
 
 export const OurBlog: FC = () => {
   const navigationPrevRef = useRef(null)
@@ -44,12 +44,12 @@ export const OurBlog: FC = () => {
         <BlogWrapperText>
           <BlogTitle>Our blog</BlogTitle>
           <BlogController>
-            <SelectButton ref={navigationPrevRef}>
+            <TestimonialButton ref={navigationPrevRef}>
               <Icon src={ArrowLeft} alt="previous slide" />
-            </SelectButton>
-            <SelectButton ref={navigationNextRef}>
+            </TestimonialButton>
+            <TestimonialButton ref={navigationNextRef}>
               <Icon src={ArrowRight} alt="next slide" />
-            </SelectButton>
+            </TestimonialButton>
           </BlogController>
         </BlogWrapperText>
         <BlogList>
@@ -109,8 +109,7 @@ export const OurBlog: FC = () => {
           : (
           <ButtonWrapper>
             <Button
-              size="big"
-              btnType="square"
+              variant='contained'
               clickHandle={handleNavigate}>
               Learn more
             </Button>

@@ -1,33 +1,29 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import Plus from '@/assets/icons/plus.svg'
 import Minus from '@/assets/icons/minus.svg'
 import { IFAQsItem } from '@/types'
+import { Svgr } from '@/components/common'
 
 import {
   FAQsItemSubtitle,
   FAQsItemContainer,
   FAQsItemTitle,
 } from './styled'
-import { Svgr } from '@/components/common'
 
 export const FAQsItem: FC<IFAQsItem> = ({
   title,
   text,
+  isActive,
+  handleClick,
 }) => {
-  const [isShow, setIsShow] = useState<boolean>(false)
-
-  const handleClickItem = (): void => {
-    setIsShow(!isShow)
-  }
-
   return (
-    <FAQsItemContainer onClick={handleClickItem}>
-      <FAQsItemTitle isShow={isShow}>
+    <FAQsItemContainer onClick={handleClick}>
+      <FAQsItemTitle isShow={isActive ?? false}>
         {title}
-        <Svgr icon={isShow ? Minus : Plus} />
+        <Svgr icon={isActive ? Minus : Plus} />
       </FAQsItemTitle>
-      {isShow && (
+      {isActive && (
         <FAQsItemSubtitle>{text}</FAQsItemSubtitle>
       )}
     </FAQsItemContainer>

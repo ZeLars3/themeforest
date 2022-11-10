@@ -39,17 +39,11 @@ export const WrapperInner = styled.div`
   max-width: 540px;
 
   button {
-    color: ${({ theme }) => theme.colors.white};
-    border: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    padding: 15px 37px;
+    padding: 15px 35px;
     width: 190px;
-
-    &:hover {
-      background: ${({ theme }) => theme.colors.hover};
-    }
   }
 
   @media (max-width: 768px) {

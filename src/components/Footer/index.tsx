@@ -34,6 +34,7 @@ import {
   FooterWrapper,
   Icon,
   FooterList,
+  TextWrapper,
 } from './styled'
 
 export const Footer: FC = () => {
@@ -120,10 +121,10 @@ export const Footer: FC = () => {
         <Text>
           Ensome© 2022 All Rights Reserved
         </Text>
-        <>
+        <TextWrapper>
           <Text $color={true}>Privacy policy</Text>
           <Text $color={true}>Terms of us</Text>
-        </>
+        </TextWrapper>
       </RightsContainer>
     </FooterContainer>
   )

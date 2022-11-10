@@ -41,12 +41,21 @@ export const TestimonialButton = styled.button`
   width: 110px;
   padding: 15px 40px;
   border: none;
-  border-radius: 14px;
   cursor: pointer;
-  transition: 0.7s;
+  transition: 0.3s;
   border-radius: 20px;
   background-color: ${({ theme }) =>
     theme.colors.background};
+
+  &:hover {
+   border: 1px solid ${({ theme }) =>
+   theme.colors.grey};
+  }
+
+  &:active {
+    background-color: ${({ theme }) =>
+    theme.colors.hover};
+  }
 
   @media (max-width: 768px) {
     display: flex;

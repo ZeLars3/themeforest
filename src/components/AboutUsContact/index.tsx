@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 import { Button } from '@/components/common'
 import { ContactForm } from '@/components/forms/ContactForm'
+import { useTypedSelector } from '@/hooks'
 
 import {
   AboutUsContactContainer,
@@ -14,6 +15,10 @@ import {
 import { AboutUsContactItem } from './AboutUsContactItem'
 
 export const AboutUsContact: FC = () => {
+  const currentViewport: string = useTypedSelector(
+    ({ app }) => app.viewport,
+  )
+
   return (
     <AboutUsContactContainer>
       <AboutUsContactWrapper>
@@ -34,9 +39,9 @@ export const AboutUsContact: FC = () => {
         <AboutUsContactWrapperText>
           <ContactForm title="Contact Us" titleSize="big" />
         </AboutUsContactWrapperText>
-        <Button size="big" btnType="square">
-          Contact us
-        </Button>
+        {currentViewport === 'desktop' ? null : (
+          <Button variant="contained">Contact us</Button>
+        )}
       </AboutUsContactWrapper>
     </AboutUsContactContainer>
   )

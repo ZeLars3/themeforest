@@ -13,13 +13,11 @@ export const HelpWrapper = styled.div`
 
   button {
     margin: 0 auto;
-    padding: 15px 52px;
+    padding: 15px 35px;
     width: 190px;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    border: none;
-    color: ${({ theme }) => theme.colors.white};
   }
 
   @media (max-width: 768px) {

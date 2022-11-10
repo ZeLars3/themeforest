@@ -65,9 +65,8 @@ export const ContactForm: FC<IContactForm> = ({ title, titleSize }) => {
           />
         ))}
         <Button
-          size='form'
+          variant='contained'
           type='submit'
-          btnType='square'
         >
           Send
         </Button>

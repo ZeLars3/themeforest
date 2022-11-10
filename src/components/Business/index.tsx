@@ -39,8 +39,7 @@ export const Business: FC = () => {
             beatae vitae dicta sunt explicabo.
           </BusinessText>
           <Button
-            size="big"
-            btnType="square"
+            variant='contained'
             clickHandle={handleNavigate}>
             Discover more
           </Button>

@@ -63,21 +63,11 @@ export const BlogTitle = styled.h2`
 
 export const BlogController = styled.div`
   display: flex;
+  gap: 15px;
 
   @media (max-width: 768px) {
     display: none;
   }
-`
-
-export const SelectButton = styled.button`
-  width: 110px;
-  padding: 15px 40px;
-  border-radius: 20px;
-  margin-left: 15px;
-  border: none;
-  cursor: pointer;
-  transition: 0.7s;
-  background: ${({ theme }) => theme.colors.tertiary};
 `
 
 export const Icon = styled.img``
