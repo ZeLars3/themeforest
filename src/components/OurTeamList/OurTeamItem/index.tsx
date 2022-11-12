@@ -7,7 +7,6 @@ import {
   OurTeamItemContainer,
   OurTeamItemPosition,
   OurTeamItemWrapper,
-  OurTeamItemName,
   OurTeamItemLink,
 } from './styled'
 
@@ -20,13 +19,13 @@ export const OurTeamItem: FC<ITeamItem> = ({
   return (
     <OurTeamItemContainer>
       <OurTeamItemWrapper avatar={avatar}>
-        <OurTeamItemName>
-          <OurTeamItemLink
-            href={Routes.OurTeam + '/id=' + id}>
-            {name}
-          </OurTeamItemLink>
-        </OurTeamItemName>
-        <OurTeamItemPosition>
+        <OurTeamItemLink
+          variant="h4"
+          underline="hover"
+          href={Routes.OurTeam + '/id=' + id}>
+          {name}
+        </OurTeamItemLink>
+        <OurTeamItemPosition variant="body1">
           {position}
         </OurTeamItemPosition>
       </OurTeamItemWrapper>

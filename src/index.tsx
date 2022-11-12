@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import { ThemeProvider as ThemeProviderMUI } from '@emotion/react'
 
 import GlobalStyles from '@/assets/styles/globalStyles'
-import theme from '@/assets/styles/theme'
+import theme, { customTheme } from '@/assets/styles/theme'
 import store from '@/store'
 import { ErrorBoundary } from '@/components'
 import { ScrollToTop } from '@/helpers'
@@ -24,7 +25,9 @@ root.render(
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <ErrorBoundary>
-            <App />
+            <ThemeProviderMUI theme={customTheme}>
+              <App />
+            </ThemeProviderMUI>
           </ErrorBoundary>
         </ThemeProvider>
       </Provider>

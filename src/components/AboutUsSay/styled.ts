@@ -1,54 +1,48 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import List from '@mui/material/List'
 
 export const AboutUsSayContainer = styled.section`
-  padding-bottom: 120px;
+  padding: 0 16px 120px 16px;
 
   @media (max-width: 768px) {
-    padding-bottom: 50px;
+    padding: 0 16px 50px 16px;
   }
 `
 
-export const AboutUsSayWrapper = styled.div`
+export const AboutUsSayWrapper = styled(Stack)`
   max-width: 1110px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
-  padding-bottom: 80px;
-
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
 `
 
-export const AboutUsSayTitle = styled.h2`
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
+export const AboutUsSayTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
     padding-bottom: 15px;
     text-align: center;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const AboutUsSayController = styled.div`
-  display: flex;
+export const AboutUsSayController = styled(Stack)`
   gap: 10px;
 `
 
 export const AboutUsSayButton = styled.button`
   width: 110px;
   padding: 15px 40px;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: 0.7s;
   border-radius: 20px;
   background-color: ${({ theme }) =>
     theme.colors.background};
+
+  &:hover {
+    background-color: ${({ theme }) =>
+      theme.colors.tertiary};
+  }
 
   @media (max-width: 768px) {
     display: flex;
@@ -65,8 +59,13 @@ export const Icon = styled.img`
   }
 `
 
-export const AboutUsSayList = styled.ul`
+export const AboutUsSayList = styled(List)`
   display: flex;
   max-width: 1110px;
   margin: 0 auto;
+  padding: 80px 0 0 0 !important;
+
+  @media (max-width: 768px) {
+    padding: 0 !important;
+  }
 `

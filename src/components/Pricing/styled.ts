@@ -1,21 +1,22 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
 
-export const PricingContainer = styled.section``
+export const PricingContainer = styled.section`
+  padding: 0 16px;
+`
 
-export const PricingWrapper = styled.div`
+export const PricingWrapper = styled(Box)`
   max-width: 1110px;
   margin: 0 auto;
 `
 
-export const PricingTitle = styled.h2`
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
+export const PricingTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 

@@ -1,20 +1,15 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+import ListItem from '@mui/material/ListItem'
 
-export const ServiceInfoSectionTitle = styled.h3`
-  margin: 14px 0;
-  padding: 0;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 33px;
+export const ServiceInfoSectionTitle = styled(Typography)`
+  margin: 14px 0 !important;
 `
 
-export const ServiceInfoSectionText = styled.p`
-  margin: 10px 0 20px 0;
-  padding: 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: ${({ theme }) => theme.colors.grey};
+export const ServiceInfoSectionText = styled(Typography)`
+  margin: 10px 0 20px 0 !important;
+  color: ${({ theme }) => theme.colors.grey} !important;
 `
 
 export const ServiceInfoSectionImage = styled.img`
@@ -31,12 +26,8 @@ export const SolutionFeatures = styled.ul`
   margin: 10px 0 20px 0;
 `
 
-export const SolutionFeatureItem = styled.li`
-  display: flex;
-  align-items: center;
-  padding: 2px 0;
-  font-weight: 400;
-  font-size: 14px;
+export const SolutionFeatureItem = styled(ListItem)`
+  padding: 2px 0 !important;
   line-height: 24px;
 
   svg {
@@ -44,6 +35,6 @@ export const SolutionFeatureItem = styled.li`
   }
 `
 
-export const ServiceSingleListWrapper = styled.div`
+export const ServiceSingleListWrapper = styled(Box)`
   max-width: 400px;
 `

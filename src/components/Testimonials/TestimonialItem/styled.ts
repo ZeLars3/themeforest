@@ -1,9 +1,9 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 
-export const TestimonialItemContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+export const TestimonialItemContainer = styled(Stack)`
   max-width: 350px;
   margin: 20px auto;
   padding: 35px;
@@ -20,7 +20,7 @@ export const TestimonialItemWrapper = styled.div`
     padding-bottom: 26px;
   }
 `
-export const TestimonialItemAvatar = styled.div`
+export const TestimonialItemAvatar = styled(Box)`
   margin-right: 20px;
   overflow: hidden;
 `
@@ -35,28 +35,21 @@ export const Icon = styled.img`
   }
 `
 
-export const TestimonialItemName = styled.h3`
-  color: ${({ theme }) => theme.colors.black};
-`
+export const TestimonialItemPosition = styled(Typography)`
+  color: ${({ theme }) => theme.colors.grey} !important;
 
-export const TestimonialItemPosition = styled.p`
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
-    color: ${({ theme }) => theme.colors.grey};
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
-export const TestimonialItemText = styled.p`
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
-
+export const TestimonialItemText = styled(Typography)`
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
+export const TestimonialItemName = styled(Typography)``
 export const TestimonialItemInfo = styled.div``

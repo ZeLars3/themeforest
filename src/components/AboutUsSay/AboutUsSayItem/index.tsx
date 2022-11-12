@@ -19,19 +19,21 @@ export const AboutUsSayItem: FC<ITestimonialItem> = ({
   text,
 }) => {
   return (
-    <AboutUsSayItemLink href={Routes.Blog}>
+    <AboutUsSayItemLink variant="body1" href={Routes.Blog}>
       <AboutUsSayItemWrapper>
         <AboutUsSayItemAvatar
           src={avatar}
           alt="Person avatar"
         />
-        <AboutUsSayItemText>{text}</AboutUsSayItemText>
-        <>
-          <AboutUsSayItemName>{name}</AboutUsSayItemName>
-          <AboutUsSayItemPosition>
-            {position}
-          </AboutUsSayItemPosition>
-        </>
+        <AboutUsSayItemText variant="body1">
+          {text}
+        </AboutUsSayItemText>
+        <AboutUsSayItemName variant="h6">
+          {name}
+        </AboutUsSayItemName>
+        <AboutUsSayItemPosition variant="subtitle2">
+          {position}
+        </AboutUsSayItemPosition>
       </AboutUsSayItemWrapper>
     </AboutUsSayItemLink>
   )

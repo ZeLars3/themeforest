@@ -26,13 +26,17 @@ export const TestimonialItem: FC<ITestimonialItem> = ({
           <Icon src={avatar} alt="Person avatar" />
         </TestimonialItemAvatar>
         <TestimonialItemInfo>
-          <TestimonialItemName>{name}</TestimonialItemName>
-          <TestimonialItemPosition>
+          <TestimonialItemName variant="h6">
+            {name}
+          </TestimonialItemName>
+          <TestimonialItemPosition variant="subtitle2">
             {position}
           </TestimonialItemPosition>
         </TestimonialItemInfo>
       </TestimonialItemWrapper>
-      <TestimonialItemText>{text}</TestimonialItemText>
+      <TestimonialItemText variant="body1">
+        {text}
+      </TestimonialItemText>
     </TestimonialItemContainer>
   )
 }

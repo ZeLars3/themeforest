@@ -1,8 +1,4 @@
-import {
-  FC,
-  MouseEventHandler,
-  useState,
-} from 'react'
+import { FC, MouseEventHandler, useState } from 'react'
 import {
   Link,
   NavigateFunction,
@@ -45,7 +41,7 @@ export const Footer: FC = () => {
     ({ app }) => app.viewport,
   )
   const handleNavigateFromLogo: MouseEventHandler<
-  HTMLImageElement
+    HTMLImageElement
   > = () => {
     navigate(Routes.Home)
   }
@@ -58,14 +54,14 @@ export const Footer: FC = () => {
 
   return (
     <FooterContainer>
-      <FooterWrapper>
+      <FooterWrapper direction={'row'}>
         <InfoContainer>
           <LogoStyled
             alt="Logo"
             src={LogoIcon}
             onClick={handleNavigateFromLogo}
           />
-          <FooterText>
+          <FooterText variant="subtitle2">
             Ut enim ad minima veniam, quis nostrum
             exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.
@@ -73,7 +69,7 @@ export const Footer: FC = () => {
           <SocialLinks />
         </InfoContainer>
         <WrapperText>
-          <HeadingText onClick={handleClick}>
+          <HeadingText variant="h6" onClick={handleClick}>
             Quick Link
             <Icon icon={Arrow} />
           </HeadingText>
@@ -88,7 +84,7 @@ export const Footer: FC = () => {
           )}
         </WrapperText>
         <WrapperText>
-          <HeadingText onClick={handleClick}>
+          <HeadingText variant="h6" onClick={handleClick}>
             Services
             <Icon icon={Arrow} />
           </HeadingText>
@@ -103,7 +99,7 @@ export const Footer: FC = () => {
           )}
         </WrapperText>
         <WrapperText>
-          <HeadingText onClick={handleClick}>
+          <HeadingText variant="h6" onClick={handleClick}>
             Contact Info <Icon icon={Arrow} />
           </HeadingText>
           {isShowDropDowm && (
@@ -117,14 +113,14 @@ export const Footer: FC = () => {
           )}
         </WrapperText>
       </FooterWrapper>
-      <RightsContainer>
-        <Text>
-          Ensome© 2022 All Rights Reserved
-        </Text>
-        <TextWrapper>
-          <Text $color={true}>Privacy policy</Text>
-          <Text $color={true}>Terms of us</Text>
-        </TextWrapper>
+      <RightsContainer direction={'row'}>
+        <Text>Ensome© 2022 All Rights Reserved</Text>
+        {currentViewport === 'desktop' ? (
+          <TextWrapper direction={'row'}>
+            <Text $color={true}>Privacy policy</Text>
+            <Text $color={true}>Terms of us</Text>
+          </TextWrapper>
+        ) : null}
       </RightsContainer>
     </FooterContainer>
   )

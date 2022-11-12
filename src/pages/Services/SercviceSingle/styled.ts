@@ -5,10 +5,10 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1110px;
+  padding: 0 16px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 0 16px;
   }
 `
 

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 
 export const ServiceItemContainer = styled.li`
   padding: 20px;
@@ -8,43 +10,34 @@ export const ServiceItemContainer = styled.li`
   }
 `
 
-export const ServiceItemTitle = styled.h2`
+export const ServiceItemTitle = styled(Typography)`
   padding: 25px 0 16px 0;
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 20px !important;
+    line-height: 30px !important;
   }
 `
 
-export const ServiceItemText = styled.p`
+export const ServiceItemText = styled(Typography)`
   padding-bottom: 20px;
   max-width: 470px;
-  color: ${({ theme }) => theme.colors.grey};
 
   @media (max-width: 768px) {
-    max-width: 278px;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
-export const Button = styled.button`
-  text-align: left;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  background: none;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  transition: 0.7s;
-  color: ${({ theme }) => theme.colors.primary};
+export const ReadButton = styled(Button)`
+  font-size: 14px !important;
+  padding: 0 !important;
 
   &:hover {
     color: ${({ theme }) => theme.colors.hover};
   }
 `
 
-export const ServiceItemLink = styled.a``
-export const Icon = styled.img``
+export const Icon = styled.img`
+  margin-left: 7px;
+`

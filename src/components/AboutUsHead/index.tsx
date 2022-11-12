@@ -4,23 +4,23 @@ import { Routes } from '@/enums'
 
 import {
   AboutUsHeadContainer,
-  AboutUsHeadLink,
-  AboutUsHeadPath,
   AboutUsHeadTitle,
   AboutUsHeadWrapper,
 } from './styled'
+import { Breadcrumbs } from '../common'
 
 export const AboutUsHead: FC = () => {
   return (
     <AboutUsHeadContainer>
       <AboutUsHeadWrapper>
-        <AboutUsHeadTitle>About Us</AboutUsHeadTitle>
-        <AboutUsHeadPath>
-          <AboutUsHeadLink href={Routes.Home}>
-            Home
-          </AboutUsHeadLink>{' '}
-          | About Us
-        </AboutUsHeadPath>
+        <AboutUsHeadTitle variant="h1">
+          About Us
+        </AboutUsHeadTitle>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={'About Us'}
+          color={'black'}
+        />
       </AboutUsHeadWrapper>
     </AboutUsHeadContainer>
   )

@@ -9,7 +9,7 @@ import {
 } from './styled'
 
 export const FAQsList: FC = () => {
-  const [activeId, setActiveId] = useState <number>(0)
+  const [activeId, setActiveId] = useState<number>(0)
 
   const handleClickDropdown = (id: number) => (): void =>
     setActiveId((prevId: number) =>

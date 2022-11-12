@@ -20,7 +20,6 @@ import {
   BasicInfoWrapperText,
   BasicInfoContainer,
 } from './styled'
-
 export const BasicInfo: FC = () => {
   const navigate: NavigateFunction = useNavigate()
 
@@ -35,11 +34,16 @@ export const BasicInfo: FC = () => {
   return (
     <BasicInfoContainer>
       <BasicInfoWrapper>
-        <BasicInfoTitle>
+        <BasicInfoTitle variant="h1">
           Find true power in your data with{' '}
-          <ColorTitle>Ensome</ColorTitle>
+          <ColorTitle
+            variant="h1"
+            component="span"
+            color="primary">
+            Ensome
+          </ColorTitle>
         </BasicInfoTitle>
-        <BasicInfoWrapperText>
+        <BasicInfoWrapperText elevation={0}>
           <BasicInfoText>
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque

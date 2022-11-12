@@ -19,8 +19,12 @@ export const BlogNewsItem: FC<IBlogNewsItem> = ({
     <BlogNewsItemContainer>
       <BlogNewsItemImg src={image}></BlogNewsItemImg>
       <BlogNewsItemInfo>
-        <BlogNewsItemTitle>{title}</BlogNewsItemTitle>
-        <BlogNewsItemText>{text}</BlogNewsItemText>
+        <BlogNewsItemTitle variant="h3">
+          {title}
+        </BlogNewsItemTitle>
+        <BlogNewsItemText variant="body1">
+          {text}
+        </BlogNewsItemText>
       </BlogNewsItemInfo>
     </BlogNewsItemContainer>
   )

@@ -32,7 +32,7 @@ export const NewSolutions: FC = () => {
 
   return (
     <SolutionContainer>
-      <SolutionWrapper>
+      <SolutionWrapper direction="row">
         <WrapperImage>
           <Image
             src={
@@ -44,10 +44,10 @@ export const NewSolutions: FC = () => {
           />
         </WrapperImage>
         <WrapperInner>
-          <SolutionTitle>
+          <SolutionTitle variant="h2">
             Radically new solutions for data
           </SolutionTitle>
-          <SolutionText>
+          <SolutionText variant="h5">
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae
@@ -55,7 +55,7 @@ export const NewSolutions: FC = () => {
             beatae vitae dicta sunt explicabo.
           </SolutionText>
           <Button
-            variant='contained'
+            variant="contained"
             clickHandle={handleNavigate}>
             Learn more
           </Button>

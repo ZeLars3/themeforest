@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
 
 export const OurTeamItemContainer = styled.li`
   width: 100%;
@@ -29,9 +32,7 @@ export const OurTeamItemContainer = styled.li`
   }
 `
 
-export const OurTeamItemWrapper = styled.div <{ avatar: string } >`
-  display: flex;
-  flex-direction: column;
+export const OurTeamItemWrapper = styled(Stack)<{ avatar: string }>`
   justify-content: flex-end;
   width: 100%;
   height: 100%;
@@ -46,38 +47,28 @@ export const OurTeamItemWrapper = styled.div <{ avatar: string } >`
   }
 `
 
-export const OurTeamItemLink = styled.a`
-  text-decoration: none;
+export const OurTeamItemLink = styled(Link)`
   cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white} !important;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hover};
+    color: ${({ theme }) => theme.colors.hover} !important;
   }
 
   @media (max-width: 768px) {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.01em !important;
   }
 `
 
-export const OurTeamItemPosition = styled.p`
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+export const OurTeamItemPosition = styled(Typography)`
+  color: ${({ theme }) => theme.colors.white} !important;
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
-    color: ${({ theme }) => theme.colors.grey};
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: ${({ theme }) => theme.colors.grey} !important;
   }
 `
-
-export const OurTeamItemName = styled.h3``

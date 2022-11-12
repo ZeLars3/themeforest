@@ -1,23 +1,26 @@
 import styled from 'styled-components'
 import Box from '@mui/material/Box'
+import IconButton from '@mui/material/IconButton'
 
 export const HeaderContainer = styled.header`
+  padding: 40px 16px;
   background-color: ${({ theme }) =>
     theme.colors.background};
-  padding: 40px 0;
 
   @media (max-width: 768px) {
-    padding: 20px 0 0 0;
+    padding: 20px 16px 0 16px;
     background-color: ${({ theme }) => theme.colors.white};
   }
 `
 
 export const HeaderWrapper = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  max-width: 1110px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 0 16px;
     color: ${({ theme }) => theme.colors.white};
   }
 
@@ -26,7 +29,7 @@ export const HeaderWrapper = styled(Box)`
   }
 `
 
-export const HeaderWrapperInner = styled.div`
+export const HeaderWrapperInner = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,23 +37,21 @@ export const HeaderWrapperInner = styled.div`
   @media (max-width: 768px) {
     flex-direction: row;
   }
+
+  img {
+    @media (max-width: 360px) {
+      width: 92px;
+      height: 30px;
+    }
+  }
 `
 
-export const HeaderWrapperButton = styled.div`
+export const HeaderWrapperButton = styled(Box)`
   button {
     padding: 10px 13px;
-    border: none;
     font-weight: 600;
-    font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
-    text-transform: none;
-    color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.primary};
-
-    &:hover {
-      background-color: ${({ theme }) => theme.colors.hover};
-    }
 
     img {
       padding-right: 10px;
@@ -62,22 +63,13 @@ export const HeaderWrapperButton = styled.div`
   }
 `
 
-export const HeaderLogo = styled.div`
-  img {
-    @media (max-width: 360px) {
-      width: 92px;
-      height: 30px;
-    }
-  }
-`
-
-export const BurgerButton = styled.button`
-  display: none;
+export const BurgerButton = styled(IconButton)`
+  display: none !important;
   border: none;
   background-color: transparent;
 
   @media (max-width: 768px) {
-    display: block;
+    display: block !important;
   }
 `
 

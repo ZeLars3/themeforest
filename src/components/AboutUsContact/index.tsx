@@ -21,13 +21,13 @@ export const AboutUsContact: FC = () => {
 
   return (
     <AboutUsContactContainer>
-      <AboutUsContactWrapper>
+      <AboutUsContactWrapper direction="row">
         <AboutUsContactWrapperText>
-          <AboutUsContactTitle>
+          <AboutUsContactTitle variant="h2">
             Left questions? Contacts us now for a free
             consultation and free trial!
           </AboutUsContactTitle>
-          <AboutUsContactText>
+          <AboutUsContactText variant="body1">
             Ut enim ad minima veniam, quis nostrum
             exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.

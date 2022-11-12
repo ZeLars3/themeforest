@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 
 export const BlogItemContainer = styled.li`
   display: flex;
@@ -12,58 +15,38 @@ export const BlogItemContainer = styled.li`
   }
 `
 
-export const BlogItemWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-export const BlogItemDate = styled.span`
-  margin: 20px 0 12px 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+export const BlogItemDate = styled(Typography)`
+  margin: 20px 0 12px 0 !important;
+  color: ${({ theme }) => theme.colors.grey} !important;
 
   @media (max-width: 768px) {
-    margin: 0;
+    margin: 0 !important;
   }
 `
 
-export const Button = styled.button`
+export const BlogButton = styled(Button)`
   text-align: left;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  background: none;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  transition: 0.7s;
-  color: ${({ theme }) => theme.colors.primary};
+  display: block !important;
+  font-size: 14px !important;
+  padding: 0 !important;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hover};
+    color: ${({ theme }) => theme.colors.hover} !important;
   }
 `
 
-export const BlogItemTitle = styled.h3`
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 33px;
+export const BlogItemTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    padding: 6px 0;
-    font-size: 14px;
-    line-height: 24px;
+    padding: 6px 0 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
-export const BlogItemText = styled.p`
+export const BlogItemText = styled(Typography)`
   padding: 12px 0;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
 
   @media (max-width: 768px) {
     display: none;
@@ -81,3 +64,5 @@ export const BlogItemImage = styled.img`
     max-height: 96px;
   }
 `
+
+export const BlogItemWrapper = styled(Stack)``

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import List from '@mui/material/List'
 
-export const PriceItemContainer = styled.li<any>`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+export const PriceItemContainer = styled(Stack)`
   max-width: 255px;
   height: 522px;
   padding: 35px 20px;
@@ -16,10 +16,7 @@ export const PriceItemContainer = styled.li<any>`
   button {
     width: 100%;
     padding: 10px 0;
-    font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
   }
 
   @media (max-width: 768px) {
@@ -27,16 +24,7 @@ export const PriceItemContainer = styled.li<any>`
   }
 `
 
-export const PriceItemTitle = styled.h3`
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-`
-
-export const PriceItemWrapperInner = styled.div`
-  display: flex;
-  align-items: center;
+export const PriceItemWrapperInner = styled(Stack)`
   justify-content: space-between;
   width: 100%;
   margin: 20px 0 30px 0;
@@ -48,15 +36,14 @@ export const PriceItemWrapperInner = styled.div`
   }
 `
 
-export const PriceItemPrice = styled.h4`
-  font-weight: 800;
-  font-size: 26px;
-  line-height: 40px;
+export const PriceItemPrice = styled(Typography)`
+  font-weight: 800 !important;
+  font-size: 26px !important;
   letter-spacing: -0.015em;
 `
 
-export const PriceItemAdvantages = styled.ul`
-  margin: 20px 0;
+export const PriceItemAdvantages = styled(List)`
+  margin: 20px 0 !important;
 `
 
 export const PriceItemAdvantageItem = styled.li`
@@ -64,3 +51,5 @@ export const PriceItemAdvantageItem = styled.li`
   align-items: center;
   padding: 0 0 10px 0;
 `
+
+export const PriceItemTitle = styled(Typography)``

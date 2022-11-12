@@ -16,11 +16,11 @@ export const SolutionsChooseItem: FC<ISolutionItem> = ({
 }) => {
   return (
     <SolutionsChooseItemWrapper>
-      <SolutionsChooseItemTitle>
+      <SolutionsChooseItemTitle variant="h6">
         <Icon icon={Checkmark} />
         {title}
       </SolutionsChooseItemTitle>
-      <SolutionsChooseItemText>
+      <SolutionsChooseItemText variant="body1">
         {text}
       </SolutionsChooseItemText>
     </SolutionsChooseItemWrapper>

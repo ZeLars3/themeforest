@@ -14,8 +14,8 @@ export const AboutUsContactItem: FC = () => {
     <>
       {CONTACT_ITEMS.map(({ name, title }) => (
         <ContactsInfoItem key={uuidv4()}>
-          <InfoTitle>{name}</InfoTitle>
-          <InfoSubtitle>{title}</InfoSubtitle>
+          <InfoTitle variant="body1">{name}</InfoTitle>
+          <InfoSubtitle variant="body2">{title}</InfoSubtitle>
         </ContactsInfoItem>
       ))}
     </>

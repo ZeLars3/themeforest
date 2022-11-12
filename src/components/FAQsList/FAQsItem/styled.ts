@@ -1,8 +1,11 @@
 import styled from 'styled-components'
+import ListItem from '@mui/material/ListItem'
+import Typography from '@mui/material/Typography'
 
-export const FAQsItemContainer = styled.li`
+export const FAQsItemContainer = styled(ListItem)`
   max-width: 1110px;
-  padding: 35px;
+  padding: 35px !important;
+  display: block !important;
   list-style: none;
   margin-bottom: 20px;
   border-radius: 6px;
@@ -14,36 +17,29 @@ export const FAQsItemContainer = styled.li`
   }
 
   @media (max-width: 768px) {
-    padding: 15px;
+    padding: 15px !important;
   }
 `
 
-export const FAQsItemTitle = styled.h4<{ isShow: boolean }>`
+export const FAQsItemTitle = styled(Typography)<{ isShow: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 33px;
   letter-spacing: -0.015em;
   color: ${({ isShow, theme }) =>
-  isShow ? theme.colors.primary : theme.colors.black};
+  isShow ? theme.colors.primary : theme.colors.black} !important;
 
   @media (max-width: 768px) {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px !important;
+    line-height: 24px !important;
   }
 `
 
-export const FAQsItemSubtitle = styled.p`
-  margin-top: 15px;
-  font-size: 20px;
-  line-height: 33px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+export const FAQsItemSubtitle = styled(Typography)`
+  margin-top: 15px !important;
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `

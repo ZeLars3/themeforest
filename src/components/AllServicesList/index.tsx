@@ -26,14 +26,15 @@ export const AllServicesList: FC = () => {
 
   return (
     <AllServicesWrapper>
-      <Title>All services</Title>
+      <Title variant="h3">All services</Title>
       <AllServicesListWrapper>
         {SERVICES_ITEMS.map(({ title, id }) => {
           return (
             <AllServicesItem
               key={id}
               onClick={serviceItemClickHandle(String(id))}>
-              {title} <Icon src={ArrowRight} alt="about service" />
+              {title}{' '}
+              <Icon src={ArrowRight} alt="about service" />
             </AllServicesItem>
           )
         })}

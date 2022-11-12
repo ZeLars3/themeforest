@@ -7,13 +7,12 @@ import PlayIcon from '@/assets/icons/play.png'
 import { useTypedSelector } from '@/hooks'
 
 import {
+  BurgerButton,
   HeaderContainer,
-  HeaderLogo,
   HeaderWrapper,
   HeaderWrapperButton,
   HeaderWrapperInner,
   Icon,
-  BurgerButton,
 } from './styled'
 import {
   Navigation,
@@ -25,7 +24,7 @@ import {
 export const Header: FC = () => {
   const [isMenuOpen, setIsMenuOpen] =
     useState<boolean>(false)
-  const [isVideo, setIsVideo] = useState <boolean>(false)
+  const [isVideo, setIsVideo] = useState<boolean>(false)
 
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
@@ -47,19 +46,12 @@ export const Header: FC = () => {
 
   return (
     <HeaderContainer>
-      <HeaderWrapper
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          maxWidth: 1110,
-        }}>
+      <HeaderWrapper>
         <HeaderWrapperInner>
-          <HeaderLogo>
-            <Icon src={LogoBlue} alt="Site logo" />
-          </HeaderLogo>
+          <Icon src={LogoBlue} alt="Site logo" />
           <BurgerButton
             onClick={handleMenuClick}
-            aria-label="Open-close menu">
+            aria-label="open/close menu">
             {!isMenuOpen ? (
               <Svgr icon={MenuOpen} />
             ) : (

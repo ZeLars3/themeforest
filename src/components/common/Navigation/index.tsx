@@ -15,6 +15,7 @@ export const Navigation: FC<INavigation> = ({ menu }) => {
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
   )
+
   return (
     <NavigationContainer>
       {menu && (
@@ -26,12 +27,9 @@ export const Navigation: FC<INavigation> = ({ menu }) => {
           ))}
         </NavigationList>
       )}
-      {currentViewport === 'tablet' && menu && (
-        <SocialLinks />
-      )}
-      {currentViewport === 'mobile' && menu && (
-        <SocialLinks />
-      )}
+      {currentViewport === 'desktop'
+        ? null
+        : menu && <SocialLinks />}
     </NavigationContainer>
   )
 }

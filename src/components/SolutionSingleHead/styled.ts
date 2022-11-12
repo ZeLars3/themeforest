@@ -1,43 +1,27 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
 
 export const SolutionSingleHeadContainer = styled.section`
-  padding: 60px 0 160px 0;
+  padding: 60px 16px 160px 16px;
   background: ${({ theme }) => theme.colors.background};
 
   @media (max-width: 768px) {
-    padding: 35px 0 60px 0;
+    padding: 35px 16px 60px 16px;
   }
 `
 
-export const SolutionSingleHeadWrapper = styled.div`
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
-`
-
-export const SolutionSingleHeadTitle = styled.h1`
+export const SolutionSingleHeadTitle = styled(Typography)`
   padding-bottom: 20px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 60px;
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const SolutionSingleHeadPath = styled.div`
+export const SolutionSingleHeadWrapper = styled(Stack)`
   text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-`
-
-export const SolutionSingleHeadLink = styled.a`
-  color: ${({ theme }) => theme.colors.grey};
-  text-decoration: none;
+  align-items: center;
 `

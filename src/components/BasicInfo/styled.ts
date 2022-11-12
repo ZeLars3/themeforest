@@ -1,60 +1,54 @@
 import styled from 'styled-components'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Paper from '@mui/material/Paper'
 
 export const BasicInfoContainer = styled.section``
 
-export const BasicInfoWrapper = styled.div`
+export const BasicInfoWrapper = styled(Box)`
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1110px;
-  min-width: 360px;
   margin: 0 auto;
-  padding: 73px 0 92px 0;
+  padding: 73px 16px 92px 16px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 40px 16px;
   }
 `
-export const ColorTitle = styled.span`
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-export const BasicInfoTitle = styled.h1`
-  max-width: 540px;
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 60px;
-  letter-spacing: -0.015em;
-
+export const ColorTitle = styled(Typography)<{component: string}>`
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const BasicInfoWrapperText = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 350px;
+export const BasicInfoTitle = styled(Typography)`
+  width: 540px;
+
+  @media (max-width: 768px) {
+    width: 100% !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+`
+
+export const BasicInfoWrapperText = styled(Paper)`
+  width: 350px;
 
   @media (max-width: 768px) {
     width: 100%;
   }
 `
 
-export const BasicInfoText = styled.p`
-  color: ${({ theme }) => theme.colors.grey};
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-
+export const BasicInfoText = styled(Typography)`
   @media (max-width: 768px) {
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 24px;
+    margin-top: 20px !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
@@ -86,12 +80,11 @@ export const BasicInfoButton = styled.button`
   }
 `
 
-export const BasicInfoImgWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
+export const BasicInfoImgWrapper = styled(Box)`
   @media (max-width: 768px) {
     height: auto;
+    display: flex;
+    justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,60 +1,57 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
 
 export const BusinessContainer = styled.section`
-  padding: 120px 0;
+  padding: 120px 16px;
 
   @media (max-width: 768px) {
-    padding: 50px 0;
+    padding: 50px 16px;
   }
 `
 
-export const BusinessWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+export const BusinessWrapper = styled(Stack)`
   align-items: center;
   max-width: 1110px;
   margin: 0 auto;
+  align-items: flex-start;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 0 16px;
+    flex-direction: column !important;
   }
 `
 
-export const BusinessTitle = styled.h1`
-  font-weight: 800;
-  font-size: 57px;
-  line-height: 66px;
-  letter-spacing: -0.015em;
+export const BusinessTitle = styled(Typography)`
+  width: 540px;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    width: 100% !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const ColorTitle = styled.span`
-  color: ${({ theme }) => theme.colors.primary};
+export const ColorTitle = styled(Typography)<{ component: string }>`
+  @media (max-width: 768px) {
+    width: 100% !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
 `
 
-export const BusinessWrapperInner = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 540px;
+export const BusinessWrapperInner = styled(Stack)`
+  width: 540px;
   padding-left: 30px;
 
   button {
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
     padding: 15px 35px;
     width: 190px;
   }
 
   @media (max-width: 768px) {
     padding: 20px 0 0 0;
-    max-width: auto;
+    width: 100%;
 
     button {
       width: 100%;
@@ -62,15 +59,11 @@ export const BusinessWrapperInner = styled.div`
   }
 `
 
-export const BusinessText = styled.p`
-  padding-bottom: 30px;
-  font-size: 20px;
-  line-height: 33px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+export const BusinessText = styled(Typography)`
+  padding-bottom: 30px !important;
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `

@@ -19,12 +19,16 @@ export const FAQsItem: FC<IFAQsItem> = ({
 }) => {
   return (
     <FAQsItemContainer onClick={handleClick}>
-      <FAQsItemTitle isShow={isActive ?? false}>
+      <FAQsItemTitle
+        variant="h4"
+        isShow={isActive ?? false}>
         {title}
         <Svgr icon={isActive ? Minus : Plus} />
       </FAQsItemTitle>
       {isActive && (
-        <FAQsItemSubtitle>{text}</FAQsItemSubtitle>
+        <FAQsItemSubtitle variant="h5">
+          {text}
+        </FAQsItemSubtitle>
       )}
     </FAQsItemContainer>
   )

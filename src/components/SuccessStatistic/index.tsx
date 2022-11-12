@@ -24,7 +24,7 @@ export const SuccessStatistic: FC = () => {
   return (
     <StatisticContainer>
       <StatisticWrapper>
-        <StatisticTitle>
+        <StatisticTitle variant="h2">
           We provide services that guarantee your success
         </StatisticTitle>
         <StatisticWrapperInner>
@@ -33,12 +33,16 @@ export const SuccessStatistic: FC = () => {
               ({ title, count }) => (
                 <StatisticAmountItem key={uuidv4()}>
                   <ItemCount>{count}</ItemCount>
-                  <ItemName>{title}</ItemName>
+                  <ItemName
+                    variant="body1"
+                    component="span">
+                    {title}
+                  </ItemName>
                 </StatisticAmountItem>
               ),
             )}
           </StatisticAmounts>
-          <StatisticText>
+          <StatisticText variant="h5">
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptat accusantium doloremque laudantium,
             totam rem aperiam, eaque ipsa quaeab illo
@@ -52,6 +56,7 @@ export const SuccessStatistic: FC = () => {
               key={uuidv4()}
               src={icon}
               alt="company"
+              loading="lazy"
             />
           ))}
         </StatisticCompanies>

@@ -43,11 +43,11 @@ export const SWIPER_CONFIG = {
   benefitsPoints: {
     360: {
       slidesPerView: 1,
-      spaceBetween: -40,
+      spaceBetween: 10,
     },
     500: {
       slidesPerView: 2,
-      spaceBetween: 0,
+      spaceBetween: 20,
     },
     768: {
       slidesPerView: 3,

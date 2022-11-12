@@ -2,11 +2,10 @@ import { FC } from 'react'
 
 import { Routes } from '@/enums'
 
+import { Breadcrumbs } from '../common'
 import {
   OutTeamHeadContainer,
   OutTeamHeadWrapper,
-  OutTeamHeadPath,
-  OutTeamHeadLink,
   OutTeamHeadWrapperText,
   OutTeamHeadTitle,
   OutTeamHeadSubtitle,
@@ -17,17 +16,18 @@ export const OutTeamHead: FC = () => {
   return (
     <OutTeamHeadContainer>
       <OutTeamHeadWrapper>
-        <OutTeamHeadPath>
-          <OutTeamHeadLink href={Routes.Home}>
-            Home
-          </OutTeamHeadLink>{' '}
-          | Our Team
-        </OutTeamHeadPath>
-        <OutTeamHeadWrapperText>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={'Our Team'}
+          color='white'
+        />
+        <OutTeamHeadWrapperText direction="row">
           <OutTeamHeadItem>
-            <OutTeamHeadTitle>Our team</OutTeamHeadTitle>
+            <OutTeamHeadTitle variant="h1">
+              Our team
+            </OutTeamHeadTitle>
           </OutTeamHeadItem>
-          <OutTeamHeadSubtitle>
+          <OutTeamHeadSubtitle variant="subtitle2">
             Sed ut perspiciatis unde omnis iste natus error
             volupta accusantium doloremque laudantium, totam
             remiga aperiam, eaque ipsa. Phasellus tristique

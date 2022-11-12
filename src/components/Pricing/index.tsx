@@ -24,7 +24,9 @@ export const Pricing: FC = () => {
   return (
     <PricingContainer>
       <PricingWrapper>
-        <PricingTitle>Our pricing</PricingTitle>
+        <PricingTitle variant="h2">
+          Our pricing
+        </PricingTitle>
         <PriceList>
           <Swiper
             spaceBetween={SWIPER_CONFIG.freeSpace}

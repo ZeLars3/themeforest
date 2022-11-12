@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
 
 import { Svgr } from '@/components/common'
 
@@ -13,29 +14,21 @@ export const SolutionsChooseItemWrapper = styled.li`
   }
 `
 
-export const SolutionsChooseItemTitle = styled.h3`
+export const SolutionsChooseItemTitle = styled(Typography)`
   display: flex;
   align-items: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 20px !important;
+    line-height: 30px !important;
   }
 `
 
-export const SolutionsChooseItemText = styled.p`
-  margin-top: 15px;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+export const SolutionsChooseItemText = styled(Typography)`
+  margin-top: 15px !important;
 
   @media (max-width: 768px) {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 `
 

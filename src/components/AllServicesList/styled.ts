@@ -1,10 +1,15 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+import List from '@mui/material/List'
+import ListItemButton from '@mui/material/ListItemButton'
 
-export const AllServicesWrapper = styled.div`
-  width: 330px;
+export const AllServicesWrapper = styled(Box)`
+  max-width: 330px;
+  margin: 0 auto;
 `
 
-export const AllServicesListWrapper = styled.ul`
+export const AllServicesListWrapper = styled(List)`
   padding: 16px 0;
 
   @media (max-width: 360px) {
@@ -12,27 +17,19 @@ export const AllServicesListWrapper = styled.ul`
   }
 `
 
-export const Title = styled.h2`
-  padding: 0 0 20px 0;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 40px;
+export const Title = styled(Typography)`
+  padding: 0 0 20px 0 !important;
 `
 
-export const AllServicesItem = styled.li<any>`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-top: 1px solid ${({ theme }) => theme.colors.grey};
-  cursor: pointer;
+export const AllServicesItem = styled(ListItemButton)<any>`
+  justify-content: space-between !important;
+  padding: 10px 0 !important;
+  border-top: 1px solid ${({ theme }) =>
+    theme.colors.grey} !important;;
 
   &:last-child {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
-  }
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.grey};
+    border-bottom: 1px solid ${({ theme }) =>
+      theme.colors.grey};
   }
 `
 

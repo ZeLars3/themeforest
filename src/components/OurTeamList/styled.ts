@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const OurTeamListContainer = styled.div`
-  padding: 120px 0 50px 0;
+  padding: 120px 16px 50px 16px;
 
   @media (max-width: 950px) {
-    padding: 0 0 50px 0;
+    padding: 0 16px 50px 16px;
   }
 `
 
@@ -20,7 +20,6 @@ export const OurTeamListWrapper = styled.ul<any>`
   @media (max-width: 768px) {
     grid-gap: 8px;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 16px;
     margin: 60px auto 0 auto;
   }
 `

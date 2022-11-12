@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import Box from '@mui/material/Box'
+import List from '@mui/material/List'
 
-export const NavigationContainer = styled.header`
-  display: flex;
+export const NavigationContainer = styled(Box)`
+  display: flex !important;
   max-width: 1110px;
 
   h2 {
@@ -14,7 +16,7 @@ export const NavigationContainer = styled.header`
   }
 `
 
-export const NavigationList = styled.ul`
+export const NavigationList = styled(List)`
   display: flex;
 
   @media (max-width: 768px) {
@@ -28,7 +30,6 @@ export const NavigationListItem = styled(NavLink)`
   align-items: center;
   padding: 0 15px;
   text-decoration: none;
-  font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.01em;
@@ -42,7 +43,6 @@ export const NavigationListItem = styled(NavLink)`
     padding: 15px 0;
     font-weight: 700;
     font-size: 16px;
-    line-height: 24px;
     letter-spacing: -0.015em;
     color: ${({ theme }) => theme.colors.black};
     border-top: 1px solid

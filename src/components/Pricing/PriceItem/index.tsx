@@ -46,9 +46,9 @@ export const PriceItem: FC<IPriceItem> = ({
   return (
     <>
       <PriceItemContainer>
-        <PriceItemTitle>{title}</PriceItemTitle>
-        <PriceItemWrapperInner>
-          <PriceItemPrice>{price}</PriceItemPrice>
+        <PriceItemTitle variant="h6">{title}</PriceItemTitle>
+        <PriceItemWrapperInner direction={'row'}>
+          <PriceItemPrice variant="h4">{price}</PriceItemPrice>
           <ToggleButtonGroup
             color="primary"
             value={alignment}

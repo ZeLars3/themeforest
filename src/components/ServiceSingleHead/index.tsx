@@ -7,12 +7,11 @@ import { useTypedSelector } from '@/hooks'
 
 import {
   ServiceSingleHeadContainer,
-  ServiceSingleHeadLink,
-  ServiceSingleHeaddPath,
   SolutionsHeadSubtitle,
   ServiceSingleTitle,
   ServiceSingleHeadWrapper,
 } from './styled'
+import { Breadcrumbs } from '../common'
 
 export const ServiceSingleHead: FC = () => {
   const currentViewport: string = useTypedSelector(
@@ -27,14 +26,19 @@ export const ServiceSingleHead: FC = () => {
   return (
     <ServiceSingleHeadContainer>
       <ServiceSingleHeadWrapper>
-        <ServiceSingleHeaddPath>
-          <ServiceSingleHeadLink href={Routes.Home}>
-            Home
-          </ServiceSingleHeadLink>{' '}
-          | {title}
-        </ServiceSingleHeaddPath>
-        <ServiceSingleTitle>{title}</ServiceSingleTitle>
-        <SolutionsHeadSubtitle>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={title}
+          color={
+            currentViewport === 'desktop'
+              ? 'black'
+              : 'white'
+          }
+        />
+        <ServiceSingleTitle variant="h1">
+          {title}
+        </ServiceSingleTitle>
+        <SolutionsHeadSubtitle variant="h5">
           {currentViewport === 'desktop' ? `${text}` : null}
         </SolutionsHeadSubtitle>
       </ServiceSingleHeadWrapper>

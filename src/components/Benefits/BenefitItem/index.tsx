@@ -18,8 +18,12 @@ export const BenefitItem: FC<IBenefitItem> = ({
   return (
     <BenefitListItem key={id}>
       <Icon src={icon} alt={title} />
-      <BenefitItemTitle>{title}</BenefitItemTitle>
-      <BenefitItemText>{text}</BenefitItemText>
+      <BenefitItemTitle variant="h4">
+        {title}
+      </BenefitItemTitle>
+      <BenefitItemText variant="subtitle2">
+        {text}
+      </BenefitItemText>
     </BenefitListItem>
   )
 }

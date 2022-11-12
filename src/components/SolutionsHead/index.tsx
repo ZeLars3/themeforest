@@ -3,10 +3,9 @@ import { FC } from 'react'
 import { Routes } from '@/enums'
 import { useTypedSelector } from '@/hooks'
 
+import { Breadcrumbs } from '../common'
 import {
   SolutionsHeadContainer,
-  SolutionsHeadLink,
-  SolutionsHeadPath,
   SolutionsHeadSubtitle,
   SolutionsHeadText,
   SolutionsHeadTitle,
@@ -21,17 +20,18 @@ export const SolutionsHead: FC = () => {
   return (
     <SolutionsHeadContainer>
       <SolutionsHeadWrapper>
-        <SolutionsHeadPath>
-          <SolutionsHeadLink href={Routes.Home}>
-            Home
-          </SolutionsHeadLink>{' '}
-          | solutions
-        </SolutionsHeadPath>
-        <SolutionsHeadText>Solutions</SolutionsHeadText>
-        <SolutionsHeadTitle>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={'Solutions'}
+          color={'black'}
+        />
+        <SolutionsHeadText variant="h6">
+          Solutions
+        </SolutionsHeadText>
+        <SolutionsHeadTitle variant="h1">
           Data analytics solutions
         </SolutionsHeadTitle>
-        <SolutionsHeadSubtitle>
+        <SolutionsHeadSubtitle variant="h5">
           {currentViewport === 'desktop'
             ? `Getting ready for your success, we provide truly
             outstanding IT solutions.`

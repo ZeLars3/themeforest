@@ -7,7 +7,10 @@ import {
 
 import ArrowLeft from '@/assets/icons/arrowLeft.png'
 import ArrowRight from '@/assets/icons/arrowRight.png'
-import { SWIPER_CONFIG, BLOG_ITEMS } from '@/constants/index'
+import {
+  SWIPER_CONFIG,
+  BLOG_ITEMS,
+} from '@/constants/index'
 import { Routes } from '@/enums'
 import { Button } from '@/components/common'
 import { useTypedSelector } from '@/hooks'
@@ -26,14 +29,14 @@ import {
 import { TestimonialButton } from '../Testimonials/styled'
 
 export const OurBlog: FC = () => {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+  const navigationPrevRef = useRef<HTMLButtonElement>(null)
+  const navigationNextRef = useRef<HTMLButtonElement>(null)
   const navigate: NavigateFunction = useNavigate()
 
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
   )
-  
+
   const handleNavigate = (): void => {
     navigate(Routes.Solutions)
   }
@@ -41,8 +44,8 @@ export const OurBlog: FC = () => {
   return (
     <BlogContainer>
       <BlogWrapper>
-        <BlogWrapperText>
-          <BlogTitle>Our blog</BlogTitle>
+        <BlogWrapperText direction={'row'}>
+          <BlogTitle variant="h2">Our blog</BlogTitle>
           <BlogController>
             <TestimonialButton ref={navigationPrevRef}>
               <Icon src={ArrowLeft} alt="previous slide" />
@@ -52,9 +55,8 @@ export const OurBlog: FC = () => {
             </TestimonialButton>
           </BlogController>
         </BlogWrapperText>
-        <BlogList>
-          {currentViewport === 'desktop'
-            ? (
+        <BlogList direction={'row'}>
+          {currentViewport === 'desktop' ? (
             <Swiper
               navigation={SWIPER_CONFIG.setCustomNavigation(
                 navigationPrevRef,
@@ -88,10 +90,9 @@ export const OurBlog: FC = () => {
                 ),
               )}
             </Swiper>
-              )
-            : (
-                BLOG_ITEMS.slice(0, 3).map(
-                  ({ img, date, title, text, id }) => (
+          ) : (
+            BLOG_ITEMS.slice(0, 3).map(
+              ({ img, date, title, text, id }) => (
                 <BlogItem
                   key={id}
                   id={id}
@@ -100,21 +101,19 @@ export const OurBlog: FC = () => {
                   title={title}
                   text={text}
                 />
-                  )
-                )
-              )}
+              )
+            )
+          )}
         </BlogList>
-        {currentViewport === 'desktop'
-          ? null
-          : (
+        {currentViewport === 'desktop' ? null : (
           <ButtonWrapper>
             <Button
-              variant='contained'
+              variant="contained"
               clickHandle={handleNavigate}>
               Learn more
             </Button>
           </ButtonWrapper>
-            )}
+        )}
       </BlogWrapper>
     </BlogContainer>
   )

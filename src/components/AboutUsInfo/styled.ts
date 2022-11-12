@@ -1,62 +1,54 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
 
 export const AboutUsInfoContainer = styled.section`
-  padding: 120px 0;
+  padding: 120px 16px;
 
   @media (max-width: 768px) {
-    padding: 50px 0 0 0;
+    padding: 50px 16px 0 16px;
   }
 `
 
-export const AboutUsInfoWrapper = styled.div`
+export const AboutUsInfoWrapper = styled(Box)`
   max-width: 1110px;
   margin: 0 auto;
 `
 
-export const AboutUsInfoItem = styled.div`
-  display: flex;
-  flex-direction: row;
-
+export const AboutUsInfoItem = styled(Stack)`
   &:first-child {
     margin-bottom: 134px;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column !important;
 
     &:first-child {
       margin-bottom: 50px;
     }
 
     &:last-child {
-      flex-direction: column-reverse;
+      flex-direction: column-reverse !important;
     }
   }
 `
 
-export const AboutUsInfoTitle = styled.h2`
+export const AboutUsInfoTitle = styled(Typography)`
   padding-bottom: 30px;
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 60px;
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
     padding-bottom: 20px;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const AboutUsInfoText = styled.p`
-  font-size: 20px;
-  line-height: 33px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
-
+export const AboutUsInfoText = styled(Typography)`
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
@@ -84,11 +76,4 @@ export const AboutUsInfoImg = styled.img`
   }
 `
 
-export const AboutUsInfoWrapperText = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
-`
+export const AboutUsInfoWrapperText = styled(Stack)``

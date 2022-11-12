@@ -1,5 +1,8 @@
 import { FC } from 'react'
-import { NavigateFunction, useNavigate } from 'react-router-dom'
+import {
+  NavigateFunction,
+  useNavigate,
+} from 'react-router-dom'
 
 import { Button } from '@/components/common'
 import { Routes } from '@/enums'
@@ -21,7 +24,9 @@ export const Help: FC = () => {
   return (
     <HelpContainer>
       <HelpWrapper>
-        <HelpTitle>Do you need help?</HelpTitle>
+        <HelpTitle variant="h2">
+          Do you need help?
+        </HelpTitle>
         <HelpText>
           Ut enim ad minima veniam, quis nostrum
           exercitationem ullam corporis suscipit laboriosam,

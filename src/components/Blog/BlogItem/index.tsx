@@ -15,7 +15,7 @@ import {
   BlogItemText,
   BlogItemTitle,
   BlogItemWrapper,
-  Button,
+  BlogButton,
   Icon,
 } from './styled'
 
@@ -36,12 +36,15 @@ export const BlogItem: FC<IBlogItem> = ({
     <BlogItemContainer>
       <BlogItemImage src={img} alt="Blog picture" />
       <BlogItemWrapper>
-        <BlogItemDate>{date}</BlogItemDate>
-        <BlogItemTitle>{title}</BlogItemTitle>
-        <BlogItemText>{text}</BlogItemText>
-        <Button onClick={handleNavigate}>
-          Read more <Icon src={ArrowRightSmall} alt="read more" />
-        </Button>
+        <BlogItemDate variant="subtitle2">
+          {date}
+        </BlogItemDate>
+        <BlogItemTitle variant="h4">{title}</BlogItemTitle>
+        <BlogItemText variant="body1">{text}</BlogItemText>
+        <BlogButton onClick={handleNavigate}>
+          Read more{' '}
+          <Icon src={ArrowRightSmall} alt="read more" />
+        </BlogButton>
       </BlogItemWrapper>
     </BlogItemContainer>
   )

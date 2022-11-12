@@ -1,19 +1,22 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import List from '@mui/material/List'
+
 import { Svgr } from '../common'
 
 export const FooterContainer = styled.footer`
-  padding-top: 50px;
+  padding: 50px 16px 40px 16px;
   background-color: ${({ theme }) =>
     theme.colors.secondary};
   color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 768px) {
-    padding-top: 40px;
+    padding: 40px 16px 20px 16px;
   }
 `
 
-export const FooterWrapper = styled.div`
-  display: flex;
+export const FooterWrapper = styled(Stack)`
   justify-content: space-between;
   max-width: 1110px;
   margin: 0 auto;
@@ -29,17 +32,13 @@ export const FooterWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 0 16px;
+    flex-direction: column !important;
   }
 `
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
+export const InfoContainer = styled(Stack)`
   @media (max-width: 768px) {
-    padding-bottom: 11x;
+    padding-bottom: 11px;
   }
 `
 
@@ -54,15 +53,12 @@ export const LogoStyled = styled.img`
   }
 `
 
-export const HeadingText = styled.p`
-  margin-bottom: 31px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: ${({ theme }) => theme.colors.white};
+export const HeadingText = styled(Typography)`
+  margin-bottom: 31px !important;
+  color: ${({ theme }) => theme.colors.white} !important;
 
   @media (max-width: 768px) {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid
@@ -70,12 +66,10 @@ export const HeadingText = styled.p`
   }
 `
 
-export const FooterText = styled.p`
-  margin: 20px 0;
+export const FooterText = styled(Typography)`
+  margin: 20px 0 !important;
   max-width: 285px;
-  font-size: 14px;
-  line-height: 24px;
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.white} !important;
 
   @media (max-width: 768px) {
     display: none;
@@ -83,7 +77,6 @@ export const FooterText = styled.p`
 `
 
 export const LinkWrapper = styled.li`
-  list-style: none;
   margin: 12px 0;
   max-width: 235px;
   color: ${({ theme }) => theme.colors.grey};
@@ -98,28 +91,18 @@ export const LinkWrapper = styled.li`
   }
 `
 
-export const RightsContainer = styled.div`
+export const RightsContainer = styled(Stack)`
   max-width: 1110px;
-  padding: 35px 0;
+  padding-top: 35px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    padding: 0 16px;
+    padding-top: 10px;
   }
 `
 
-export const Wrapper = styled.div`
-  display: flex;
-  gap: 95px;
-`
-
-export const Text =
-  styled.p <
-  any >
-  `
+export const Text = styled.p<any>`
   color: ${({ theme }) => theme.colors.helperBlue2};
 
   &:first-child {
@@ -142,9 +125,9 @@ export const Icon = styled(Svgr)`
   }
 `
 
-export const TextWrapper = styled.div`
-  display: flex;
+export const FooterList = styled(List)`
+  padding: 0 !important;
 `
 
 export const WrapperText = styled.div``
-export const FooterList = styled.ul``
+export const TextWrapper = styled(Stack)``
