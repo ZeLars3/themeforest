@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@mui/material/Button'
 
 export const SubscribeFormContainer = styled.div`
   display: flex;
@@ -11,9 +12,7 @@ export const SubscribeFormContainer = styled.div`
   }
 
   input {
-    width: 100%;
     padding: 15px 30px 15px 25px;
-    border: none;
     min-height: 54px;
     background: ${({ theme }) => theme.colors.helperBlue3};
     border-radius: 6px 0 0 6px;
@@ -26,32 +25,29 @@ export const SubscribeFormContainer = styled.div`
         theme.colors.helperBlue2};
     }
   }
+`
 
-  button {
-    position: relative;
-    z-index: 1;
-    margin-left: -10px;
-    padding: 14px 20px;
-    color: ${({ theme }) => theme.colors.black};
-    background-color: ${({ theme }) => theme.colors.white};
-    border: 1px solid transparent;
-    outline-color: ${({ theme }) => theme.colors.primary};
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
+export const FormButton = styled(Button)`
+  z-index: 1;
+  width: 125px;
+  margin-left: -10px !important;
+  padding: 15px 20px !important;
+  color: ${({ theme }) => theme.colors.black} !important;
+  background-color: ${({ theme }) => theme.colors.white} !important;
+  border: 1px solid transparent;
+  outline-color: ${({ theme }) => theme.colors.primary};
 
-    @media (max-width: 768px) {
-      width: 100%;
-      margin-left: 0;
-      padding: 15px;
-    }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0 !important;;
+    padding: 15px !important;
+  }
 `
 
 export const Form = styled.form`
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 
   @media (max-width: 768px) {

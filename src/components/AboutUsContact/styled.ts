@@ -17,10 +17,6 @@ export const AboutUsContactWrapper = styled(Stack)`
   max-width: 1110px;
   margin: 0 auto;
 
-  button {
-    display: none;
-  }
-
   @media (max-width: 950px) {
     flex-direction: column !important;
   }

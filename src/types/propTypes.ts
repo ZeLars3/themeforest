@@ -29,7 +29,6 @@ export interface IButtonVideo {
 
 export interface IContactForm {
   title: string
-  titleSize: 'big' | 'small'
 }
 
 export type DefaultInput = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>

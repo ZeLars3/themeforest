@@ -37,7 +37,7 @@ export const AboutUsContact: FC = () => {
           </AboutUsContactList>
         </AboutUsContactWrapperText>
         <AboutUsContactWrapperText>
-          <ContactForm title="Contact Us" titleSize="big" />
+          <ContactForm title="Contact Us" />
         </AboutUsContactWrapperText>
         {currentViewport === 'desktop' ? null : (
           <Button variant="contained">Contact us</Button>

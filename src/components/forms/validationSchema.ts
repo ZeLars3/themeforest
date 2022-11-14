@@ -26,21 +26,21 @@ export const VALIDATION = {
 const { NAME, EMAIL, MESSAGE, THEME } = VALIDATION
 
 export const sendEmailSchema = yup.object().shape({
-  form_name: yup
+  name: yup
     .string()
     .min(NAME.min, 'Too Short!')
     .max(NAME.max, `Max symbols count: ${NAME.max}`)
     .required(NAME.req),
-  form_email: yup
+  email: yup
     .string()
     .email('Please, enter a valid Email')
     .required(EMAIL.req),
-  form_job: yup
+  job: yup
     .string()
     .min(THEME.min, 'Too Short!')
     .max(THEME.max, `Max symbols count: ${THEME.max}`)
     .required(THEME.req),
-  form_message: yup
+  message: yup
     .string()
     .min(THEME.min, 'Too Short!')
     .max(THEME.max, `Max symbols count: ${MESSAGE.max}`)
@@ -49,7 +49,7 @@ export const sendEmailSchema = yup.object().shape({
 
 export const subscribeFields = [
   {
-    name: 'form_email',
+    name: 'email',
     text: '',
     placeholder: 'Your email',
   },
@@ -58,25 +58,25 @@ export const subscribeFields = [
 export const contactFields = [
   {
     label: 'Name',
-    name: 'form_name',
+    name: 'name',
     text: '',
     placeholder: 'Andrea',
   },
   {
     label: 'Email',
-    name: 'form_email',
+    name: 'email',
     text: '',
     placeholder: 'andrea@gmaol.com',
   },
   {
     label: 'Theme',
-    name: 'form_job',
+    name: 'job',
     text: '',
     placeholder: 'Job',
   },
   {
     label: 'Message',
-    name: 'form_message',
+    name: 'message',
     text: '',
     placeholder: 'Your message',
   },
@@ -84,22 +84,22 @@ export const contactFields = [
 
 export const helpFields = [
   {
-    name: 'help_email',
+    name: 'email',
     text: '',
     placeholder: 'Your email',
   },
   {
-    name: 'help_name',
+    name: 'name',
     text: '',
     placeholder: 'Your name',
   },
   {
-    name: 'help_job',
+    name: 'job',
     text: '',
     placeholder: 'Theme',
   },
   {
-    name: 'help_message',
+    name: 'message',
     text: '',
     placeholder: 'Your message',
   },

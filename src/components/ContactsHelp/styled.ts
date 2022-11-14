@@ -1,25 +1,27 @@
 import styled from 'styled-components'
+import Box from '@mui/material/Box'
 
 export const ContactsHelpContainer = styled.section`
-  padding-bottom: 120px;
+  padding: 20px 16px 120px 16px;
 
   @media (max-width: 768px) {
-    padding-bottom: 50px;
+    padding: 10px 16px 50px 16px;
   }
 `
 
-export const ContactsHelpWrapper = styled.div`
+export const ContactsHelpWrapper = styled(Box)`
   max-width: 1110px;
   margin: 0 auto;
-
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
+  padding-top: 75px;
+
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
 `
 
 export const ContactsHelpTitle = styled.h1`
@@ -49,23 +51,6 @@ export const ContactsHelpFormWrapper = styled.div`
     margin: 40px 0 50px 0;
     height: auto;
   }
-`
-
-export const ContactsHelpPath = styled.div`
-  padding: 20px 0 92px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-
-  @media (max-width: 768px) {
-    padding: 20px 0 40px 0;
-  }
-`
-
-export const ContactsHelpLink = styled.a`
-  color: ${({ theme }) => theme.colors.grey};
-  text-decoration: none;
 `
 
 export const ContactsHelpList = styled.ul`

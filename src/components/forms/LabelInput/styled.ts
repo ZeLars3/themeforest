@@ -19,12 +19,8 @@ export const LabelInputField = styled.input<any>`
     error ? theme.colors.red : theme.colors.grey};
 
   &::-webkit-input-placeholder {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
     color: ${({ error, theme }) =>
-     error ? theme.colors.red : theme.colors.black};
+      error ? theme.colors.red : theme.colors.grey};
   }
 
   &:active,
@@ -36,17 +32,11 @@ export const LabelInputField = styled.input<any>`
 
 export const FieldLabel = styled.label`
   padding-top: 20px;
-  font-weight: 600;
   font-size: 12px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey}
+  color: ${({ theme }) => theme.colors.black};
 `
 
 export const FieldMessage = styled.span`
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  color: ${({ theme }) => theme.colors.red}
+  font-size: 14px;
+  color: ${({ theme }) => theme.colors.red};
 `

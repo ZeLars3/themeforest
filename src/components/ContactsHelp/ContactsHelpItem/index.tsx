@@ -16,7 +16,7 @@ export const ContactsHelpItem: FC = () => {
     <>
       {CONTACT_ITEMS.map(({ title, name, icon }) => (
         <ContactsInfoItem key={uuidv4()}>
-          <ContactsHelpTitle>
+          <ContactsHelpTitle variant="subtitle2">
             <Svgr icon={icon} />
             <TitleText>{name}</TitleText>
           </ContactsHelpTitle>
