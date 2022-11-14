@@ -126,5 +126,4 @@ export const customTheme = createTheme({
 export default {
   shadows,
   colors,
-  customTheme,
 }

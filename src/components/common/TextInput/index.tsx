@@ -16,16 +16,16 @@ export const TextInput: FC<FieldsProps> = ({
   message,
   ...restProps
 }) => {
-  const handleChangeCallback = (
-    event: ChangeEvent<HTMLInputElement>,
-  ): void => {
-    onChangeText != null && onChangeText(event)
+  const onChangeCallback = (
+    e: ChangeEvent<HTMLInputElement>,
+  ) => {
+    (onChangeText != null) && onChangeText(e)
   }
 
   return (
     <TextInputContainer>
       <TextInputField
-        onChange={handleChangeCallback}
+        onChange={onChangeCallback}
         placeholder={placeholder}
         error={error}
         message={message}

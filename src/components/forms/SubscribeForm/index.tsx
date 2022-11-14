@@ -65,9 +65,9 @@ export const SubscribeForm: FC = () => {
           ),
         )}
         <FormButton
-          disabled={disabled}
           type="submit"
-          variant="contained">
+          variant="contained"
+          disabled={disabled}>
           {currentViewport === 'desktop' ? 'Send' : 'Subscribe'}
         </FormButton>
       </Form>

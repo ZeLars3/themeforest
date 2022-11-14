@@ -7,7 +7,7 @@ export const BenefitListItem = styled(ListItem)`
   padding: 25px !important;
   align-items: baseline !important;
   max-height: 248px;
-  maz-width: 244px;
+  width: 255px !important;
   border-radius: 6px;
   background-color: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.shadows.shadowCard3};

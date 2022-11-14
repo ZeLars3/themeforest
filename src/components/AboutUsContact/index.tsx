@@ -1,8 +1,13 @@
 import { FC } from 'react'
+import {
+  NavigateFunction,
+  useNavigate,
+} from 'react-router-dom'
+import Button from '@mui/material/Button'
 
-import { Button } from '@/components/common'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { useTypedSelector } from '@/hooks'
+import { Routes } from '@/enums'
 
 import {
   AboutUsContactContainer,
@@ -15,10 +20,15 @@ import {
 import { AboutUsContactItem } from './AboutUsContactItem'
 
 export const AboutUsContact: FC = () => {
+  const navigate: NavigateFunction = useNavigate()
+
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
   )
 
+  const handleNavigate = (): void => {
+    navigate(Routes.Contacts)
+  }
   return (
     <AboutUsContactContainer>
       <AboutUsContactWrapper direction="row">
@@ -40,7 +50,11 @@ export const AboutUsContact: FC = () => {
           <ContactForm title="Contact Us" />
         </AboutUsContactWrapperText>
         {currentViewport === 'desktop' ? null : (
-          <Button variant="contained">Contact us</Button>
+          <Button
+            variant="contained"
+            onClick={handleNavigate}>
+            Contact us
+          </Button>
         )}
       </AboutUsContactWrapper>
     </AboutUsContactContainer>
