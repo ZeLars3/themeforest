@@ -19,6 +19,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Themeforest',
+      favicon: "./public/favicon.ico",
       template: './public/index.html',
     }),
   ],

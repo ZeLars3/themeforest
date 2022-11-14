@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@mui/material/Button'
 
 export const ContactHelpContainer = styled.div`
   display: flex;
@@ -7,19 +8,15 @@ export const ContactHelpContainer = styled.div`
   @media (max-width: 360px) {
     width: 100%;
   }
+`
 
-  button {
-    margin: 10px 0 0 auto;
-    padding: 10px 51px;
-    border: none;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
+export const FormButton = styled(Button)`
+  margin: 20px 0 0 auto !important;
+  width: 137px;
+  padding: 10px 51px !important;
 
-    @media (max-width: 768px) {
-      width: 100%;
-    }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -31,7 +28,7 @@ export const HelpForm = styled.form`
 
   input,
   textarea {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     padding: 15px;
   }
 `

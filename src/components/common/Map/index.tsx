@@ -3,7 +3,7 @@ import { TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
-import LocationMarker from '@/assets/icons/locationMarker.svg'
+import LocationMarker from '@/assets/icons/locationBlue.png'
 import { MAP_MARKERS } from '@/constants/mapMarkers'
 
 import { MapWrapper } from './styled'

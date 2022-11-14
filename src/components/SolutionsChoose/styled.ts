@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 
 export const SolutionsChooseContainer = styled.section`
   width: 100%;
@@ -12,18 +15,17 @@ export const SolutionsChooseContainer = styled.section`
   }
 `
 
-export const SolutionsChooseWrapper = styled.div`
-  display: flex;
+export const SolutionsChooseWrapper = styled(Stack)`
   justify-content: space-between;
   max-width: 1110px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 `
 
-export const SolutionsChooseImgWrapper = styled.div`
+export const SolutionsChooseImgWrapper = styled(Box)`
   position: relative;
   flex-grow: 1;
   width: 500px;
@@ -44,7 +46,7 @@ export const SolutionsChooseImg = styled.img`
   }
 `
 
-export const SolutionsChooseMain = styled.div`
+export const SolutionsChooseMain = styled(Box)`
   flex-grow: 1;
   width: 500px;
   padding: 118px 0 90px 50px;
@@ -56,15 +58,10 @@ export const SolutionsChooseMain = styled.div`
   }
 `
 
-export const SolutionsChooseTitle = styled.h2`
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
-  letter-spacing: -0.015em;
-
+export const SolutionsChooseTitle = styled(Typography)`
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 

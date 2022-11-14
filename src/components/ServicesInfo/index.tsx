@@ -18,11 +18,13 @@ export const ServicesInfo: FC = () => {
     <ServicesInfoContainer>
       <ServicesInfoWrapper>
         <ServicesInfoWrapperHead>
-          <ServicesInfoText>Services</ServicesInfoText>
-          <ServicesInfoTitle>
+          <ServicesInfoText variant="h6">
+            Services
+          </ServicesInfoText>
+          <ServicesInfoTitle variant="h1">
             Data Analytics Services
           </ServicesInfoTitle>
-          <ServicesInfoSubtitle>
+          <ServicesInfoSubtitle variant="h5">
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quaeab

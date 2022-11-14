@@ -32,12 +32,12 @@ export const Testimonials: FC = () => {
 
   return (
     <TestimonialsContainer>
-      <TestimonialsWrapper>
-        <TestimonialsTitle>Testimonials</TestimonialsTitle>
-        <TestimonialsController>
-          <TestimonialButton
-            disabled={true}
-            ref={navigationPrevRef}>
+      <TestimonialsWrapper direction={'row'}>
+        <TestimonialsTitle variant="h2">
+          Testimonials
+        </TestimonialsTitle>
+        <TestimonialsController direction={'row'}>
+          <TestimonialButton ref={navigationPrevRef}>
             <Icon src={ArrowLeft} alt="previous slide" />
           </TestimonialButton>
           <TestimonialButton ref={navigationNextRef}>

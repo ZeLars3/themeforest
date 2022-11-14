@@ -12,9 +12,24 @@ export const NAV_ITEMS = [
     path: Routes.Solutions,
   },
   {
+    id: 'services',
+    name: 'Services',
+    path: Routes.Services,
+  },
+  {
     id: 'aboutUs',
     name: 'About Us',
     path: Routes.AboutUs,
+  },
+  {
+    id: 'faqs',
+    name: 'FAQs',
+    path: Routes.FAQs,
+  },
+  {
+    id: 'ourTeam',
+    name: 'Our Team',
+    path: Routes.OurTeam,
   },
   {
     id: 'blog',

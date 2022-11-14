@@ -1,89 +1,74 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
 
-export const OurTeamItemContainer = styled.li<{ avatar: string, isMargin?: boolean }>`
-  width: 350px;
+export const OurTeamItemContainer = styled.li`
+  width: 100%;
   height: 500px;
+  max-width: 400px;
   list-style: none;
-  margin: -${({ isMargin }) => isMargin && '60px 0 30px 0'};
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 500px;
-    background-image: ${({ avatar }) => `url(${avatar})`};
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
+  &:nth-child(3n + 2) {
+    margin-top: -60px;
   }
 
-  @media (max-width: 950px) {
-    width: 160px;
-    height: 220px;
-    background-size: 160px 220px;
-    margin: 0 auto;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+
+    &:nth-child(3n + 2) {
+      margin-top: 0;
+    }
 
     &:nth-child(2n) {
       margin-top: -60px;
     }
+  }
 
-    &::before {
-      width: 160px;
-      height: 220px;
-    }
+  @media (max-width: 450px) {
+    height: 220px;
+    max-width: 160px;
   }
 `
 
-export const OurTeamItemWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
+export const OurTeamItemWrapper = styled(Stack)<{ avatar: string }>`
   justify-content: flex-end;
   width: 100%;
   height: 100%;
   padding: 25px;
-  background: linear-gradient(180deg, rgba(40, 50, 66, 0) 43.61%, #283242 100.37%);
   border-radius: 6px;
+  background-image: ${({ avatar }) => `url(${avatar})`};
+  background-size: cover;
+  background-position: center;
 
   @media (max-width: 768px) {
     padding: 6px 15px;
   }
 `
 
-export const OurTeamItemLink = styled.a`
-  text-decoration: none;
+export const OurTeamItemLink = styled(Link)`
   cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white} !important;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hover};
+    color: ${({ theme }) => theme.colors.hover} !important;
   }
 
   @media (max-width: 768px) {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.01em !important;
   }
 `
 
-export const OurTeamItemPosition = styled.p`
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+export const OurTeamItemPosition = styled(Typography)`
+  color: ${({ theme }) => theme.colors.white} !important;
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
-    color: ${({ theme }) => theme.colors.grey};
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: ${({ theme }) => theme.colors.grey} !important;
   }
 `
-
-export const OurTeamItemName = styled.h3``

@@ -17,7 +17,7 @@ import { SolutionsChooseItem } from './SolutionsChooseItem'
 export const SolutionsChoose: FC = () => {
   return (
     <SolutionsChooseContainer>
-      <SolutionsChooseWrapper>
+      <SolutionsChooseWrapper direction={'row'}>
         <SolutionsChooseImgWrapper>
           <SolutionsChooseImg
             src={Solutions}
@@ -25,7 +25,7 @@ export const SolutionsChoose: FC = () => {
           />
         </SolutionsChooseImgWrapper>
         <SolutionsChooseMain>
-          <SolutionsChooseTitle>
+          <SolutionsChooseTitle variant="h2">
             Why choose us?
           </SolutionsChooseTitle>
           <SolutionsChooseList>

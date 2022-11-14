@@ -5,7 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
 
     &::-webkit-scrollbar {
       width: 11px;

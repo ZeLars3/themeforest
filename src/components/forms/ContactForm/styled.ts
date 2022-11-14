@@ -1,12 +1,10 @@
 import styled from 'styled-components'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 
-export const FormLegend = styled.h3<{ titleSize: string }>`
-  margin-bottom: 30px;
+export const FormLegend = styled(Typography)`
+  margin-bottom: 30px !important;
   text-align: left;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 40px;
-  letter-spacing: -0.015em;
 `
 
 export const ContactFormContainer = styled.div`
@@ -30,17 +28,10 @@ export const ContactFormContainer = styled.div`
     flex-direction: column;
     width: 100%;
     margin: 0;
-
-    button {
-      display: flex;
-      justify-content: center;
-      margin: 83px 0 0 auto;
-      border: none;
-      padding: 10px 51px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: -0.015em;
-    }
   }
+`
+
+export const FormButton = styled(Button)`
+  margin: 83px 0 0 auto !important;
+  padding: 10px 51px !important;
 `

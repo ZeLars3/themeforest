@@ -17,14 +17,16 @@ export const AboutUsStatistic: FC = () => {
   return (
     <AboutUsStatisticContainer>
       <AboutUsStatisticWrapper>
-        <AboutUsStatisticTitle>
+        <AboutUsStatisticTitle variant="h1">
           Ensome in numbers
         </AboutUsStatisticTitle>
         <AboutUsStatisticList>
           {STATISTIC_AMOUNT.map(({ title, count }) => (
             <AboutUsStatisticItem key={uuidv4()}>
               <ItemCount>{count}</ItemCount>
-              <ItemName>{title}</ItemName>
+              <ItemName component="span" variant="body1">
+                {title}
+              </ItemName>
             </AboutUsStatisticItem>
           ))}
         </AboutUsStatisticList>

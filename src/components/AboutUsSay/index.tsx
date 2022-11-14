@@ -34,13 +34,13 @@ export const AboutUsSay: FC = () => {
 
   return (
     <AboutUsSayContainer>
-      <AboutUsSayWrapper>
-        <AboutUsSayTitle>
+      <AboutUsSayWrapper direction="row">
+        <AboutUsSayTitle variant="h1">
           What our customers say
         </AboutUsSayTitle>
         {currentViewport === 'desktop'
           ? (
-          <AboutUsSayController>
+          <AboutUsSayController direction="row">
             <AboutUsSayButton
               ref={navigationPrevRef}>
               <Icon src={ArrowLeft} alt="previous slide" />

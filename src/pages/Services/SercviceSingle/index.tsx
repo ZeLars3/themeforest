@@ -31,7 +31,7 @@ const ServiceSingle: FC = () => {
               to you with 25 hours.
             </ContactSubtitle>
             <ContactsHelpItem />
-            <Button btnType='round' size='big'>
+            <Button variant='contained' >
               Contact Us
             </Button>
           </ContactWrapper>

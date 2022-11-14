@@ -1,31 +1,26 @@
 import styled from 'styled-components'
+import ListItem from '@mui/material/ListItem'
+import Typography from '@mui/material/Typography'
 
-export const ContactsInfoItem = styled.li`
+export const ContactsInfoItem = styled(ListItem)`
   margin-bottom: 24px;
-  list-style: none;
+  display: block !important;
+  padding: 0 !important;
 
   @media (max-width: 768px) {
     margin-bottom: 15px;
   }
 `
 
-export const InfoTitle = styled.p`
-  line-height: 28px;
+export const InfoSubtitle = styled(Typography)`
   letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
-`
-
-export const InfoSubtitle = styled.p`
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.black};
 
   @media (max-width: 768px) {
     max-width: 300px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
+
+export const InfoTitle = styled(Typography)``

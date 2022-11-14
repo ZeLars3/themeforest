@@ -7,13 +7,12 @@ import PlayIcon from '@/assets/icons/play.png'
 import { useTypedSelector } from '@/hooks'
 
 import {
+  BurgerButton,
   HeaderContainer,
-  HeaderLogo,
   HeaderWrapper,
   HeaderWrapperButton,
   HeaderWrapperInner,
   Icon,
-  BurgerButton,
 } from './styled'
 import {
   Navigation,
@@ -49,33 +48,31 @@ export const Header: FC = () => {
     <HeaderContainer>
       <HeaderWrapper>
         <HeaderWrapperInner>
-          <HeaderLogo>
-            <Icon src={LogoBlue} alt="Site logo" />
-          </HeaderLogo>
+          <Icon src={LogoBlue} alt="Site logo" />
           <BurgerButton
             onClick={handleMenuClick}
-            aria-label="Open-close menu">
-            {!isMenuOpen
-              ? (
+            aria-label="open/close menu">
+            {!isMenuOpen ? (
               <Svgr icon={MenuOpen} />
-                )
-              : (
+            ) : (
               <Svgr icon={MenuClose} />
-                )}
+            )}
           </BurgerButton>
         </HeaderWrapperInner>
         <Navigation menu={isMenuOpen} />
         <HeaderWrapperButton>
           <Button
-            size="medium"
-            btnType="square"
+            variant="contained"
             clickHandle={handleCallDemo}>
             <Icon src={PlayIcon} alt="Play Demo" />
             Watch the demo
           </Button>
         </HeaderWrapperButton>
       </HeaderWrapper>
-      {isVideo && <DemoVideo />}
+      <DemoVideo
+        isOpen={isVideo}
+        onClose={handleCallDemo}
+      />
     </HeaderContainer>
   )
 }

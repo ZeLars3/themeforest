@@ -27,10 +27,10 @@ export const AboutUsCustomers: FC = () => {
     <AboutUsCustomersContainer>
       <AboutUsCustomersWrapper>
         <AboutUsCustomersWrapperText>
-          <AboutUsCustomersTitle>
+          <AboutUsCustomersTitle variant="h1">
             Our customers
           </AboutUsCustomersTitle>
-          <AboutUsCustomersSubtitle>
+          <AboutUsCustomersSubtitle variant="h5">
             {currentViewport === 'desktop'
               ? `Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque laudan,
@@ -58,7 +58,7 @@ export const AboutUsCustomers: FC = () => {
               grabCursor={SWIPER_CONFIG.grabCursor}
               scrollbar={SWIPER_CONFIG.scrollbar}
               modules={SWIPER_CONFIG.modules}>
-              {STATISTIC_COMPANY_ICONS.map(icon => (
+              {STATISTIC_COMPANY_ICONS.map((icon) => (
                 <SwiperSlide key={uuidv4()}>
                   <CompanyIcon src={icon} alt="company" />
                 </SwiperSlide>

@@ -11,16 +11,20 @@ import {
 } from './styled'
 
 export const Subscribe: FC<{
-  background: 'primary' | 'secondary'
+  background: 'primary' | 'secondary',
 }> = ({ background }) => {
   return (
     <SubscribeContainer background={background}>
-      <SubscribeWrapper>
+      <SubscribeWrapper direction="row">
         <SubscribeWrapperInner>
-          <SubscribeTitle>
+          <SubscribeTitle
+            variant="h2"
+            color={'common.white'}>
             Subscribe to our newsletter
           </SubscribeTitle>
-          <SubscribeText>
+          <SubscribeText
+            variant="h5"
+            color={'common.white'}>
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque
             laudantium.

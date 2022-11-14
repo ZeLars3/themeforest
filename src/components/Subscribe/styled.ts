@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
 
-export const SubscribeContainer = styled.section<{ background: string }>`
-  color: ${({ theme }) => theme.colors.white};
+export const SubscribeContainer = styled.section <{ background: string }>`
+  padding: 80px 16px;  
   background-color: ${({ background, theme }) =>
     background === 'primary'
       ? theme.colors.primary
@@ -10,21 +12,18 @@ export const SubscribeContainer = styled.section<{ background: string }>`
     ${({ theme }) => theme.colors.helperBlue2};
 
   @media (max-width: 768px) {
+    padding: 50px 16px 60px 16px;
     border-bottom: none;
   }
 `
 
-export const SubscribeWrapper = styled.div`
-  display: flex;
+export const SubscribeWrapper = styled(Stack)`
   justify-content: space-between;
   max-width: 1110px;
   margin: 0 auto;
-  padding: 80px 0;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 50px 16px 60px 16px;
+    flex-direction: column !important;
     border-bottom: 1px solid
       ${({ theme }) => theme.colors.helperBlue1};
   }
@@ -39,21 +38,18 @@ export const SubscribeWrapperInner = styled.div`
   }
 `
 
-export const SubscribeTitle = styled.h2`
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
+export const SubscribeTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
     text-align: center;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const SubscribeText = styled.p`
-  margin: 20px 0;
+export const SubscribeText = styled(Typography)`
+  margin: 20px 0 !important;
 
   @media (max-width: 768px) {
     display: none;

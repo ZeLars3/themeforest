@@ -25,13 +25,19 @@ export const Business: FC = () => {
 
   return (
     <BusinessContainer>
-      <BusinessWrapper>
-        <BusinessTitle>
-          The <ColorTitle>newest</ColorTitle> business
-          analytics platform
+      <BusinessWrapper direction="row">
+        <BusinessTitle variant="h1">
+          The{' '}
+          <ColorTitle
+            variant="h1"
+            component="span"
+            color="primary">
+            newest <br />
+          </ColorTitle>{' '}
+          business analytics platform
         </BusinessTitle>
         <BusinessWrapperInner>
-          <BusinessText>
+          <BusinessText variant="h5">
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae
@@ -39,8 +45,7 @@ export const Business: FC = () => {
             beatae vitae dicta sunt explicabo.
           </BusinessText>
           <Button
-            size="big"
-            btnType="square"
+            variant="contained"
             clickHandle={handleNavigate}>
             Discover more
           </Button>

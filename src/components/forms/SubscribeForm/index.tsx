@@ -1,18 +1,19 @@
-import { FC, FormEvent, useRef, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import { useFormik } from 'formik'
 
-import { TextInput, Button } from '@/components/common'
+import { TextInput } from '@/components/common'
 import { useTypedSelector } from '@/hooks'
 
 import { sendEmailSchema, subscribeFields } from '../validationSchema'
-import { Form, SubscribeFormContainer } from './styled'
+import { Form, FormButton, SubscribeFormContainer } from './styled'
 
-init(process.env.REACT_APP_PUBLIC_KEY as string)
+init(process.env.REACT_APP_EMAIL_PUBLIC_KEY as string)
 
 export const SubscribeForm: FC = () => {
   const [_, setMessage] = useState<string>('')
   const [disabled, setDisabled] = useState<boolean>(false)
+  const subscribeFormRef = useRef<HTMLFormElement>(null)
 
   const currentViewport: string = useTypedSelector(
     ({ app }) => app.viewport,
@@ -22,41 +23,36 @@ export const SubscribeForm: FC = () => {
     return acc
   }, {})
 
-  const subscribeRef = useRef<HTMLFormElement>(null)
-
   const formik = useFormik({
     initialValues,
     validationSchema: sendEmailSchema,
-    validateOnChange: false,
-    validateOnBlur: false,
-    onSubmit: (values, { resetForm }) => {
-      resetForm()
+    onSubmit: (_, { resetForm }) => {
+      setDisabled(true)
+      emailjs
+        .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID as string,
+        process.env.REACT_APP_EMAIL_TEMPLATE_SUBSCRIBE as string,
+        subscribeFormRef.current as HTMLFormElement,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY as string
+        )
+        .then(
+          () => {
+            setMessage('success')
+            resetForm()
+          },
+          () => setMessage('error'),
+        )
+        .finally(() => {
+          setDisabled(false)
+          resetForm()
+        })
     },
   })
 
-  const sendEmail = (event: FormEvent<HTMLFormElement>): void => {
-    event.preventDefault()
-
-    setDisabled(true)
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID as string,
-        'template_98jhgo7',
-        subscribeRef.current as HTMLFormElement,
-        process.env.REACT_APP_PUBLIC_KEY as string,
-      )
-      .then(
-        () => setMessage('success'),
-        () => setMessage('error')
-      )
-      .finally(() => setDisabled(false))
-  }
-
   return (
     <SubscribeFormContainer>
-      <Form ref={subscribeRef} onSubmit={sendEmail}>
-        {
-          subscribeFields.map(({ name, placeholder }) => (
+      <Form ref={subscribeFormRef} onSubmit={formik.handleSubmit}>
+        {subscribeFields.map(({ name, placeholder }) => (
             <TextInput
               key={name}
               name={name}
@@ -66,16 +62,14 @@ export const SubscribeForm: FC = () => {
               message={formik.errors[name]}
               onChange={formik.handleChange}
             />
-          ))
-        }
-        <Button
-          size='form'
-          type='submit'
-          btnType='square'
-          isDisable={disabled}
-        >
+          ),
+        )}
+        <FormButton
+          type="submit"
+          variant="contained"
+          disabled={disabled}>
           {currentViewport === 'desktop' ? 'Send' : 'Subscribe'}
-        </Button>
+        </FormButton>
       </Form>
     </SubscribeFormContainer>
   )

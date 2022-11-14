@@ -1,52 +1,52 @@
 import styled from 'styled-components'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import List from '@mui/material/List'
 
 export const TestimonialsContainer = styled.section`
-  padding: 120px 0;
+  padding: 120px 16px;
 
   @media (max-width: 768px) {
-    padding: 50px 0;
+    padding: 50px 16px;
   }
 `
 
-export const TestimonialsWrapper = styled.div`
+export const TestimonialsWrapper = styled(Stack)`
   max-width: 1110px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
-
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
 `
 
-export const TestimonialsTitle = styled.h2`
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
+export const TestimonialsTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const TestimonialsController = styled.div`
-  display: flex;
+export const TestimonialsController = styled(Stack)`
   gap: 15px;
 `
 
 export const TestimonialButton = styled.button`
   width: 110px;
   padding: 15px 40px;
-  border: none;
-  border-radius: 14px;
   cursor: pointer;
-  transition: 0.7s;
+  transition: 0.3s;
   border-radius: 20px;
   background-color: ${({ theme }) =>
     theme.colors.background};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.tertiary};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.colors.hover};
+  }
 
   @media (max-width: 768px) {
     display: flex;
@@ -56,10 +56,10 @@ export const TestimonialButton = styled.button`
   }
 `
 
-export const TestimonialsList = styled.ul`
+export const TestimonialsList = styled(List)`
   display: flex;
   max-width: 1110px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 `
 
 export const Icon = styled.img`

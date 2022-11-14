@@ -1,5 +1,6 @@
-import { FC, useState } from 'react'
+import { FC, useState, MouseEvent } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { ToggleButtonGroup, ToggleButton } from '@mui/material'
 
 import FluentCheckmark from '@/assets/icons/checkmark.svg'
 import { IPriceItem } from '@/types'
@@ -20,7 +21,6 @@ import {
   PriceItemPrice,
   PriceItemTitle,
   PriceItemWrapperInner,
-  PriceToggleWrapper,
 } from './styled'
 
 export const PriceItem: FC<IPriceItem> = ({
@@ -28,35 +28,46 @@ export const PriceItem: FC<IPriceItem> = ({
   price,
   features,
 }) => {
-  const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
+  const [alignment, setAlignment] = useState<string>('Mo');
+  const [isOpenModal, setIsOpenModal] =
+    useState<boolean>(false)
 
   const handleCallModal = (): void => {
     setIsOpenModal(!isOpenModal)
   }
 
+  const handleChange = (
+    event: MouseEvent<HTMLElement>,
+    newAlignment: string,
+  ): void => {
+    setAlignment(newAlignment)
+  }
+
   return (
     <>
       <PriceItemContainer>
-        <PriceItemTitle>{title}</PriceItemTitle>
-        <PriceItemWrapperInner>
-          <PriceItemPrice>{price}</PriceItemPrice>
-          <PriceToggleWrapper>
-            <Button size="small" btnType="square">
-              Mo
-            </Button>
-            <Button size="small" btnType="square">
-              Yr
-            </Button>
-          </PriceToggleWrapper>
+        <PriceItemTitle variant="h6">{title}</PriceItemTitle>
+        <PriceItemWrapperInner direction={'row'}>
+          <PriceItemPrice variant="h4">{price}</PriceItemPrice>
+          <ToggleButtonGroup
+            color="primary"
+            value={alignment}
+            exclusive
+            onChange={handleChange}
+            aria-label="Platform">
+            <ToggleButton value="Mo">Mo</ToggleButton>
+            <ToggleButton value="Yr">
+            Yr
+            </ToggleButton>
+          </ToggleButtonGroup>
         </PriceItemWrapperInner>
         <Button
-          size="large"
-          btnType="square"
+          variant="contained"
           clickHandle={handleCallModal}>
           Choose plan
         </Button>
         <PriceItemAdvantages>
-          {features.map(name => (
+          {features.map((name) => (
             <PriceItemAdvantageItem key={uuidv4()}>
               <Svgr icon={FluentCheckmark} /> {name}
             </PriceItemAdvantageItem>
@@ -76,7 +87,7 @@ export const PriceItem: FC<IPriceItem> = ({
           </CardPrice>
         </TextWrapper>
         <PriceItemAdvantages>
-          {features.map(name => (
+          {features.map((name) => (
             <PriceItemAdvantageItem key={uuidv4()}>
               <Svgr icon={FluentCheckmark} /> {name}
             </PriceItemAdvantageItem>

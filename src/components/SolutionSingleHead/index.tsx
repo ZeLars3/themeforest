@@ -2,10 +2,9 @@ import { FC } from 'react'
 
 import { Routes } from '@/enums'
 
+import { Breadcrumbs } from '../common'
 import {
   SolutionSingleHeadContainer,
-  SolutionSingleHeadLink,
-  SolutionSingleHeadPath,
   SolutionSingleHeadTitle,
   SolutionSingleHeadWrapper,
 } from './styled'
@@ -16,15 +15,14 @@ export const SolutionSingleHead: FC<{ title: string }> = ({
   return (
     <SolutionSingleHeadContainer>
       <SolutionSingleHeadWrapper>
-        <SolutionSingleHeadTitle>
+        <SolutionSingleHeadTitle variant="h1">
           {title}
         </SolutionSingleHeadTitle>
-        <SolutionSingleHeadPath>
-          <SolutionSingleHeadLink href={Routes.Home}>
-            Home
-          </SolutionSingleHeadLink>{' '}
-          | {title}
-        </SolutionSingleHeadPath>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={title}
+          color={'black'}
+        />
       </SolutionSingleHeadWrapper>
     </SolutionSingleHeadContainer>
   )

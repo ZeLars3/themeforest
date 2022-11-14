@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
 export const TextInputContainer = styled.div`
-  position: relative;
   width: 100%;
-  margin: 0;
-  padding: 0;
 `
 
 export const TextInputField = styled.input<any>`
@@ -36,10 +33,7 @@ export const FieldMessage = styled.span`
   color: ${({ theme }) => theme.colors.red};
 `
 
-export const TextInputMessage = styled.span`
-  position: absolute;
-  z-index: 1;
-  bottom: 13px;
-  right: 20px;
+export const TextInputMessage = styled.p`
+  padding-top: 5px;
   color: ${({ theme }) => theme.colors.red};
 `

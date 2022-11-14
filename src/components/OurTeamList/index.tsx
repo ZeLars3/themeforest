@@ -1,26 +1,32 @@
 import { FC } from 'react'
-
 import { TEAM_ITEMS } from '@/constants/teamItems'
+import Masonry, {
+  ResponsiveMasonry,
+} from 'react-responsive-masonry'
 
-import { OurTeamItem } from './OurTeamItem'
 import {
   OurTeamListContainer,
   OurTeamListWrapper,
 } from './styled'
+import { OurTeamItem } from './OurTeamItem'
 
 export const OurTeamList: FC = () => {
   return (
-    <OurTeamListContainer>
-      <OurTeamListWrapper>
-        {TEAM_ITEMS.map(({ id, ...restProps }, index) => (
-          <OurTeamItem
-            key={id}
-            id={id}
-            {...restProps}
-            isMargin={index === 1 || (index - 1) % 3 === 0}
-          />
-        ))}
-      </OurTeamListWrapper>
-    </OurTeamListContainer>
+    <ResponsiveMasonry
+      columnsCountBreakPoints={{ 350: 1, 750: 1, 900: 1 }}>
+      <Masonry columnsCount={1}>
+        <OurTeamListContainer>
+          <OurTeamListWrapper>
+            {TEAM_ITEMS.map(({ id, ...restProps }) => (
+              <OurTeamItem
+                key={id}
+                id={id}
+                {...restProps}
+              />
+            ))}
+          </OurTeamListWrapper>
+        </OurTeamListContainer>
+      </Masonry>
+    </ResponsiveMasonry>
   )
 }

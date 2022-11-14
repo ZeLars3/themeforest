@@ -1,51 +1,52 @@
 import styled from 'styled-components'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
 
 export const AboutUsStatisticContainer = styled.section`
-  padding: 100px 0 140px 0;
+  padding: 100px 16px 140px 16px;
   background: ${({ theme }) => theme.colors.background};
 
   @media (max-width: 768px) {
-    padding: 50px 0 45px 0;
+    padding: 50px 16px 45px 16px;
   }
 `
 
-export const AboutUsStatisticWrapper = styled.div`
+export const AboutUsStatisticWrapper = styled(Box)`
   max-width: 1110px;
   margin: 0 auto;
+  text-align: center;
 `
 
-export const AboutUsStatisticTitle = styled.h2`
-  text-align: center;
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 60px;
+export const AboutUsStatisticTitle = styled(Typography)`
   letter-spacing: -0.015em;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const AboutUsStatisticList = styled.ul`
-  padding: 30px;
+export const AboutUsStatisticList = styled(List)`
+  padding-top: 80px !important;
   display: flex;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 35px 16px 0 16px;
+    padding-top: 35px !important;
   }
 `
 
-export const AboutUsStatisticItem = styled.li`
-  display: grid;
-  list-style: none;
+export const AboutUsStatisticItem = styled(ListItem)`
+  flex-direction: column;
+  max-width: 255px;
   border-right: 1px solid
     ${({ theme }) => theme.colors.helperBlue3};
 
   @media (max-width: 768px) {
-    padding-bottom: 70px;
+    padding-bottom: 70px !important;
     border-right: none;
 
     &:last-child {
@@ -55,11 +56,9 @@ export const AboutUsStatisticItem = styled.li`
 `
 
 export const ItemCount = styled.span`
-  padding: 0 63px;
   font-weight: 800;
   font-size: 56px;
   line-height: 112px;
-  text-align: center;
   letter-spacing: -0.025em;
   color: ${({ theme }) => theme.colors.primary};
 
@@ -70,10 +69,6 @@ export const ItemCount = styled.span`
   }
 `
 
-export const ItemName = styled.span`
-  font-weight: 700;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+export const ItemName = styled(Typography)<{ component: string }>`
+  font-weight: 700 !important;
 `

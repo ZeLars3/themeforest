@@ -10,22 +10,20 @@ import {
   Wrapper,
   ContactsHelpTitle,
   ContactsHelpFormWrapper,
-  ContactsHelpLink,
-  ContactsHelpPath,
   ContactsHelpList,
   ColorTitle,
 } from './styled'
+import { Breadcrumbs } from '../common'
 
 export const ContactsHelp: FC = () => {
   return (
     <ContactsHelpContainer>
       <ContactsHelpWrapper>
-        <ContactsHelpPath>
-          <ContactsHelpLink href={Routes.Home}>
-            Home
-          </ContactsHelpLink>{' '}
-          | Contacts
-        </ContactsHelpPath>
+        <Breadcrumbs
+          path={Routes.Home}
+          currentPage={'Contacts'}
+          color={'black'}
+        />
         <Wrapper>
           <ContactsHelpTitle>
             How can we <ColorTitle>help you?</ColorTitle>

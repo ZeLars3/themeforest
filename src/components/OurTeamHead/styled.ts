@@ -1,79 +1,56 @@
 import styled from 'styled-components'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
 
 export const OutTeamHeadContainer = styled.section`
-  padding: 40px 0 90px 0;
+  padding: 40px 16px 90px 16px;
   background: ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 10px 0 0 0;
   }
 `
 
-export const OutTeamHeadWrapper = styled.div`
+export const OutTeamHeadWrapper = styled(Box)`
   max-width: 1110px;
   margin: 0 auto;
 `
 
-export const OutTeamHeadWrapperText = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+export const OutTeamHeadWrapperText = styled(Stack)`
+  margin-top: 135px;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column !important;
+    margin-top: 57px;
     background: ${({ theme }) => theme.colors.white};
   }
 `
 
-export const OutTeamHeadPath = styled.div`
-  padding: 20px 0 129px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  color: ${({ theme }) => theme.colors.white};
-
-  @media (max-width: 768px) {
-    padding: 10px 16px 57px 16px;
-  }
-`
-
-export const OutTeamHeadLink = styled.a`
-  color: ${({ theme }) => theme.colors.grey};
-  text-decoration: none;
-`
-
-export const OutTeamHeadItem = styled.div`
+export const OutTeamHeadItem = styled(Box)`
   padding-bottom: 35px;
   width: 100%;
   background: ${({ theme }) => theme.colors.secondary};
 `
 
-export const OutTeamHeadTitle = styled.h2`
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 60px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+export const OutTeamHeadTitle = styled(Typography)`
+  color: ${({ theme }) => theme.colors.white} !important;
 
   @media (max-width: 768px) {
     padding: 0 16px;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const OutTeamHeadSubtitle = styled.p`
-  max-width: 530px;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.background};
+export const OutTeamHeadSubtitle = styled(Typography)`
+  max-width: 540px;
+  color: ${({ theme }) =>
+    theme.colors.background} !important;
 
   @media (max-width: 768px) {
+    max-width: 100%;
     padding: 50px 16px 40px 16px;
-    color: ${({ theme }) => theme.colors.grey};
+    color: ${({ theme }) => theme.colors.grey} !important;
   }
 `

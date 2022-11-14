@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const SolutionsListContainer = styled.section``
+export const SolutionsListContainer = styled.section`
+  padding: 0 16px;
+`
 
 export const SolutionsListWrapper = styled.ul`
   display: grid;

@@ -77,7 +77,6 @@ const OurTeamSingle: FC = () => {
         <OurTeamSingleFormWrapper>
           <ContactForm
             title={`Want ${userName} to share his expertise with you?`}
-            titleSize="big"
           />
         </OurTeamSingleFormWrapper>
       </OurTeamSingleMain>

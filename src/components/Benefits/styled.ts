@@ -1,76 +1,62 @@
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
 
 export const BenefitsContainer = styled.section`
+  padding: 120px 16px;
   background-color: ${({ theme }) =>
     theme.colors.background};
-  padding: 120px 0;
 
   @media (max-width: 768px) {
-    padding: 50px 0;
+    padding: 50px 16px;
   }
 `
 
-export const BenefitsWrapper = styled.div`
+export const BenefitsWrapper = styled(Stack)`
   max-width: 1110px;
-  display: flex;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 0 16px;
+    flex-direction: column !important;
   }
 `
 
-export const BenefitsTitle = styled.h2`
-  padding-bottom: 30px;
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 56px;
-  letter-spacing: -0.015em;
+export const BenefitsTitle = styled(Typography)`
+  padding-bottom: 30px !important;
 
   @media (max-width: 768px) {
-    padding-bottom: 20px;
-    font-size: 30px;
-    line-height: 40px;
+    padding-bottom: 20px !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 `
 
-export const BenefitsText = styled.p`
-  font-size: 20px;
-  line-height: 33px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
-
+export const BenefitsText = styled(Typography)`
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 `
 
-export const TextWrapper = styled.div`
-  display: grid;
+export const TextWrapper = styled(Box)`
   align-self: center;
   max-width: 540px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `
 
 export const BenefitsList = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-left: 30px;
 
   @media (max-width: 768px) {
+    display: block;
     padding-top: 30px;
-  }
-`
-
-export const GroupWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-  &:first-child {
-    margin: 0 30px;
-  }
-
-  &:last-child {
-    padding-top: 56px;
+    margin-left: 0;
   }
 `

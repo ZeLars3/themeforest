@@ -17,10 +17,12 @@ export const AboutUsInfo: FC = () => {
   return (
     <AboutUsInfoContainer>
       <AboutUsInfoWrapper>
-        <AboutUsInfoItem>
+        <AboutUsInfoItem direction="row">
           <AboutUsInfoWrapperText>
-            <AboutUsInfoTitle>Who we are</AboutUsInfoTitle>
-            <AboutUsInfoText>
+            <AboutUsInfoTitle variant="h1">
+              Who we are
+            </AboutUsInfoTitle>
+            <AboutUsInfoText variant="h5">
               Sed ut perspiciatis unde omnis iste natus
               error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae
@@ -35,19 +37,18 @@ export const AboutUsInfo: FC = () => {
               consequat et dolor vel, cursus lacinia lectus.
             </AboutUsInfoText>
           </AboutUsInfoWrapperText>
-          <AboutUsInfoImg
-            src={Team}
-            alt="Our team"
-          />
+          <AboutUsInfoImg src={Team} alt="Our team" />
         </AboutUsInfoItem>
-        <AboutUsInfoItem>
+        <AboutUsInfoItem direction="row">
           <AboutUsInfoImg
             src={TeamMission}
             alt="Our team"
           />
           <AboutUsInfoWrapperText>
-            <AboutUsInfoTitle>Our mission</AboutUsInfoTitle>
-            <AboutUsInfoText>
+            <AboutUsInfoTitle variant="h1">
+              Our mission
+            </AboutUsInfoTitle>
+            <AboutUsInfoText variant="h5">
               Sed ut perspiciatis unde omnis iste natus
               error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae

@@ -14,7 +14,6 @@ import {
   BenefitsText,
   BenefitsTitle,
   BenefitsWrapper,
-  GroupWrapper,
   TextWrapper,
 } from './styled'
 
@@ -25,12 +24,12 @@ export const Benefits: FC = () => {
 
   return (
     <BenefitsContainer>
-      <BenefitsWrapper>
+      <BenefitsWrapper direction={'row'}>
         <TextWrapper>
-          <BenefitsTitle>
+          <BenefitsTitle variant="h2">
             The benefits of Ensome
           </BenefitsTitle>
-          <BenefitsText>
+          <BenefitsText variant="h5">
             Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae
@@ -39,38 +38,21 @@ export const Benefits: FC = () => {
           </BenefitsText>
         </TextWrapper>
         <BenefitsList>
-          {currentViewport === 'desktop'
-            ? (
+          {currentViewport === 'desktop' ? (
             <>
-              <GroupWrapper>
-                {BENEFIT_ITEMS.slice(0, 2).map(
-                  ({ title, text, icon, id }) => (
-                    <BenefitItem
-                      key={id}
-                      id={id}
-                      title={title}
-                      text={text}
-                      icon={icon}
-                    />
-                  ),
-                )}
-              </GroupWrapper>
-              <GroupWrapper>
-                {BENEFIT_ITEMS.slice(2, 4).map(
-                  ({ title, text, icon, id }) => (
-                    <BenefitItem
-                      key={id}
-                      id={id}
-                      title={title}
-                      text={text}
-                      icon={icon}
-                    />
-                  ),
-                )}
-              </GroupWrapper>
+              {BENEFIT_ITEMS.map(
+                ({ title, text, icon, id }) => (
+                  <BenefitItem
+                    key={id}
+                    id={id}
+                    title={title}
+                    text={text}
+                    icon={icon}
+                  />
+                ),
+              )}
             </>
-              )
-            : (
+          ) : (
             <Swiper
               centeredSlidesBounds={
                 SWIPER_CONFIG.centeredSlidesBounds
@@ -94,7 +76,7 @@ export const Benefits: FC = () => {
                 ),
               )}
             </Swiper>
-              )}
+          )}
         </BenefitsList>
       </BenefitsWrapper>
     </BenefitsContainer>
